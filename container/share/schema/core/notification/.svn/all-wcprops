@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/falkon/!svn/ver/1/container/share/schema/core/notification
+END
+notification_consumer_flattened.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/falkon/!svn/ver/1/container/share/schema/core/notification/notification_consumer_flattened.wsdl
+END
+subscription_manager_bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/falkon/!svn/ver/1/container/share/schema/core/notification/subscription_manager_bindings.wsdl
+END
+notification_consumer_bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/falkon/!svn/ver/1/container/share/schema/core/notification/notification_consumer_bindings.wsdl
+END
+subscription_manager_service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/falkon/!svn/ver/1/container/share/schema/core/notification/subscription_manager_service.wsdl
+END
+notification_consumer_service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/falkon/!svn/ver/1/container/share/schema/core/notification/notification_consumer_service.wsdl
+END
+subscription_manager_flattened.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/falkon/!svn/ver/1/container/share/schema/core/notification/subscription_manager_flattened.wsdl
+END

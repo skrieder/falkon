@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gpt_package_metadata SYSTEM "globus_package.dtd">
+<gpt_package_metadata Format_Version="0.02" Name="globus_wsrf_gram_scheduler_test" >
+<Aging_Version Age="0" Major="0" Minor="20" />
+<Description >GT4 GRAM Scheduler Tests</Description>
+<Functional_Group >Execution</Functional_Group>
+<Version_Stability Release="alpha" />
+<PackagingTool ToolName="GPT" ToolVersion="3.2" />
+<pgm_pkg >
+<Flavor ColocateLibraries="yes" >noflavor</Flavor>
+<Version_Label >0.1.0</Version_Label>
+<Binary_Dependencies Type="Runtime" >
+<Dependency Name="globus_globusrun_ws" Package="pgm" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+<Dependency Name="globus_proxy_utils" Package="pgm" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+</Binary_Dependencies>
+</pgm_pkg>
+</gpt_package_metadata>

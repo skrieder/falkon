@@ -1,0 +1,7 @@
+/lib/libglobus_mp_gcc32dbg.a
+/lib/libglobus_mp_gcc32dbg.la
+/include/gcc32dbg/globus_mp_mpi.h
+/include/gcc32dbg/globus_mp_mpl.h
+/include/gcc32dbg/globus_mp_inx.h
+/etc/globus_packages/globus_mp/gcc32dbg_dev.filelist
+/etc/globus_packages/globus_mp/pkg_data_gcc32dbg_dev.gpt

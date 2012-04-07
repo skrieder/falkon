@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/repos/falkon/!svn/ver/1/worker/etc/gpt/dtd
+END
+gpt_filelist.dtd
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/falkon/!svn/ver/1/worker/etc/gpt/dtd/gpt_filelist.dtd
+END
+globus_package.dtd
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/falkon/!svn/ver/1/worker/etc/gpt/dtd/globus_package.dtd
+END
+globus_flavors.dtd
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/falkon/!svn/ver/1/worker/etc/gpt/dtd/globus_flavors.dtd
+END
+gpt_reservoir.dtd
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/falkon/!svn/ver/1/worker/etc/gpt/dtd/gpt_reservoir.dtd
+END
+gpt_bundle.dtd
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/falkon/!svn/ver/1/worker/etc/gpt/dtd/gpt_bundle.dtd
+END

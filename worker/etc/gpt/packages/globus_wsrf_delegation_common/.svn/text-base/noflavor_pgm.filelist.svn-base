@@ -1,0 +1,13 @@
+share/schema/delegationService/test/delegation_test_service.wsdl
+share/schema/delegationService/test/delegation_test_port_type.wsdl
+share/schema/delegationService/test/delegation_test_bindings.wsdl
+share/schema/delegationService/delegation_bindings.wsdl
+share/schema/delegationService/delegation_factory_service.wsdl
+share/schema/delegationService/delegation_factory_bindings.wsdl
+share/schema/delegationService/delegation_factory_flattened.wsdl
+share/schema/delegationService/delegation_service.wsdl
+share/schema/delegationService/delegation_flattened.wsdl
+share/globus_delegation_common/build.xml
+etc/gpt/./packages/globus_delegation_common/undeploy.xml
+etc/gpt/packages/globus_wsrf_delegation_common/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_delegation_common/pkg_data_noflavor_pgm.gpt

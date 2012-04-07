@@ -1,0 +1,7 @@
+/test/globus_c_wsrf_core_performance_test/global_security_descriptor.xml
+/test/globus_c_wsrf_core_performance_test/get-multiple-resource-pingpong
+/test/globus_c_wsrf_core_performance_test/performance-test.pl
+/test/globus_c_wsrf_core_performance_test/TESTS.pl
+/test/globus_c_wsrf_core_performance_test/plot-output.pl
+/etc/globus_packages/globus_c_wsrf_core_performance_test/gcc32dbg_pgm.filelist
+/etc/globus_packages/globus_c_wsrf_core_performance_test/pkg_data_gcc32dbg_pgm.gpt

@@ -1,0 +1,5 @@
+/share/schema/core/tests/c-providers/ResourcePropertiesTest.wsdl
+/share/schema/core/tests/c-providers/ResourcePropertiesTest_bindings.wsdl
+/share/schema/core/tests/c-providers/ResourcePropertiesTest_service.wsdl
+/etc/globus_packages/globus_c_wsrf_providers_test_wsdl/noflavor_data.filelist
+/etc/globus_packages/globus_c_wsrf_providers_test_wsdl/pkg_data_noflavor_data.gpt

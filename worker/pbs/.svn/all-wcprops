@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/repos/falkon/!svn/ver/1/worker/pbs
+END
+qsub_worker_ia32
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/worker/pbs/qsub_worker_ia32
+END
+qsub_worker_ia64
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/worker/pbs/qsub_worker_ia64
+END

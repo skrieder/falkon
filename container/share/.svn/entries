@@ -1,0 +1,49 @@
+10
+
+dir
+403
+https://svn.globus.org/repos/falkon/container/share
+https://svn.globus.org/repos/falkon
+
+
+
+2008-04-07T12:50:52.178014Z
+149
+iraicu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1f19993a-f93e-0410-91d9-c634b3d9fdf5
+
+schema
+dir
+
+globus_wsrf_common
+dir
+
+globus_wsrf_core
+dir
+
+licenses
+dir
+
+globus_wsrf_test
+dir
+
+globus_wsrf_core_registry
+dir
+
+globus_wsrf_tools
+dir
+

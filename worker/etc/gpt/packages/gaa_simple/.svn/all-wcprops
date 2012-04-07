@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gaa_simple
+END
+pkg_data_gcc32dbg_dev.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gaa_simple/pkg_data_gcc32dbg_dev.gpt
+END
+pkg_data_gcc32dbg_rtl.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gaa_simple/pkg_data_gcc32dbg_rtl.gpt
+END
+pkg_data_noflavor_data.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gaa_simple/pkg_data_noflavor_data.gpt
+END
+gcc32dbgdev.format
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gaa_simple/gcc32dbgdev.format
+END
+pkg_data_gcc32dbg_pgm.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gaa_simple/pkg_data_gcc32dbg_pgm.gpt
+END
+gcc32dbg_dev.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gaa_simple/gcc32dbg_dev.filelist
+END
+gcc32dbgrtl.format
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gaa_simple/gcc32dbgrtl.format
+END
+noflavordata.format
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gaa_simple/noflavordata.format
+END
+gcc32dbg_rtl.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gaa_simple/gcc32dbg_rtl.filelist
+END
+gcc32dbgpgm.format
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gaa_simple/gcc32dbgpgm.format
+END
+noflavor_data.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gaa_simple/noflavor_data.filelist
+END
+gcc32dbg_pgm.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gaa_simple/gcc32dbg_pgm.filelist
+END

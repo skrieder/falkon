@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gpt_package_metadata SYSTEM "globus_package.dtd">
+<gpt_package_metadata Format_Version="0.01" Name="globus_wsrf_gram_service_java_setup_common" >
+<Aging_Version Age="0" Major="0" Minor="11" />
+<Description >Common GRAM Service Setup</Description>
+<Functional_Group >ResourceManagement</Functional_Group>
+<Version_Stability Release="Beta" />
+<PackagingTool ToolName="GPT" ToolVersion="3.2" />
+<pgm_pkg >
+<Flavor ColocateLibraries="yes" >noflavor</Flavor>
+<Binary_Dependencies Type="Runtime" >
+<Dependency Name="globus_wsrf_gram_service_java" Package="pgm" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+</Binary_Dependencies>
+<Post_Install_Message >
+         Run setup-gram-service-common to install the GRAM service configuration that is common to all local resource managers.
+     </Post_Install_Message>
+<Post_Install_Program >
+         setup-gram-service-common
+     </Post_Install_Program>
+<Setup Name="globus_wsrf_gram_service_java_setup" >
+<Aging_Version Age="0" Major="0" Minor="0" />
+</Setup>
+</pgm_pkg>
+</gpt_package_metadata>

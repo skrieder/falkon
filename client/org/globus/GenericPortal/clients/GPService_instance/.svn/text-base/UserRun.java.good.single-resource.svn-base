@@ -1,0 +1,2354 @@
+/*
+ * This file is licensed under the terms of the Globus Toolkit Public License
+ * v3, found at http://www.globus.org/toolkit/legal/4.0/license-v3.html.
+ * 
+ * This notice must gppear in redistributions of this file, with or without
+ * modification.
+ */
+package org.globus.GenericPortal.clients.GPService_instance;
+
+import java.io.*;
+
+import javax.xml.rpc.Stub;
+import org.globus.wsrf.impl.security.authorization.NoAuthorization;
+//import org.globus.wsrf.security.Constants;
+import org.globus.wsrf.impl.security.authorization.SelfAuthorization;
+import org.globus.wsrf.client.BaseClient;
+import org.apache.commons.cli.ParseException;
+import org.apache.commons.cli.CommandLine;
+import org.globus.wsrf.impl.security.authentication.*;
+import org.globus.axis.gsi.GSIConstants;
+import org.globus.axis.util.Util;
+import org.globus.GenericPortal.common.*;
+
+import org.globus.wsrf.impl.security.authentication.Constants.*;
+import javax.security.auth.Subject;
+import java.security.cert.X509Certificate;
+import org.globus.gsi.CertUtil;
+import org.globus.wsrf.impl.security.authentication.encryption.EncryptionCredentials;
+import org.globus.gsi.GSIConstants.*;
+
+
+//import java.io.FileInputStream;
+import java.io.*;
+
+import org.apache.axis.message.addressing.Address;
+import org.apache.axis.message.addressing.EndpointReferenceType;
+import org.globus.GenericPortal.services.core.WS.impl.GPConstants;
+import org.globus.GenericPortal.stubs.GPService_instance.GPPortType;
+import org.globus.GenericPortal.stubs.GPService_instance.service.GPServiceAddressingLocator;
+import org.globus.wsrf.encoding.ObjectDeserializer;
+import org.oasis.wsrf.properties.GetResourcePropertyResponse;
+import org.xml.sax.InputSource;
+import org.globus.wsrf.NotificationConsumerManager;
+
+import org.globus.GenericPortal.stubs.GPService_instance.*;
+
+import org.globus.wsrf.ResourceKey;
+
+
+import org.globus.wsrf.utils.AddressingUtils;
+
+import org.globus.GenericPortal.common.*;
+
+
+import org.apache.axis.message.addressing.Address;
+import org.apache.axis.message.addressing.EndpointReferenceType;
+import org.globus.GenericPortal.services.core.WS.impl.GPConstants;
+import org.globus.GenericPortal.stubs.Factory.CreateResource;
+import org.globus.GenericPortal.stubs.Factory.CreateResourceResponse;
+import org.globus.GenericPortal.stubs.Factory.FactoryPortType;
+import org.globus.GenericPortal.stubs.Factory.service.FactoryServiceAddressingLocator;
+import org.globus.wsrf.encoding.ObjectSerializer;
+import org.globus.GenericPortal.clients.GPService_instance.*;
+import org.globus.axis.util.Util;
+
+public class UserRun
+{
+
+    public boolean retrieveResult = false;
+
+    public static String CLIENT_DESC = null;
+
+
+    static boolean AUTHENTICATE = false;
+    static boolean AUTHORIZE = false;
+    static boolean ENCRYPT = false;
+    static boolean SIGN = false;
+    static boolean TSL = false;
+    static boolean MSG = false;
+    static boolean CONV = false;
+
+    static {
+        Util.registerTransport();
+    }
+
+    public Notification userNot;
+
+
+
+    public boolean resultsRetrieved = false;
+    String finalResultStrings[] = null;
+    public String machID;
+
+    public boolean DEBUG = false;
+    public boolean INTERACTIVE = false;
+    public boolean DIPERF;
+    public boolean SUMMARY = false;
+    public boolean NOINIT = false;
+
+    //public int activeNotifications;	//# of concurent notifications
+    //public int MAX_NUM_NOTIFICATIONS;
+    //public int activeThreads;	//# of concurent threads accross all the jobs
+    //public int MAX_NUM_THREADS;
+    //public int queueLength;	//# of individual tasks (image ROI) scheduled to take place
+
+    //public int LIFETIME; 	//time in ms that the worker should accept work
+
+    //public Thread                              notificationThread;
+
+    //public Notification userNot;
+    //private int SO_TIMEOUT;
+
+    public String fileEPR;
+    public String serviceURI;
+    public EndpointReferenceType homeEPR;
+    public String homeURI;
+
+    public String path;
+    public String fileName;
+
+    public int NUM_TASKS;
+
+    public String configFile;
+    public String jobDescriptionFile;
+
+    public int HEIGHT = 10;
+    public int WIDTH = 10;
+
+    public int num_execs = 1;
+
+    boolean userResultAvailable = false;
+
+
+    public static int old_GPWS_qLength = 0;
+    public static int old_GPWS_activeTasks = 0;
+    public static int old_GPWS_numWorkers = 0;
+    public static int old_completedTasks = 0;
+    public static int old_queuedTask = 0;
+    public static int old_activeTask = 0;
+
+    public int MAX_COM_PER_WS = 1;
+
+
+
+
+    //public Random rand;
+
+    //public String scratchDisk;
+
+/*	private static void printResourceProperties(GPPortType gp)
+            throws Exception {
+        GetResourcePropertyResponse numJobsRP, stateRP, numWorkersRP, numUserResultsRP, numWorkerResultsRP, lastLogRP;
+        String numJobs, state, numWorkers, numUserResults, numWorkerResults, lastLog;
+
+        numJobsRP = gp.getResourceProperty(GPConstants.RP_NUMJOBS);
+        stateRP = gp.getResourceProperty(GPConstants.RP_STATE);
+                numWorkersRP = gp.getResourceProperty(GPConstants.RP_NUMWORKERS);
+                numUserResultsRP = gp.getResourceProperty(GPConstants.RP_NUMUSERRESULTS);
+                numWorkerResultsRP = gp.getResourceProperty(GPConstants.RP_NUMWORKERRESULTS);
+
+
+        numJobs = numJobsRP.get_any()[0].getValue();
+        state = stateRP.get_any()[0].getValue();
+        numWorkers = numWorkersRP.get_any()[0].getValue();
+        numUserResults = numUserResultsRP.get_any()[0].getValue();
+        numWorkerResults = numWorkerResultsRP.get_any()[0].getValue();
+
+                if (DEBUG) System.out.println("USER: NumJobs RP: " + numJobs);
+        if (DEBUG) System.out.println("USER: State RP: " + state);
+                if (DEBUG) System.out.println("USER: NumWorkers RP: " + numWorkers);
+                if (DEBUG) System.out.println("USER: NumUserResults RP: " + numUserResults);
+                if (DEBUG) System.out.println("USER: NumWorkerResults RP: " + numWorkerResults);
+
+    }
+
+    */
+
+
+
+    public Console console = null;
+    public GPPortType Ggp = null;
+
+    /*
+    public String doExecutable(String command)
+    {
+        Executable exec = null;
+        try
+        {
+
+
+            exec = processLine(command);
+        } catch (Exception e)
+        {
+            return "Error: " + e;
+        }
+
+        UserJob job = new UserJob();
+
+        String userID = "127.0.0.1";
+        try
+        {
+            userID = java.net.InetAddress.getLocalHost().getHostAddress();
+        } catch (Exception e)
+        {
+            if (DEBUG) System.out.println("ERROR: java.net.InetAddress.getLocalHost().getHostName() failed " + e);
+        }
+        userID += ":console";
+
+        job.setUserID(userID);
+        job.setPassword("");
+
+        Executable execs[] = new Executable[1];
+        execs[0] = exec;
+        job.setExecutables(execs);
+
+        NUM_TASKS = 1;
+        //job.setNumExecs(NUM_TASKS);
+
+        if (DEBUG) System.out.println("Ready to send job of size " + NUM_TASKS + " tasks!");
+
+        return sendJob(job);
+    }
+    */
+    private int taskID = 0;
+
+    public synchronized String getID()
+    {
+        taskID++;
+        return new String(machID + ":" + taskID);
+    }
+
+    public String[] doExecutables(String commands[])
+    {
+        //Executable exec = null;
+        //try
+        //{
+
+
+        //    exec = processLine(command);
+        //} catch (Exception e)
+        //{
+        //    return "Error: " + e;
+        //}
+
+        int numTotalJobs = (int)Math.ceil(commands.length*1.0/MAX_COM_PER_WS);
+        if (DEBUG) System.out.println("Will brake down the " + commands.length + " commands into " + numTotalJobs + " jobs...");
+        NUM_TASKS = commands.length;
+
+
+        UserJob jobs[] = new UserJob[numTotalJobs];
+
+        for (int j=0;j<jobs.length;j++)
+        {
+
+
+            jobs[j] = new UserJob();
+
+            String userID = "127.0.0.1";
+            try
+            {
+                userID = java.net.InetAddress.getLocalHost().getHostAddress();
+            } catch (Exception e)
+            {
+                if (DEBUG) System.out.println("ERROR: java.net.InetAddress.getLocalHost().getHostName() failed " + e);
+            }
+            userID += ":console";
+
+            jobs[j].setUserID(userID);
+            jobs[j].setPassword("");
+
+            Executable execs[] = null;
+            if (j == jobs.length - 1)
+            {
+                execs = new Executable[commands.length - MAX_COM_PER_WS*j];
+            }
+            //else if (j == jobs.length - 1)
+            //{
+            //    execs = null;
+            //}
+            else
+            {
+
+                execs = new Executable[MAX_COM_PER_WS];
+            }
+
+            //if (execs != null)
+            //{
+
+            for (int i=0;i<execs.length;i++)
+            {
+                try
+                {
+
+                    execs[i] = processLine(commands[j*MAX_COM_PER_WS+i]);
+                    execs[i].setId(getID());
+                    execs[i].setNotification(machID);
+
+                } catch (Exception e)
+                {
+                    //System.out.println();
+
+                    //return "Error at command["+i+"]: " + e;
+                    return null;
+                }
+
+            }
+            //}
+            //execs[0] = exec;
+
+
+            jobs[j].setExecutables(execs);
+            //jobs[j].setNumExecs(NUM_TASKS);
+
+
+        }
+        if (DEBUG) System.out.println("Ready to send jobs of size " + NUM_TASKS + " tasks!");
+        return sendJobs(jobs);
+    }
+
+
+
+
+
+    public int numTuples(String fileName) throws Exception
+    {
+        //try
+        // {
+        int countRec = 0;
+        RandomAccessFile randFile = new RandomAccessFile(fileName,"r");
+        long lastRec=randFile.length();
+        randFile.close();
+        FileReader fileRead = new FileReader(fileName);
+        LineNumberReader lineRead = new LineNumberReader(fileRead);
+        lineRead.skip(lastRec);
+        countRec=lineRead.getLineNumber();
+        fileRead.close();
+        lineRead.close();
+        return countRec;
+        // }
+        //  catch(IOException e)
+        // {
+        //
+        //      if (DEBUG) System.out.println("Error: " + e);
+        //      return 0;
+        // }
+    }
+
+    public Executable processLine(String s) throws Exception
+    {
+        try
+        {
+            if (s == null)
+            {
+                throw new Exception("Formatting error in job description 'null'");
+            }
+
+            String ss = s.trim();
+            String[] tokens = ss.split(" ");
+            if (tokens.length > 0)
+            {
+                Executable exec = new Executable();
+                //set exec
+                exec.setCommand(tokens[0]);
+                if (tokens.length > 1)
+                {
+                    String args[] = new String[tokens.length - 1];
+                    for (int i=1;i<tokens.length;i++)
+                    {
+                        args[i-1] = tokens[i];
+                    }
+
+                    exec.setArguements(args);
+                } else
+                    exec.setArguements(null);
+                exec.setEnvironment(null);
+                exec.setDirectory(null);
+                return exec;
+            } else
+            {
+                throw new Exception("Formatting error in job description '" + s + "'");
+            }
+        } catch (IOException e)
+        {
+            throw new Exception("Formatting error in job description '" + s + "': " + e);
+        }
+
+
+    }
+
+    public int min(int a, int b)
+    {
+        if (a<b)
+        {
+            return a;
+        } else
+            return b;
+    }
+
+    /*
+    public UserJob readUserJob(String fileName) throws Exception
+    {
+
+        try
+        {
+            //int nTasks = numTuples(fileName);
+            //NUM_TASKS = min(nTasks, num_execs);
+            int nTasks = NUM_TASKS = num_execs;
+
+
+
+            if (DEBUG) System.out.println("Will read " + NUM_TASKS + " tuples from disks!");
+
+            Executable[] execs = new Executable[nTasks];
+            //int[] tup = new int[10];
+            //if (DEBUG) System.out.println("Set the temporary storage to " + nTasks+1 + " tuples!");
+
+
+            BufferedReader in = new BufferedReader(new FileReader(fileName));
+            String str;
+            int i=0;
+            while ((str = in.readLine()) != null && i<nTasks)
+            {
+                execs[i] = processLine(str);
+                i++;
+            }
+            in.close();
+            if (DEBUG) System.out.println("Read " + i + " execs from disks!");
+
+            UserJob job = new UserJob();
+
+            String userID = "127.0.0.1";
+            try
+            {
+                userID = java.net.InetAddress.getLocalHost().getHostAddress();
+            } catch (Exception e)
+            {
+                if (DEBUG) System.out.println("ERROR: java.net.InetAddress.getLocalHost().getHostName() failed " + e);
+            }
+            userID += ":console";
+
+            job.setUserID(userID);
+            job.setPassword("");
+
+            //Executable execs[] = new Executable[1];
+            //execs[0] = exec;
+            job.setExecutables(execs);
+
+            //NUM_TASKS = 1;
+            //job.setNumExecs(NUM_TASKS);
+
+            if (DEBUG) System.out.println("Ready to send job of size " + NUM_TASKS + " tasks!");
+
+            return job;
+
+        } catch (IOException e)
+        {
+
+            //if (DEBUG) System.out.println("Error: " + e);
+            throw new Exception("Error in readUserJob(): " + e);
+            //      return null;
+        }
+    }
+    */
+
+    /*
+    public ResourceKey getKey(EndpointReferenceType epr)
+    {
+            return NotificationConsumerManager.getKey(epr); 
+    }
+    */
+
+    public EndpointReferenceType getEPR(ResourceKey key) throws Exception
+    {
+        String instanceURI = homeEPR.getAddress().toString();
+        return(EndpointReferenceType) AddressingUtils.createEndpointReference(instanceURI, key);
+    }
+
+    public EndpointReferenceType getEPR(FileInputStream fis) throws Exception
+    {
+        return(EndpointReferenceType) ObjectDeserializer.deserialize(new InputSource(fis),EndpointReferenceType.class);
+    }
+
+
+    public EndpointReferenceType createEPR(String factoryURI)
+    {
+        FactoryServiceAddressingLocator factoryLocator = new FactoryServiceAddressingLocator();
+
+        try
+        {
+            EndpointReferenceType factoryEPR, instanceEPR;
+            FactoryPortType gpFactory;
+
+            // Get factory portType
+            factoryEPR = new EndpointReferenceType();
+            factoryEPR.setAddress(new Address(factoryURI));
+            gpFactory = factoryLocator.getFactoryPortTypePort(factoryEPR);
+
+            // Create resource and get endpoint reference of WS-Resource
+            CreateResourceResponse createResponse = gpFactory
+                                                    .createResource(new CreateResource());
+            instanceEPR = createResponse.getEndpointReference();
+
+            System.out.println("Resource created succesful!");
+            return instanceEPR; 
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+    public EndpointReferenceType getEPR(String serviceURI) throws Exception
+    {
+        EndpointReferenceType epr = new EndpointReferenceType();
+        epr.setAddress(new Address(serviceURI));
+        return epr;
+    }
+
+
+    public GPPortType getGPPortType(EndpointReferenceType epr) throws Exception
+    {
+        GPServiceAddressingLocator instanceLocator = new GPServiceAddressingLocator();
+        return instanceLocator.getGPPortTypePort(epr);
+
+    }
+
+
+    public GPPortType getGPPortType() throws Exception
+    {
+        GPServiceAddressingLocator instanceLocator = new GPServiceAddressingLocator();
+        return instanceLocator.getGPPortTypePort(homeEPR);
+
+    }
+
+
+    public void parseArgs(String[] args) throws Exception
+    {
+        if (args.length < 1)
+        {
+            usage(args);
+            return;
+        }
+
+        int ctr;
+        for (ctr = 0; ctr < args.length; ctr++)
+        {
+            if (args[ctr].equals("-epr") && ctr + 1 < args.length)
+            {
+                ctr++;
+                fileEPR = new String(args[ctr]);
+                FileInputStream fis = new FileInputStream(fileEPR);
+                //homeEPR = (EndpointReferenceType) ObjectDeserializer.deserialize(new InputSource(fis),EndpointReferenceType.class);
+                homeEPR = getEPR(fis);
+
+                fis.close();
+            }
+            //must implement properly as a new resource would have to be created :(
+            else if (args[ctr].equals("-serviceURI") && ctr + 1 < args.length)
+            {
+                ctr++;
+                serviceURI = new String(args[ctr]);
+                //FileInputStream fis = new FileInputStream(fileEPR);
+                //homeEPR = (EndpointReferenceType) ObjectDeserializer.deserialize(new InputSource(fis),EndpointReferenceType.class);
+                homeEPR = getEPR(serviceURI);
+
+                //fis.close();
+            } else if (args[ctr].equals("-config") && ctr + 1 < args.length)
+            {
+                ctr++;
+                configFile = new String(args[ctr]);
+            } else if (args[ctr].equals("-path") && ctr + 1 < args.length)
+            {
+                ctr++;
+                path = new String(args[ctr]);
+            } else if (args[ctr].equals("-result") && ctr + 1 < args.length)
+            {
+                ctr++;
+                fileName = new String(args[ctr]);
+            } else if (args[ctr].equals("-job_description") && ctr + 1 < args.length)
+            {
+                ctr++;
+                jobDescriptionFile = new String(args[ctr]);
+            } else if (args[ctr].equals("-num_execs") && ctr + 1 < args.length)
+            {
+                ctr++;
+                num_execs = (new Integer(args[ctr])).intValue();
+            } else if (args[ctr].equals("-debug") )//&& ctr + 1 < args.length)
+            {
+                //ctr++;
+                DEBUG = true;
+            } else if (args[ctr].equals("-interactive") )//&& ctr + 1 < args.length)
+            {
+                //ctr++;
+                INTERACTIVE = true;
+
+            } else if (args[ctr].equals("-diperf") )//&& ctr + 1 < args.length)
+            {
+                //ctr++;
+                DIPERF = true;
+
+            }
+
+            else if (args[ctr].equals("-summary") )//&& ctr + 1 < args.length)
+            {
+                //ctr++;
+                SUMMARY = true;
+
+            }
+            else if (args[ctr].equals("-noinit") )//&& ctr + 1 < args.length)
+            {
+                //ctr++;
+                NOINIT = true;
+
+            }
+            /*
+            else if (args[ctr].equals("-authenticate"))
+            {
+                AUTHENTICATE = true;
+
+            } else if (args[ctr].equals("-authorize"))
+            {
+                AUTHORIZE = true;
+
+            } else if (args[ctr].equals("-encrypt"))
+            {
+                ENCRYPT = true;
+
+            } else if (args[ctr].equals("-sign"))
+            {
+                SIGN = true;
+
+            } else if (args[ctr].equals("-TSL"))
+            {
+                TSL = true;
+
+            } else if (args[ctr].equals("-MSG"))
+            {
+                MSG = true;
+
+            } else if (args[ctr].equals("-CONV"))
+            {
+                CONV = true;
+
+            }
+            */
+//            CLIENT_DESC
+
+            else if (args[ctr].equals("-CLIENT_DESC") && ctr + 1 < args.length)
+            {
+                ctr++;
+                CLIENT_DESC = new String(args[ctr]);
+            }
+            else if (args[ctr].equals("-MAX_EXECS_PER_WS") && ctr + 1 < args.length)
+            {
+                ctr++;
+                MAX_COM_PER_WS = (new Integer(args[ctr])).intValue();
+            }
+
+
+            else if (args[ctr].equals("-help") )//&& ctr + 1 < args.length)
+            {
+                //ctr++;
+                if (DEBUG) System.out.println("Help Screen:");
+                usage(args);
+
+            } else
+            {
+
+                System.out.println("ERROR: invalid parameter - " + args[ctr]);
+                System.out.println("Current parameters values:");
+                System.out.println("-epr " + fileEPR);
+                System.out.println("-serviceURI " + serviceURI);
+                System.out.println("-config " + configFile);
+                System.out.println("-path " + path);
+                System.out.println("-result " + fileName);
+                System.out.println("-job_description " + jobDescriptionFile);
+                System.out.println("-num_execs " + num_execs);
+                System.out.println("-debug " + DEBUG);
+                System.out.println("-diperf " + DIPERF);
+                System.out.println("-summary " + SUMMARY);
+
+
+
+                usage(args);
+            }
+        }
+
+    }
+
+
+    public void usage(String[] args)
+    {
+        System.out.println("Help Screen: ");
+        System.out.println("-fi <>");
+        System.out.println("-fo <>");
+        System.out.println("-fc <>");
+        System.out.println("-ft <>");
+        System.out.println("-nf <>");
+        System.out.println("-nr <>");
+        System.out.println("-fpi <>");
+        System.out.println("-fpo <>");
+        System.out.println("-x <>");
+        System.out.println("-y <>");
+        System.out.println("-h <>");
+        System.out.println("-w <>");
+        System.out.println("-i <>");
+        System.out.println("-o <>");
+        System.out.println("-d1 <>");
+        System.out.println("-d2 <>");
+        System.out.println("-gz <>");
+        System.out.println("-diperf <>");
+        System.out.println("-help <>");
+        System.exit(0);
+
+    }
+
+
+    public String getMachNamePort()
+    {
+
+        String machName = "";
+        //String machIP;
+        //Utility tools = new Utility();
+        try
+        {
+
+            //    int iPID = tools.pid();
+            //    String tPID = null;
+
+            //    if ( iPID < 0 || iPID > 65535) 
+            //    {
+            //        tPID = (new Integer(tools.rand())).toString();
+            //    }
+            //    else
+            //    {
+            //        tPID = (new Integer(iPID)).toString();
+
+            //    }
+
+            machName = java.net.InetAddress.getLocalHost().getCanonicalHostName();
+            machName = machName +  ":" + userNot.recvPort;
+            //machIP = java.net.InetAddress.getLocalHost().getHostAddress();
+            if (DEBUG) if (DIPERF == false) System.out.println("WORKER: Machine ID = " + machName);
+
+        } catch (Exception e)
+        {
+            if (DEBUG) if (DIPERF == false) System.out.println("WORKER: ERROR: java.net.InetAddress.getLocalHost().getHostName() failed " + e);
+        }
+        return machName;
+    }
+
+
+    public String waitForNotification() throws Exception
+    {
+        //boolean test = false;
+        //ResourceKey key = null;
+        //String key = null;
+        String taskID = null;
+
+        while (taskID == null)
+        {
+            try
+            {
+
+                //key = userNot.recv();
+                taskID = userNot.recvString();
+            } catch (Exception e)
+            {
+                System.out.println("exception received in notification recvString() " + e);
+                if (DEBUG) e.printStackTrace();
+
+            }
+
+            if (taskID == null)
+            {
+                    try
+                    {
+                        if (DEBUG) if (DIPERF == false) System.out.println("Notification received, but taskID was null :( sleeping 1000 ms and trying again...");
+
+                        Thread.sleep(1000);
+                    } catch (Exception e)
+                    {
+                        if (DEBUG) if (DIPERF == false) System.out.println("ERROR: sleep() " + e);
+
+                    }
+
+            } else
+            {
+                if (DEBUG) if (DIPERF == false) System.out.println("Received taskID = " + taskID);
+                return taskID;
+                //if (DEBUG) if (DIPERF == false) System.out.println("Received key = " + key);
+                //return getEPRfromKey(key);
+            }
+
+        }
+
+        return taskID;
+
+    }
+
+
+/*
+    <xsd:complexType name="Task">
+          <xsd:sequence>
+        <xsd:element name="fileName" type="xsd:string"/> 
+        <xsd:element name="tuple" type="tns:Tuple"/> 
+        <xsd:element name="x_coord" type="xsd:int"/> 
+        <xsd:element name="y_coord" type="xsd:int"/> 
+           </xsd:sequence>
+     </xsd:complexType>
+     */
+    String taskToString(Task task)
+    {
+        //String s = "[" + t.getFileName() + ", " + t.getX_coord() + "x" + t.getY_coord() + ", " + tupleToString(t.getTuple()) + "]";
+        //return s;
+
+        Executable exec = task.getExecutable();
+        String s = executableToString(exec);
+        s += "EXIT_CODE: " + task.getExitCode() + "\n";
+        s += "STDOUT:\n";
+        s += task.getStdout() + "\n";
+        s += "STDERR:\n";
+        s += task.getStderr() + "\n";
+
+        return s;
+
+
+
+
+
+    }
+
+/*
+    <xsd:complexType name="Tuple">
+          <xsd:sequence>
+        <xsd:element name="band" type="xsd:string"/> 
+        <xsd:element name="dec" type="xsd:double"/> 
+        <xsd:element name="ra" type="xsd:double"/> 
+           </xsd:sequence>
+     </xsd:complexType>
+     */
+    String executableToString(Executable exec)
+    {
+        String com = exec.getCommand();
+        String args[] = exec.getArguements();
+        String env[] = exec.getEnvironment();
+        String dir = exec.getDirectory();
+
+        String s = new String("Executing: ");
+        if (com != null)
+        {
+            s += com + " ";
+
+            if (args != null)
+            {
+
+                for (int i=0;i<args.length;i++)
+                {
+                    s += args[i] + " ";
+
+                } 
+                s += "\n";
+            } else
+                s += "\n";
+
+            s += "Environment:\n";
+            if (env != null)
+            {
+
+                for (int i=0;i<env.length;i++)
+                {
+                    s += env[i] + "\n";
+
+                }
+            } else
+            {
+                //s += "\n";
+            }
+
+            s += "Working Directory: ";
+            if (dir != null)
+            {
+
+                s += dir + "\n";
+            } else
+                s += "\n";
+
+
+        } else
+        {
+            s += "null\n";
+            s += "Environment: null\n";
+            s += "Working Directory: null\n";
+        }
+
+        return s;
+
+    }
+
+    public void main_run(String[] args)
+    {
+        GPPortType gp = null;
+
+        try
+        {
+
+
+
+            StopWatch sw = new StopWatch();
+            StopWatch lt = new StopWatch();
+
+            StopWatch jobTime = new StopWatch();
+            jobTime.start();
+
+
+            //sw.start();
+            //UserRun u = new UserRun();
+            //sw.stop();
+            //if (DEBUG) System.out.println("USER: Initialize User (" + sw.getElapsedTime() + "ms)");
+            //sw.reset();
+
+            sw.start();
+            parseArgs(args);
+            sw.stop();
+
+
+
+
+            //if (DEBUG) System.out.println("USER: v0.2 running on " + java.net.InetAddress.getLocalHost().getHostName());
+            //else
+            //    if (DIPERF == false && SUMMARY == false) System.out.println("User client v0.2 starting up...");
+
+            if (DEBUG) System.out.println("USER: Parse Arguements and Setup Corresponding State (" + sw.getElapsedTime() + "ms)");
+            if (DIPERF) System.out.println("USER:parseArgs(): " + sw.getElapsedTime() + " ms");
+            sw.reset();
+
+
+
+
+            int SO_TIMEOUT = 0;
+            userNot = new Notification(SO_TIMEOUT);
+            if (DEBUG) System.out.println("Notification initialized on port: " + userNot.recvPort);
+
+
+
+            sw.start();
+
+            machID = getMachNamePort(); 
+            sw.stop();
+            if (DEBUG)
+            {
+                System.out.println("WORKER: Get Machine Name (" + sw.getElapsedTime() + "ms)");
+            }
+
+            if (DIPERF) System.out.println("WORKER:getMachNamePort(): " + sw.getElapsedTime() + " ms");
+
+            if (DIPERF == false)
+            {
+                System.out.println("User " + machID + " started succesful!");
+            }
+            sw.reset();
+
+
+
+
+            sw.start();
+            // Get PortType
+            //GPPortType gp = instanceLocator
+            //		.getGPPortTypePort(instanceEPR);
+            gp = getGPPortType();
+
+            //boolean tttt = true;
+            if (CLIENT_DESC != null && (new File(CLIENT_DESC)).exists())
+            {
+                System.out.println("Setting appropriate security from file '" + CLIENT_DESC + "'!");
+                ((Stub)gp)._setProperty(Constants.CLIENT_DESCRIPTOR_FILE, CLIENT_DESC);
+
+
+            }
+            //else
+            //{
+            /*
+
+
+            if (AUTHORIZE)
+            {
+                //authorization
+                System.out.println("Enable authorization!");
+                ((Stub)gp)._setProperty(Constants.AUTHORIZATION,SelfAuthorization.getInstance());
+
+            } else
+            {
+                //no authorization
+                System.out.println("Disable authorization!");
+                ((Stub)gp)._setProperty(Constants.AUTHORIZATION,NoAuthorization.getInstance());
+            }
+
+            if (AUTHENTICATE)
+            {
+                //authentication
+                System.out.println("Enable authentication!");
+                ((Stub)gp)._setProperty(Constants.GSI_ANONYMOUS, Boolean.FALSE );
+            } else
+            {
+
+                //no authentication
+                System.out.println("Disable authentication!");
+                ((Stub)gp)._setProperty(Constants.GSI_ANONYMOUS, Boolean.TRUE );
+            }
+
+
+
+
+            if (SIGN)
+            {
+                if (CONV)
+                {
+                    //GSI Transport Conversation + Signature
+                    System.out.println("Use GSI Transport Conversation with Signature!");
+                    ((Stub)gp)._setProperty(Constants.GSI_SEC_CONV,Constants.SIGNATURE);
+                } else if (MSG)
+                {
+                    //GSI Transport Message + Signature
+                    System.out.println("Use GSI Transport Message with Signature!");
+                    ((Stub)gp)._setProperty(Constants.GSI_SEC_MSG,Constants.SIGNATURE);
+                } else if (TSL)
+                {
+                    //GSI (TSL) Transport Message + Signature
+                    System.out.println("Use GSI (TSL) Transport Message with Signature!");
+                    ((Stub)gp)._setProperty(GSIConstants.GSI_TRANSPORT, Constants.SIGNATURE);
+                }
+            }
+            else if (ENCRYPT)
+            {
+                if (CONV)
+                {
+                    //GSI Transport Conversation + Encryption
+                    System.out.println("Use GSI Transport Conversation with Encryption!");
+                    ((Stub)gp)._setProperty(Constants.GSI_SEC_CONV,Constants.ENCRYPTION);
+                } else if (MSG)
+                {
+                    //GSI Transport Message + Encryption
+                    System.out.println("Use GSI Transport Message with Encryption!");
+                    ((Stub)gp)._setProperty(Constants.GSI_SEC_MSG,Constants.ENCRYPTION);
+
+                    Subject subject = new Subject();
+                    X509Certificate serverCert = CertUtil.loadCertificate("/home/iraicu/.globus/usercert.pem");
+                    EncryptionCredentials encryptionCreds = new EncryptionCredentials(new X509Certificate[] { serverCert });
+                    subject.getPublicCredentials().add(encryptionCreds);
+                    ((Stub)gp)._setProperty(Constants.PEER_SUBJECT, subject);
+
+                } else if (TSL)
+                {
+                    //GSI (TSL) Transport Message + Encryption
+                    System.out.println("Use GSI (TSL) Transport Message with Encryption!");
+                    ((Stub)gp)._setProperty(GSIConstants.GSI_TRANSPORT, Constants.ENCRYPTION);
+                }
+            }
+            else
+            {
+
+                if (CONV)
+                {
+                    //GSI Transport Conversation + Encryption
+                    System.out.println("Use GSI Transport Conversation!");
+                    ((Stub)gp)._setProperty(Constants.GSI_SEC_CONV,Constants.NONE);
+                } else if (MSG)
+                {
+                    //GSI Transport Message + Encryption
+                    System.out.println("Use GSI Transport Message!");
+                    ((Stub)gp)._setProperty(Constants.GSI_SEC_MSG,Constants.NONE);
+                } else if (TSL)
+                {
+                    //GSI (TSL) Transport Message + Encryption
+                    System.out.println("Use GSI (TSL) Transport Message!");
+                    ((Stub)gp)._setProperty(GSIConstants.GSI_TRANSPORT, Constants.NONE);
+                }
+            }
+
+            */
+            //}
+
+            this.Ggp = gp;
+
+
+
+            sw.stop();
+            if (DEBUG) System.out.println("USER: Get ProtType (" + sw.getElapsedTime() + "ms)");
+            if (DIPERF) System.out.println("USER:getGPPortType(): " + sw.getElapsedTime() + " ms");
+
+            sw.reset();
+
+
+            //populate the job description...
+
+            if (DEBUG) System.out.println("USER: Reading User Job Description from file '" + jobDescriptionFile + "'...");
+            sw.start();
+
+            //UserJob job = new UserJob(readUserJob(jobDescriptionFile));
+
+            if (INTERACTIVE == false)
+            {
+                System.out.println("Starting non-interactive mode....");
+
+                System.out.println("Reading file: " + jobDescriptionFile + "... ");
+                int numExecs = 0;
+                String execs[] = null;
+                try
+                {
+                    numExecs = Math.min(numTuples(jobDescriptionFile), num_execs);
+                    execs = new String[numExecs];
+                    int execsIndex = 0;
+
+                    BufferedReader in2 = new BufferedReader(new FileReader(jobDescriptionFile));
+                    String exec;
+                    while ((exec = in2.readLine()) != null && execsIndex < numExecs)
+                    {
+                        execs[execsIndex++] = new String(exec);
+                    }
+                    in2.close();
+                } catch (Exception e)
+                {
+                    System.out.println("Error in reading file: " + jobDescriptionFile + "... :" + e);
+                    e.printStackTrace();
+
+                }
+
+
+                if (numExecs > 0)
+                {
+
+                    if (!NOINIT)
+                    {
+                    
+                    sw.start();
+                    Init initObject = new Init();
+                    initObject.setValid(true);
+                    initObject.setMachID(machID);
+                    InitResponse ir = gp.init(initObject);
+
+                    sw.stop();
+                    if (ir.isValid())
+                    {
+
+                        if (!DIPERF) System.out.println("Initialized GenericPortal (" + sw.getElapsedTime() + ")");
+                    } else
+                    {
+                        System.out.println("Failed to initialize GenericPortal (" + sw.getElapsedTime() + "), exiting...");
+                        System.exit(0);
+                    }
+                    sw.reset();
+                    }
+
+
+                    System.out.println("Processing " + numExecs + " executables... ");
+                    long sTime = System.currentTimeMillis();
+                    String results[] = doExecutables(execs);
+                    long eTime = System.currentTimeMillis();
+                    System.out.println("Executables completed in " + (eTime - sTime) + " ms");
+                    if (DEBUG)
+                    {
+
+                    System.out.print("Results: ");
+                    if (results != null)
+                    {
+
+                        for (int k=0;k<results.length;k++)
+                        {
+                            System.out.println(results[k]);
+                        }
+
+
+                    } else
+                        System.out.println("null");
+                    }
+                } else
+                    System.out.println("There were no commands to process... probably there was nothing in the file...");
+
+
+                /*
+
+                UserJob job = readUserJob(jobDescriptionFile);
+
+
+                String userID = "127.0.0.1";
+                try
+                {
+                    userID = java.net.InetAddress.getLocalHost().getHostAddress();
+                } catch (Exception e)
+                {
+                    System.out.println("ERROR: java.net.InetAddress.getLocalHost().getHostName() failed " + e);
+                }
+
+                job.setUserID(userID);
+                job.setPassword("");
+                //job.setHeight(HEIGHT);
+                //job.setWidth(WIDTH);
+
+                sw.stop();
+                if (DEBUG) System.out.println("USER: Read User Job Description from file '" + jobDescriptionFile + "' succesful! (" + sw.getElapsedTime() + "ms)");
+                else
+                    if (DIPERF == false && SUMMARY == false) System.out.println("Ready to send job of size " + NUM_TASKS + " tasks!");
+
+                if (DIPERF) System.out.println("USER:readUserJob(): " + sw.getElapsedTime() + " ms");
+                sw.reset();
+
+                if (!DIPERF) System.out.println("Initializing SkyServerWS...");
+
+                sw.start();
+                Init initObject = new Init();
+                initObject.setValid(true);
+                initObject.setMachID(machID);
+                InitResponse ir = gp.init(initObject);
+
+                sw.stop();
+                if (ir.isValid())
+                {
+
+                    if (!DIPERF) System.out.println("Initialized SkyServerWS (" + sw.getElapsedTime() + ")");
+                } else
+                {
+                    System.out.println("Failed to initialize SkyServerWS (" + sw.getElapsedTime() + "), exiting...");
+                    System.exit(0);
+                }
+                sw.reset();
+
+
+
+
+                //for (int iter=0;iter<1;iter++)
+                //{
+                UserJob jobs[] = new UserJob[1];
+                jobs[0] = job;
+                sendJobs(jobs);
+
+                //sendJob(job);
+
+                jobTime.stop();
+                if (DIPERF)
+                {
+
+                    //System.out.println("Time " + lt.getElapsedTime() + " NUM_TASKS " + NUM_TASKS + " numImagesStacked " + numImagesStacked + " numTasksFailed " + numTasksFailed + " numTuplesFailed " + numTuplesFailed);
+                    System.out.println("USER:JobTime: " + jobTime.getElapsedTime() + " ms");
+                    //System.out.println("USER:JobTime: " + lt.getElapsedTime() + " ms");
+
+                }
+                */
+
+            } else
+            {
+                if (!NOINIT)
+                {
+
+                sw.start();
+                Init initObject = new Init();
+                initObject.setValid(true);
+                initObject.setMachID(machID);
+                InitResponse ir = gp.init(initObject);
+                sw.stop();
+                if (ir.isValid())
+                {
+
+                    if (!DIPERF) System.out.println("Initialized GenericPortalWS (" + sw.getElapsedTime() + ")");
+                } else
+                {
+                    System.out.println("Failed to initialize GenericPortalWS (" + sw.getElapsedTime() + "), exiting...");
+                    System.exit(0);
+                }
+                sw.reset();
+                }
+
+                console = new Console(this);
+                console.start();
+
+
+                console.join();
+                System.out.println("Console thread finished...");
+
+            }
+
+            System.out.println("DeInit...");
+
+            sw.start();
+
+
+            if (!NOINIT)
+            {
+            
+            DeInit deInit = new DeInit();
+            deInit.setValid(true);
+            DeInitResponse dr = gp.deInit(deInit);
+            sw.stop();
+            if (dr.isValid())
+            {
+
+                System.out.println("DeInit GenericPortalWS (" + sw.getElapsedTime() + ")");
+            } else
+            {
+                System.out.println("Failed to deInit GenericPortalWS (" + sw.getElapsedTime() + ")");
+                //System.exit(0);
+            }
+            sw.reset();
+            }
+
+            //}
+
+            //if ((userJob == false || userResult == false) && (sleepErrorRetry >= sleepErrorRetryMax))
+            //    System.out.println("Cannot find GenericPortal WebService... timed out after " + sleepTime/1000.0 + "seconds... try running the user client again on the same EPR file, the results will not be deleted until they are retrieved from the GP WS... exiting :(");
+
+        } catch (Exception e)
+        {
+            System.out.println("Fatal ERROR main(): " + e.getMessage());
+            e.printStackTrace();
+            //sw.start();
+
+            try
+            {
+                if (!NOINIT)
+                {
+                
+                DeInitResponse dr = gp.deInit(new DeInit(new Boolean("true")));
+                //sw.stop();
+                if (dr.isValid())
+                {
+
+                    if (!DIPERF) System.out.println("DeInit GenericPortalWS");// (" + sw.getElapsedTime() + ")");
+                } else
+                {
+                    System.out.println("Failed to deInit GenericPortalWS");// (" + sw.getElapsedTime() + ")");
+                    //System.exit(0);
+                }
+                }
+            } catch (Exception ee)
+            {
+                System.out.println("Fatal ERROR DeInit(): " + ee.getMessage());
+                ee.printStackTrace();
+            }
+
+            // sw.reset();
+        }
+
+
+
+    }
+
+
+    private boolean getUserResultAvailable(GPPortType gp, long ET) throws Exception
+    {
+        int GPWS_qLength = 0;
+        int GPWS_activeTasks = 0;
+        int GPWS_numWorkers = 0;
+        int completedTasks = 0;
+        int queuedTask = 0;
+        int activeTask = 0;
+
+
+/*
+        <xsd:element name="StatusUserResponse">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="queueLength" type="xsd:int"/>
+                    <xsd:element name="activeTasks" type="xsd:int"/>
+                    <xsd:element name="queuedTask" type="xsd:int"/>
+                    <xsd:element name="activeTask" type="xsd:int"/>
+                    <xsd:element name="numWorkers" type="xsd:int"/>
+                    <xsd:element name="numWorkerResults" type="xsd:int"/>
+                    <xsd:element name="valid" type="xsd:boolean"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+        */
+
+        if (DEBUG) System.out.println("Retrieving GPWS_USER status...");
+        StatusUser stat = new StatusUser("");
+        StatusUserResponse sur = gp.statusUser(stat);
+        if (sur.isValid())
+        {
+            GPWS_qLength = sur.getQueueLength();
+            GPWS_activeTasks = sur.getActiveTasks();
+            GPWS_numWorkers = sur.getNumWorkers();
+
+            completedTasks = sur.getNumWorkerResults();
+            queuedTask = sur.getQueuedTask();
+            activeTask = sur.getActiveTask();
+            //if (DIPERF == false && SUMMARY == false) System.out.println(lt.getElapsedTime()*1.0/1000.0 + ": qLength=" + status_qLength + " activeTask=" + status_activeStacks + " numWorkers=" + status_numWorkers);
+        } else
+        {
+            if (DEBUG) System.out.println("State was not valid, trying again...");
+        }
+
+
+        if (GPWS_qLength!=old_GPWS_qLength || GPWS_activeTasks!=old_GPWS_activeTasks || GPWS_numWorkers!=old_GPWS_numWorkers || completedTasks!=old_completedTasks || queuedTask!=old_queuedTask || activeTask!=old_activeTask)
+        {
+
+            //if (DIPERF == false && SUMMARY == false) System.out.println("Time=" + ET*1.0/1000.0 + " queuedStacks=" + queuedStacks + " activeStacks=" + activeStacks + " completedStacks=" + completedStacks + " allStacks=" + NUM_TASKS + " %completed=" + completedStacks*100.0/NUM_TASKS + " GPWS_queuedStacks=" + GPWS_qLength + " GPWS_activeStacks=" + GPWS_activeStacks + " GPWS_activeResources=" + GPWS_numWorkers);
+            if (SUMMARY == false) System.out.println("Time=" + ET*1.0/1000.0 + " queuedTask=" + queuedTask + " activeTask=" + activeTask + " completedTasks=" + completedTasks + " allTasks=" + NUM_TASKS + " %completed=" + completedTasks*100.0/NUM_TASKS + " ETA=" + ((ET*1.0/1000.0)*100.0/(completedTasks*100.0/NUM_TASKS)-(ET*1.0/1000.0)) +  " GPWS_queuedTasks=" + GPWS_qLength + " GPWS_activeTasks=" + GPWS_activeTasks + " GPWS_activeResources=" + GPWS_numWorkers);
+        }
+
+        old_GPWS_qLength = GPWS_qLength;
+        old_GPWS_activeTasks = GPWS_activeTasks;
+        old_GPWS_numWorkers = GPWS_numWorkers;
+        old_completedTasks = completedTasks;
+        old_queuedTask = queuedTask;
+        old_activeTask = activeTask;
+
+
+
+
+        if (completedTasks == NUM_TASKS)
+        {
+            return true;
+        } else
+        {
+
+            return false;
+        }
+
+
+    }
+
+
+    /*
+    public String sendJob(UserJob job)
+    {
+
+        StopWatch sw = new StopWatch();
+        StopWatch lt = new StopWatch();
+        String finalResultString = new String("sendJob() output:\n");
+
+        boolean userJob = false;
+        boolean userResult = false;
+
+        int sleepErrorRetry = 1000;
+        int sleepErrorRetryMax = 1000;
+        int sleepErrorRetryStep = 1000;
+        int pollStep = 100;
+        int sleepTime = 0;
+
+        //System.out.print("Iteration " + iter + ": ");
+
+        if (Ggp == null)
+        {
+            System.out.println("GenericPortalWS not initialized properly... exiting!");
+            System.exit(0);
+        }
+
+        lt.reset();
+        lt.start();
+
+        while ((userJob == false || userResult == false) && (sleepErrorRetry <= sleepErrorRetryMax))
+        {
+            try
+            {
+
+                if (userJob == false)
+                {
+
+                    //try
+                    //{
+
+                    sw.start();
+                    UserJobResponse jobRP = Ggp.userJob(job);
+                    //boolean jobRP = gp.userJob(job);
+
+                    sw.stop();
+                    if (jobRP.isValid())
+                    {
+                        if (DEBUG) System.out.println("USER: Job submitted succesfully (" + sw.getElapsedTime() + "ms)");
+                        else
+
+                            if (DIPERF == false && SUMMARY == false) System.out.println("Job submited succesful!");
+                        userJob = true;
+
+                    } else
+                    {
+
+                        if (DEBUG) System.out.println("USER: Job submition failed (" + sw.getElapsedTime() + "ms)");
+                        else
+
+                            System.out.println("Job submition failed :(");
+                    }
+                    if (DIPERF) System.out.println("USER:userJob(job): " + sw.getElapsedTime() + " ms");
+
+                    /*try {
+                            BufferedWriter out = new BufferedWriter(new FileWriter("/home/iraicu/java/GenericClient.1.1/WScall_perf.txt", true));
+                            out.write(NUM_TASKS + " " + sw.getElapsedTime() + "\n");
+                            out.close();
+                        } catch (IOException e) {
+                        }
+                        * /
+
+                    sw.reset();
+                    //}
+                    //catch (Exception e)
+                    //{
+                    //     if (DEBUG) System.out.println("USER: Error in sending userJob(): " + e);
+                    //}
+                } else
+                {
+
+                }
+
+
+
+                while (userJob == true && userResultAvailable == false)
+                {
+                    //try
+                    //{
+
+                    sw.start();
+                    // Perform status
+                    //gp.status(numJobs);
+                    userResultAvailable = getUserResultAvailable(Ggp, lt.getElapsedTime());
+                    sw.stop();
+                    if (userResultAvailable)
+                    {
+
+                        if (DIPERF == false && SUMMARY == false) System.out.println("Results available for retrieval...");
+                    } else
+                    {
+                        int curPollStep = pollStep;
+                        if (lt.getElapsedTime() >= 1000)
+                        {
+                            curPollStep = pollStep*10;
+                        }
+
+                        if (DEBUG) System.out.println("USER: No results availble yet, trying again in " + curPollStep +" ms (" + sw.getElapsedTime() + "ms)");
+                        Thread.sleep(curPollStep);
+
+                        if (DIPERF) System.out.println("USER:sleep(): " + curPollStep + " ms");
+                    }
+                    if (DIPERF) if (DEBUG) System.out.println("USER:getUserResultAvailable(): " + sw.getElapsedTime() + " ms");
+
+                    sw.reset();
+
+
+                    // Print resource properties
+
+                    //printResourceProperties(gp);
+
+                    //this should be replaced by some notification mechanism
+                    // }
+                    // catch (Exception e)
+                    // {
+                    //     if (DEBUG) System.out.println("USER: Error in sending userJob(): " + e);
+                    //}
+
+                }
+
+                if (userJob == true && userResultAvailable == true && userResult == false)
+                {
+                    //  try
+                    //  {
+
+                    sw.start();
+                    //UserResultResponse resultRP = gp.userResult(new UserResult(true));
+                    UserResult ur = new UserResult();
+                    ur.setValid(true);
+                    ur.setMax_per_call(1);
+                    //ur.setIds(...);
+
+                    UserResultResponse resultRP = Ggp.userResult(ur);
+
+                    /*
+                    <xsd:element name="valid" type="xsd:boolean"/>
+                    <xsd:element name="ids" type="xsd:string"
+                     minOccurs="0" maxOccurs="unbounded"/>   
+                    <xsd:element name="max_per_call" type="xsd:int"/>
+                    * /
+
+                    //this doesn't seem to be correct...
+                    //UserResultResponse resultRP = gp.userResult(new UserResult());
+                    sw.stop();
+
+                    if (DIPERF) System.out.println("USER:userResult(): " + sw.getElapsedTime() + " ms");
+                    sw.reset();
+
+
+                    sw.start();
+                    if (resultRP.isValid())
+                    {
+
+
+                        lt.stop();
+
+                        if (DIPERF == false && SUMMARY == false) if (DEBUG) System.out.println("Received results in " + lt.getElapsedTime() + "ms");
+                        if (DIPERF == false && SUMMARY == false) if (DEBUG) System.out.println("Total number of tasks requested " + NUM_TASKS);
+
+                        int numTasks = resultRP.getNumTasks();
+
+
+                        Task[] tasks = null;
+                        if (numTasks > 0)
+                        {
+
+                            tasks = resultRP.getTasks();
+                        }
+
+
+                        if (numTasks > 0)
+                        {
+
+                            for (int i=0;i<tasks.length;i++)
+                            {
+                                finalResultString += taskToString(tasks[i]);
+                                //System.out.println(tasksX[i].getErrorMsg() + " " + failedCounter++ + ": " + taskToString(tasksX[i]));
+                            }
+                        }
+                        userResult = true;
+
+                        if (SUMMARY)
+                        {
+                            System.out.println("Time " + lt.getElapsedTime() + " NUM_TASKS " + NUM_TASKS);
+
+                        }
+                    } else
+                    {
+
+                        //if (DEBUG) System.out.println("USER: Received results failed (" + sw.getElapsedTime() + "ms)... trying again in 1 sec...");
+                        Thread.sleep(1000);
+
+                        if (DIPERF) System.out.println("USER:sleep(): 1000 ms");
+                    }
+                    sw.stop();
+
+                    if (DIPERF) System.out.println("USER:processResult(): " + sw.getElapsedTime() + " ms");
+                    sw.reset();
+
+                    // }
+                    // catch (Exception e)
+                    // {
+                    //      if (DEBUG) System.out.println("USER: Error in sending userJob(): " + e);
+                    // }
+                }
+
+
+
+                sleepErrorRetry = sleepErrorRetryStep;
+                sleepTime = 0;
+
+            } catch (Exception e)
+            {
+                if (DEBUG) System.out.println("USER: ERROR while(): " + e.getMessage());
+                e.printStackTrace();
+                sleepErrorRetry += sleepErrorRetryStep;
+                sleepTime += sleepErrorRetry;
+                try
+                {
+                    Thread.sleep(sleepErrorRetry);
+                } catch (Exception ee)
+                {
+                    if (DEBUG) System.out.println("USER: ERROR in catch(): " + e.getMessage());
+
+                }
+
+
+                if (DIPERF) System.out.println("USER:sleep(): " + sleepErrorRetry + " ms");
+
+                return finalResultString;
+            }
+
+
+
+        }
+        return finalResultString;
+    }  */
+
+
+    public String[] sendJobs(UserJob jobs[])
+    {
+        resultsRetrieved = false;
+
+        if (DEBUG) System.out.println("USER: sendJobs() of size " + jobs.length);
+        StopWatch sw = new StopWatch();
+        StopWatch lt = new StopWatch();
+        //String finalResultString = new String("sendJob() output:\n");
+        finalResultStrings = new String[NUM_TASKS];
+        //finalResultString
+
+        boolean userJob = false;
+        boolean userResult = false;
+        boolean userResultAvailable = false;
+
+        int sleepErrorRetry = 1000;
+        int sleepErrorRetryMax = 1000;
+        int sleepErrorRetryStep = 1000;
+        int pollStep = 100;
+        int sleepTime = 0;
+
+        //System.out.print("Iteration " + iter + ": ");
+        lt.reset();
+        lt.start();
+
+        //GetStatus gs = null;
+        GetResults gr = null;
+
+        if (Ggp == null)
+        {
+            System.out.println("GenericPortalWS not initialized properly... exiting!");
+            System.exit(0);
+        } else
+        {
+            //gs = new GetStatus(this, Ggp, lt);
+            //gs.start();
+
+            gr = new GetResults(this, Ggp, lt);
+            gr.start();
+        }
+
+
+        //while ((userJob == false || userResult == false) && (sleepErrorRetry <= sleepErrorRetryMax))
+        while ((userJob == false) && (sleepErrorRetry <= sleepErrorRetryMax))
+        {
+            try
+            {
+
+                for (int i=0;i<jobs.length;i++)
+                {
+
+                    if (userJob == false)
+                    {
+
+                        //try
+                        //{
+
+
+                        sw.start();
+                        if (DEBUG) System.out.println("USER: Submitting job " + i + " ... expected number of executables " + NUM_TASKS + "");
+
+                        UserJobResponse jobRP = Ggp.userJob(jobs[i]);
+
+
+                        //boolean jobRP = gp.userJob(job);
+
+                        sw.stop();
+                        if (jobRP.isValid())
+                        {
+                            if (DEBUG) System.out.println("USER: Job submitted succesfully (" + sw.getElapsedTime() + "ms)");
+                            else
+
+                                if (DIPERF == false && SUMMARY == false) System.out.println("SEND: " + lt.getElapsedTime()*1.0/1000.0 + " : job " + i + " of " + jobs.length + " , " + NUM_TASKS + " tasks submited succesful in " + sw.getElapsedTime() + " ms!");
+
+                            if (i == jobs.length - 1)
+                            {
+
+                                userJob = true;
+                            }
+
+                        } else
+                        {
+
+                            if (DEBUG) System.out.println("USER: Jobs submition failed (" + sw.getElapsedTime() + "ms)");
+                            else
+
+                                System.out.println("Job submition failed :(");
+                        }
+                        if (DIPERF) System.out.println("USER:userJob(job): " + sw.getElapsedTime() + " ms");
+
+                        /*try {
+                                BufferedWriter out = new BufferedWriter(new FileWriter("/home/iraicu/java/GenericClient.1.1/WScall_perf.txt", true));
+                                out.write(NUM_TASKS + " " + sw.getElapsedTime() + "\n");
+                                out.close();
+                            } catch (IOException e) {
+                            }
+                            */
+
+                        sw.reset();
+
+                        //}
+                        //catch (Exception e)
+                        //{
+                        //     if (DEBUG) System.out.println("USER: Error in sending userJob(): " + e);
+                        //}
+                    } else
+                    {
+
+                    }
+
+                }
+
+
+                //wait for status thread to terminate...
+                //gs.join();
+
+                //if (userJob == true && userResultAvailable == true)
+                //{
+                //    System.out.println("Results ready to be picked up!");
+                //} else
+                //{
+                //    System.out.println("Results not ready to be picked up, but the status thread exited :(... the retrieval process will likely fail...");
+
+                //}
+
+                //if (userJob == true && userResultAvailable == true && userResult == false)
+
+
+
+
+                sleepErrorRetry = sleepErrorRetryStep;
+                sleepTime = 0;
+
+            } catch (Exception e)
+            {
+                if (DEBUG) System.out.println("USER: ERROR while(): " + e.getMessage());
+                e.printStackTrace();
+                sleepErrorRetry += sleepErrorRetryStep;
+                sleepTime += sleepErrorRetry;
+                try
+                {
+                    Thread.sleep(sleepErrorRetry);
+                } catch (Exception ee)
+                {
+                    if (DEBUG) System.out.println("USER: ERROR in catch(): " + e.getMessage());
+
+                }
+
+
+                if (DIPERF) System.out.println("USER:sleep(): " + sleepErrorRetry + " ms");
+
+                return finalResultStrings;
+            }
+
+
+
+        }
+
+        try
+        {
+            System.out.println("USER: finished sending tasks!");
+
+            //System.out.println("USER: waiting for getStatus thread to terminate...");
+            //gs.join();
+            System.out.println("USER: waiting for getResults thread to terminate...");
+            gr.join();
+            System.out.println("USER: all threads terminated!");
+        } catch (Exception e)
+        {
+            if (DEBUG) System.out.println("USER: ERROR in waiting for threads to terminate...: " + e.getMessage());
+
+        }
+        resultsRetrieved = true;
+        lt.stop();
+        System.out.println("Received all results in " + lt.getElapsedTime() + " ms");
+        return finalResultStrings;
+    }
+
+    public static void main(String[] args) 
+    {
+        UserRun client = new UserRun();
+        client.main_run(args);
+    }
+}
+
+
+class GetStatus extends Thread 
+{
+    //Logger logger = Logger.getLogger("impl.GetStatus");
+
+    private UserRun user = null;
+    private GPPortType gp = null;
+
+
+    public static int old_GPWS_qLength = 0;
+    public static int old_GPWS_activeTasks = 0;
+    public static int old_GPWS_numWorkers = 0;
+    public static int old_completedTasks = 0;
+    public static int old_queuedTask = 0;
+    public static int old_activeTask = 0;
+    public StopWatch lt = null;
+
+
+    public GetStatus(UserRun user, GPPortType gp, StopWatch lt)
+    {
+        this.user = user;
+        this.gp = gp;
+        this.lt = lt;
+
+    }
+
+
+    private boolean getUserResultAvailable(long ET) throws Exception
+    {
+        int GPWS_qLength = 0;
+        int GPWS_activeTasks = 0;
+        int GPWS_numWorkers = 0;
+        int completedTasks = 0;
+        int queuedTask = 0;
+        int activeTask = 0;
+
+
+/*
+        <xsd:element name="StatusUserResponse">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="queueLength" type="xsd:int"/>
+                    <xsd:element name="activeTasks" type="xsd:int"/>
+                    <xsd:element name="queuedTask" type="xsd:int"/>
+                    <xsd:element name="activeTask" type="xsd:int"/>
+                    <xsd:element name="numWorkers" type="xsd:int"/>
+                    <xsd:element name="numWorkerResults" type="xsd:int"/>
+                    <xsd:element name="valid" type="xsd:boolean"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+        */
+
+        if (user.DEBUG) System.out.println("Retrieving GPWS_USER status...");
+        StatusUser stat = new StatusUser("");
+        StatusUserResponse sur = gp.statusUser(stat);
+        if (sur.isValid())
+        {
+            GPWS_qLength = sur.getQueueLength();
+            GPWS_activeTasks = sur.getActiveTasks();
+            GPWS_numWorkers = sur.getNumWorkers();
+
+            completedTasks = sur.getNumWorkerResults();
+            queuedTask = sur.getQueuedTask();
+            activeTask = sur.getActiveTask();
+            //if (DIPERF == false && SUMMARY == false) System.out.println(lt.getElapsedTime()*1.0/1000.0 + ": qLength=" + status_qLength + " activeTask=" + status_activeStacks + " numWorkers=" + status_numWorkers);
+        } else
+        {
+            if (user.DEBUG) System.out.println("State was not valid, trying again...");
+        }
+
+
+        if (GPWS_qLength!=old_GPWS_qLength || GPWS_activeTasks!=old_GPWS_activeTasks || GPWS_numWorkers!=old_GPWS_numWorkers || completedTasks!=old_completedTasks || queuedTask!=old_queuedTask || activeTask!=old_activeTask)
+        {
+
+            //if (DIPERF == false && SUMMARY == false) System.out.println("Time=" + ET*1.0/1000.0 + " queuedStacks=" + queuedStacks + " activeStacks=" + activeStacks + " completedStacks=" + completedStacks + " allStacks=" + NUM_TASKS + " %completed=" + completedStacks*100.0/NUM_TASKS + " GPWS_queuedStacks=" + GPWS_qLength + " GPWS_activeStacks=" + GPWS_activeStacks + " GPWS_activeResources=" + GPWS_numWorkers);
+            if (user.SUMMARY == false) System.out.println("PROCESS: Time=" + ET*1.0/1000.0 + " queuedTask=" + queuedTask + " activeTask=" + activeTask + " completedTasks=" + completedTasks + " allTasks=" + user.NUM_TASKS + " %completed=" + completedTasks*100.0/user.NUM_TASKS + " ETA=" + ((ET*1.0/1000.0)*100.0/(completedTasks*100.0/user.NUM_TASKS)-(ET*1.0/1000.0)) +  " GPWS_queuedTasks=" + GPWS_qLength + " GPWS_activeTasks=" + GPWS_activeTasks + " GPWS_activeResources=" + GPWS_numWorkers);
+        }
+
+        old_GPWS_qLength = GPWS_qLength;
+        old_GPWS_activeTasks = GPWS_activeTasks;
+        old_GPWS_numWorkers = GPWS_numWorkers;
+        old_completedTasks = completedTasks;
+        old_queuedTask = queuedTask;
+        old_activeTask = activeTask;
+
+
+
+
+        //if (completedTasks == user.NUM_TASKS && GPWS_numWorkers == 0)
+        if (completedTasks == user.NUM_TASKS)
+        {
+            if (user.DEBUG) System.out.println("getUserResultAvailable() done successfully!!!");
+            return true;
+        } else
+        {
+            if (user.DEBUG) System.out.println("getUserResultAvailable() is still not done... " + completedTasks + " != " +  user.NUM_TASKS);// +" and " + GPWS_numWorkers + " != 0");
+            return false;
+        }
+
+
+    }
+
+    public void run()
+    {
+        //StopWatch lt = new StopWatch();
+        StopWatch sw = new StopWatch();
+        //lt.start();
+
+        int pollStep = 100;
+
+
+        while (user.userResultAvailable == false)
+        {
+
+            try
+            {
+
+
+                sw.start();
+                // Perform status
+                //gp.status(numJobs);
+                user.userResultAvailable = getUserResultAvailable(lt.getElapsedTime());
+                sw.stop();
+                //if (user.userResultAvailable)
+                //{
+
+                //    if (user.DIPERF == false && user.SUMMARY == false) System.out.println("Results available for retrieval...");
+                //    break;
+                //} else
+                //{
+                int curPollStep = pollStep;
+                if (lt.getElapsedTime() >= 1000)
+                {
+                    curPollStep = pollStep*10;
+                }
+
+                if (user.DEBUG) System.out.println("USER: No results availble yet, trying again in " + curPollStep +" ms (" + sw.getElapsedTime() + "ms)");
+                Thread.sleep(curPollStep);
+
+                if (user.DIPERF) System.out.println("USER:sleep(): " + curPollStep + " ms");
+                //}
+                if (user.DIPERF) if (user.DEBUG) System.out.println("USER:getUserResultAvailable(): " + sw.getElapsedTime() + " ms");
+
+                sw.reset();
+
+
+                // Print resource properties
+
+                //printResourceProperties(gp);
+
+                //this should be replaced by some notification mechanism
+            } catch (Exception e)
+            {
+                if (user.DEBUG) System.out.println("USER: Error in GetStatus() thread: " + e);
+            }
+
+        }
+
+
+
+    }
+
+}
+
+
+class GetResults extends Thread 
+{
+    //Logger logger = Logger.getLogger("impl.GetStatus");
+
+    private UserRun user = null;
+    private GPPortType Ggp = null;
+
+    public StopWatch lt = null;
+
+
+    public GetResults(UserRun user, GPPortType Ggp, StopWatch lt)
+    {
+        this.user = user;
+        this.Ggp = Ggp;
+        this.lt = lt;
+
+    }
+
+
+    public void run()
+    {
+
+
+        System.out.println("GetResults Thread started...");
+        StopWatch sw = new StopWatch();
+        int pollStep = 100;
+
+        boolean userResult = false;
+
+        int resIndex = 0;
+
+
+        //while (userResult == false)
+        //{
+
+            //if (userJob == true && userResult == false)
+            //{
+            //  try
+            //  {
+
+            int receivedTasks = 0;
+            while (receivedTasks < user.NUM_TASKS)
+            {
+
+
+
+                sw.start();
+                if (user.DEBUG) System.out.println("Waiting for results...");
+
+                try
+                {
+                
+                    //EndpointReferenceType notificationEPR = user.waitForNotification();
+                    String taskID = user.waitForNotification();
+                }
+                catch (Exception ee)
+                {
+                    System.out.println("Error in receiving notification: " + ee);
+                    ee.printStackTrace();
+                    //should do something here...
+
+                }
+
+                sw.stop();
+                if (user.DEBUG) System.out.println("WORKER: waitForNotification (" + sw.getElapsedTime() + "ms)");
+                sw.reset();
+
+
+                if (user.retrieveResult)
+                {
+                
+                sw.start();
+                //UserResultResponse resultRP = gp.userResult(new UserResult(true));
+                UserResultResponse resultRP = null;
+
+
+                try
+                {
+                    UserResult ur = new UserResult();
+                    ur.setValid(true);
+                    ur.setMax_per_call(1);
+                    //ur.setIds(...);
+
+                    resultRP = Ggp.userResult(ur);
+
+
+                    //resultRP = Ggp.userResult(new UserResult(true));
+                } catch (Exception e)
+                {
+                    if (user.DEBUG) System.out.println("USER: Error in GetResults() thread: " + e);
+
+                }
+                //this doesn't seem to be correct...
+                //UserResultResponse resultRP = gp.userResult(new UserResult());
+                sw.stop();
+
+                if (user.DIPERF) System.out.println("USER:userResult(): " + sw.getElapsedTime() + " ms");
+                long WScallTime = sw.getElapsedTime();
+                sw.reset();
+
+
+                sw.start();
+                if (resultRP.isValid())
+                {
+
+
+
+
+                    if (user.DIPERF == false && user.SUMMARY == false) if (user.DEBUG) System.out.println("Received results in " + lt.getElapsedTime() + "ms");
+                    if (user.DIPERF == false && user.SUMMARY == false) if (user.DEBUG) System.out.println("Total number of tasks requested " + user.NUM_TASKS);
+
+                    int numTasks = resultRP.getNumTasks();
+                    receivedTasks += numTasks;
+
+                    //System.out.println("USER:userResult(): " + receivedTasks + " of " + NUM_TASKS + " tasks received in " + WScallTime + " ms...");
+                    System.out.println("RECEIVE: " + lt.getElapsedTime()*1.0/1000.0 + " : " + receivedTasks + " of " + user.NUM_TASKS + " tasks received in " + WScallTime + " ms!");
+
+
+
+                    Task[] tasks = null;
+                    if (numTasks > 0)
+                    {
+
+                        tasks = resultRP.getTasks();
+                    }
+
+
+                    if (numTasks > 0)
+                    {
+
+                        for (int i=0;i<tasks.length;i++)
+                        {
+                            //finalResultString += taskToString(tasks[i]);
+                            user.finalResultStrings[resIndex++] = user.taskToString(tasks[i]);
+                            //System.out.println(tasksX[i].getErrorMsg() + " " + failedCounter++ + ": " + taskToString(tasksX[i]));
+                        }
+                    }
+                    userResult = true;
+
+                    if (user.SUMMARY)
+                    {
+                        System.out.println("Time " + lt.getElapsedTime() + " NUM_TASKS " + user.NUM_TASKS);
+
+                    }
+                } else
+                {
+
+                    //if (DEBUG) System.out.println("USER: Received results failed (" + sw.getElapsedTime() + "ms)... trying again in 1 sec...");
+                    //int curPollStep = pollStep;
+                    //if (lt.getElapsedTime() >= 1000)
+                    //{
+                    //    curPollStep = pollStep*10;
+                    //}
+
+                    //if (user.DEBUG) System.out.println("USER: No results availble yet, trying again in " + curPollStep +" ms (" + sw.getElapsedTime() + "ms)");
+
+                    //try
+                    //{
+
+                    //    Thread.sleep(curPollStep);
+                    //} catch (Exception e)
+                    //{
+                        //if (user.DEBUG) System.out.println("USER: Error in sleep...: " + e);
+
+                    //}
+
+
+
+                    if (user.DEBUG) System.out.println("USER:getResults(): no results available...");
+                }
+                sw.stop();
+
+                if (user.DIPERF) System.out.println("USER:processResult(): " + sw.getElapsedTime() + " ms");
+                sw.reset();
+                }
+                else
+                {
+                    receivedTasks += 1;
+
+                    //System.out.println("USER:userResult(): " + receivedTasks + " of " + NUM_TASKS + " tasks received in " + WScallTime + " ms...");
+                    System.out.println("NOTIFICATION: " + lt.getElapsedTime()*1.0/1000.0 + " : " + receivedTasks + " of " + user.NUM_TASKS + " tasks notified!");
+                }
+
+                // }
+                // catch (Exception e)
+                // {
+                //      if (DEBUG) System.out.println("USER: Error in sending userJob(): " + e);
+                // }
+            }
+        //}
+
+
+
+
+    }
+
+
+    /* 
+    public void runPoll()
+    {
+        StopWatch sw = new StopWatch();
+        int pollStep = 100;
+
+        boolean userResult = false;
+
+        int resIndex = 0;
+
+
+        while (userResult == false)
+        {
+
+            //if (userJob == true && userResult == false)
+            //{
+            //  try
+            //  {
+
+            int receivedTasks = 0;
+            while (receivedTasks < user.NUM_TASKS)
+            {
+
+
+
+                sw.start();
+                //UserResultResponse resultRP = gp.userResult(new UserResult(true));
+                UserResultResponse resultRP = null;
+
+
+                try
+                {
+
+                    resultRP = Ggp.userResult(new UserResult(true));
+                } catch (Exception e)
+                {
+                    if (user.DEBUG) System.out.println("USER: Error in GetResults() thread: " + e);
+
+                }
+                //this doesn't seem to be correct...
+                //UserResultResponse resultRP = gp.userResult(new UserResult());
+                sw.stop();
+
+                if (user.DIPERF) System.out.println("USER:userResult(): " + sw.getElapsedTime() + " ms");
+                long WScallTime = sw.getElapsedTime();
+                sw.reset();
+
+
+                sw.start();
+                if (resultRP.isValid())
+                {
+
+
+
+
+                    if (user.DIPERF == false && user.SUMMARY == false) if (user.DEBUG) System.out.println("Received results in " + lt.getElapsedTime() + "ms");
+                    if (user.DIPERF == false && user.SUMMARY == false) if (user.DEBUG) System.out.println("Total number of tasks requested " + user.NUM_TASKS);
+
+                    int numTasks = resultRP.getNumTasks();
+                    receivedTasks += numTasks;
+
+                    //System.out.println("USER:userResult(): " + receivedTasks + " of " + NUM_TASKS + " tasks received in " + WScallTime + " ms...");
+                    System.out.println("RECEIVE: " + lt.getElapsedTime()*1.0/1000.0 + " : " + receivedTasks + " of " + user.NUM_TASKS + " tasks received in " + WScallTime + " ms!");
+
+
+
+                    Task[] tasks = null;
+                    if (numTasks > 0)
+                    {
+
+                        tasks = resultRP.getTasks();
+                    }
+
+
+                    if (numTasks > 0)
+                    {
+
+                        for (int i=0;i<tasks.length;i++)
+                        {
+                            //finalResultString += taskToString(tasks[i]);
+                            user.finalResultStrings[resIndex++] = user.taskToString(tasks[i]);
+                            //System.out.println(tasksX[i].getErrorMsg() + " " + failedCounter++ + ": " + taskToString(tasksX[i]));
+                        }
+                    }
+                    userResult = true;
+
+                    if (user.SUMMARY)
+                    {
+                        System.out.println("Time " + lt.getElapsedTime() + " NUM_TASKS " + user.NUM_TASKS);
+
+                    }
+                } else
+                {
+
+                    //if (DEBUG) System.out.println("USER: Received results failed (" + sw.getElapsedTime() + "ms)... trying again in 1 sec...");
+                    int curPollStep = pollStep;
+                    if (lt.getElapsedTime() >= 1000)
+                    {
+                        curPollStep = pollStep*10;
+                    }
+
+                    //if (user.DEBUG) System.out.println("USER: No results availble yet, trying again in " + curPollStep +" ms (" + sw.getElapsedTime() + "ms)");
+
+                    try
+                    {
+
+                        Thread.sleep(curPollStep);
+                    } catch (Exception e)
+                    {
+                        if (user.DEBUG) System.out.println("USER: Error in sleep...: " + e);
+
+                    }
+
+
+
+                    if (user.DEBUG) System.out.println("USER:sleep(): "+curPollStep+" ms due to invalid response from WS...");
+                }
+                sw.stop();
+
+                if (user.DIPERF) System.out.println("USER:processResult(): " + sw.getElapsedTime() + " ms");
+                sw.reset();
+
+                // }
+                // catch (Exception e)
+                // {
+                //      if (DEBUG) System.out.println("USER: Error in sending userJob(): " + e);
+                // }
+            }
+            //}
+        }
+        
+
+
+
+    }*/
+
+}

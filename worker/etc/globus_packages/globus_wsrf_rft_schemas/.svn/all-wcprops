@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_wsrf_rft_schemas
+END
+undeploy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_wsrf_rft_schemas/undeploy.xml
+END

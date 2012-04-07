@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/repos/falkon/!svn/ver/137/container/etc
+END
+worker-security-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/falkon/!svn/ver/1/container/etc/worker-security-config.xml
+END
+client_security_descriptor.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/falkon/!svn/ver/1/container/etc/client_security_descriptor.xsd
+END
+globus-devel-env.bat
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/falkon/!svn/ver/1/container/etc/globus-devel-env.bat
+END
+Provisioner.config
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/falkon/!svn/ver/1/container/etc/Provisioner.config
+END
+client-security-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/falkon/!svn/ver/1/container/etc/client-security-config.xml
+END
+globus-devel-env.sh
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/falkon/!svn/ver/1/container/etc/globus-devel-env.sh
+END
+globus-devel-setcp.bat
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/falkon/!svn/ver/1/container/etc/globus-devel-setcp.bat
+END
+security-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/falkon/!svn/ver/1/container/etc/security-config.xml
+END
+globus-devel-env.csh
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/falkon/!svn/ver/1/container/etc/globus-devel-env.csh
+END
+Falkon.config
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/container/etc/Falkon.config
+END

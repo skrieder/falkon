@@ -1,0 +1,5 @@
+etc/gpt/./packages/gram-stubs/undeploy.xml
+lib/gram-stubs.jar
+share/gram-stubs/NStoPkg.properties
+etc/gpt/packages/globus_wsrf_gram_common_java/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_gram_common_java/pkg_data_noflavor_pgm.gpt

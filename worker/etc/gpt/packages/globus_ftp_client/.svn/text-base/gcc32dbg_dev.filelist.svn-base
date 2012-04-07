@@ -1,0 +1,11 @@
+/lib/libglobus_ftp_client_gcc32dbg.a
+/lib/libglobus_ftp_client_gcc32dbg.la
+/include/gcc32dbg/globus_ftp_client_debug_plugin.h
+/include/gcc32dbg/globus_ftp_client_restart_plugin.h
+/include/gcc32dbg/globus_ftp_client_restart_marker_plugin.h
+/include/gcc32dbg/globus_ftp_client_perf_plugin.h
+/include/gcc32dbg/globus_ftp_client_throughput_plugin.h
+/include/gcc32dbg/globus_ftp_client.h
+/include/gcc32dbg/globus_ftp_client_plugin.h
+/etc/globus_packages/globus_ftp_client/gcc32dbg_dev.filelist
+/etc/globus_packages/globus_ftp_client/pkg_data_gcc32dbg_dev.gpt

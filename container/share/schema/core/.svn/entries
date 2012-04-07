@@ -1,0 +1,49 @@
+10
+
+dir
+403
+https://svn.globus.org/repos/falkon/container/share/schema/core
+https://svn.globus.org/repos/falkon
+
+
+
+2007-12-01T22:07:23.447494Z
+1
+iraicu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1f19993a-f93e-0410-91d9-c634b3d9fdf5
+
+tests
+dir
+
+samples
+dir
+
+types
+dir
+
+notification
+dir
+
+security
+dir
+
+registry
+dir
+
+management
+dir
+

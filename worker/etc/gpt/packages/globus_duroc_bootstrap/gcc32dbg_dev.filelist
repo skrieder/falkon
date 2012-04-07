@@ -1,0 +1,5 @@
+/lib/libglobus_duroc_bootstrap_gcc32dbg.a
+/lib/libglobus_duroc_bootstrap_gcc32dbg.la
+/include/gcc32dbg/globus_duroc_bootstrap.h
+/etc/globus_packages/globus_duroc_bootstrap/gcc32dbg_dev.filelist
+/etc/globus_packages/globus_duroc_bootstrap/pkg_data_gcc32dbg_dev.gpt

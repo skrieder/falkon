@@ -1,0 +1,4 @@
+/test/gaa_simple_test/gaa_test_with_assertion_file
+/test/gaa_simple_test/gaa_cred_test
+/etc/globus_packages/gaa_simple_test/noflavor_data.filelist
+/etc/globus_packages/gaa_simple_test/pkg_data_noflavor_data.gpt

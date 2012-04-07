@@ -1,0 +1,60 @@
+#DeeF config file
+#KEY=VALUE
+
+#log files
+#to be found under ${FALKON_LOGS}/service/date_time/...
+#GenericPortalWS=falkon_task_submission_history.txt
+GenericPortalWS_perf_per_sec=falkon_summary.txt
+GenericPortalWS_taskPerf=falkon_task_perf.txt
+#GenericPortalWS_task=falkon_task_status.txt
+#GenericPortalWS_user=falkon_users_info.txt
+#GenericPortalWS_workers=falkon_workers_info.txt
+
+#optimizations
+enablePiggyBacking=false
+MAX_EXECS_PER_CALL=1
+MIN_WORK_SIZE=1
+MAX_WORK_SIZE=1
+
+#settings for task retries upon known errors (i.e. stale NFS file handle) and max number of knownn failures per node before suspending the coresponding node
+maxNumErrorsPerTask=30
+maxNumErrorsPerExecutor=3
+suspendTimeoutInterval_ms=300000
+
+###################################################
+#Advanced options, no need to change these unless you understand their implications
+###################################################
+
+#throttling of notifications to executors, 0 means no throttling
+MAX_NOT_PER_SEC=0
+
+#emulation settings
+EMULATION=true
+EMULATION_NUM_EXECUTORS=256
+
+
+#data caching options
+#persistantCachePath=3DcacheGridGlobalGeneric/
+CACHE_GRID_GLOBAL=false
+DATA_AWARE_SCHEDULER=false
+MAX_CACHE_WINDOW_SIZE=10000
+CACHE_WINDOW_SIZE_FOLLOWS_REGISTERED_EXECUTORS=true
+CACHE_WINDOW_SIZE_MULTIPLIER=100
+
+#TCPCore options
+useTCPCore=false
+TCPCore_RECV_PORT=55000
+TCPCore_SEND_PORT=55001
+
+#Pool Thread Sizes
+maxNumNotificationWorkerThreads=1
+maxNumNotificationUserThreads=1
+
+#0 means to output across client sessions... >0 means to output at regular intervals
+performanceProfile=false
+performanceProfileOutputInterval=0
+performanceProfileOutputFile=performance_profile.txt
+
+#used to enable load balancer
+LOAD_BALANCER=false
+

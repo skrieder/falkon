@@ -1,0 +1,233 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/repos/falkon/!svn/ver/360/client
+END
+destroy.user.sh
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/client/destroy.user.sh
+END
+run.many.sh
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/repos/falkon/!svn/ver/1/client/run.many.sh
+END
+client-config.wsdd
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/1/client/client-config.wsdd
+END
+run.user.files-gpfs.sh
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repos/falkon/!svn/ver/1/client/run.user.files-gpfs.sh
+END
+run.user.files-gpfs-cache.sh
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/falkon/!svn/ver/1/client/run.user.files-gpfs-cache.sh
+END
+run.getAstroWorkloads.sh
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/falkon/!svn/ver/83/client/run.getAstroWorkloads.sh
+END
+container-log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/falkon/!svn/ver/1/client/container-log4j.properties
+END
+run.user.auto-caching.sh
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/1/client/run.user.auto-caching.sh
+END
+run.user.files.sh
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/client/run.user.files.sh
+END
+GLOBUS_LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repos/falkon/!svn/ver/1/client/GLOBUS_LICENSE
+END
+run.user.auto.sh
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/client/run.user.auto.sh
+END
+make.user.sh
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/repos/falkon/!svn/ver/1/client/make.user.sh
+END
+epr.txt
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/repos/falkon/!svn/ver/1/client/epr.txt
+END
+run.stacking-caching.file.sh.old
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/falkon/!svn/ver/67/client/run.stacking-caching.file.sh.old
+END
+make.user-astro.sh.old
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/falkon/!svn/ver/67/client/make.user-astro.sh.old
+END
+lib
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/repos/falkon/!svn/ver/1/client/lib
+END
+run.user.files-old.sh
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/client/run.user.files-old.sh
+END
+clean.user.sh
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repos/falkon/!svn/ver/56/client/clean.user.sh
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/client/log4j.properties
+END
+run.stacking.file.sh.old
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/falkon/!svn/ver/67/client/run.stacking.file.sh.old
+END
+run.user.drp.sh
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/client/run.user.drp.sh
+END
+run.user.file-sec.sh
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/client/run.user.file-sec.sh
+END
+run.stacking-caching.file.sh
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/falkon/!svn/ver/83/client/run.stacking-caching.file.sh
+END
+create.user.sh
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repos/falkon/!svn/ver/1/client/create.user.sh
+END
+make.user-astro.sh
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/20/client/make.user-astro.sh
+END
+run.user.file2.sh
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/client/run.user.file2.sh
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/repos/falkon/!svn/ver/1/client/README
+END
+run.stacking.file.sh
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/61/client/run.stacking.file.sh
+END
+run.user.files-backup.sh
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/1/client/run.user.files-backup.sh
+END
+schema
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/repos/falkon/!svn/ver/1/client/schema
+END
+run.user.file.caching.sh
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/1/client/run.user.file.caching.sh
+END
+run.user.interactive-nocreate.sh
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/falkon/!svn/ver/1/client/run.user.interactive-nocreate.sh
+END
+workloads
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/repos/falkon/!svn/ver/1/client/workloads
+END
+run.user.interactive.sh
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/falkon/!svn/ver/1/client/run.user.interactive.sh
+END
+run.user.file.sh
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/349/client/run.user.file.sh
+END
+GenericPortal.jar
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/client/GenericPortal.jar
+END
+etc
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/repos/falkon/!svn/ver/1/client/etc
+END
+SDSS
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/repos/falkon/!svn/ver/1/client/SDSS
+END

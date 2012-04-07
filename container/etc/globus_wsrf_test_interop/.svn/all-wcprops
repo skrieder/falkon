@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/falkon/!svn/ver/1/container/etc/globus_wsrf_test_interop
+END
+jndi-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/falkon/!svn/ver/1/container/etc/globus_wsrf_test_interop/jndi-config.xml
+END
+server-config.wsdd
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/falkon/!svn/ver/1/container/etc/globus_wsrf_test_interop/server-config.wsdd
+END

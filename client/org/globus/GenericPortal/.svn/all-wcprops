@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/falkon/!svn/ver/360/client/org/globus/GenericPortal
+END
+stubs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/falkon/!svn/ver/1/client/org/globus/GenericPortal/stubs
+END
+services
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/falkon/!svn/ver/1/client/org/globus/GenericPortal/services
+END
+common
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/falkon/!svn/ver/1/client/org/globus/GenericPortal/common
+END

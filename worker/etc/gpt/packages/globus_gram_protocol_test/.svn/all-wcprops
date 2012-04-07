@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_gram_protocol_test
+END
+pkg_data_gcc32dbg_pgm.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_gram_protocol_test/pkg_data_gcc32dbg_pgm.gpt
+END
+gcc32dbgpgm.format
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_gram_protocol_test/gcc32dbgpgm.format
+END
+gcc32dbg_pgm.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_gram_protocol_test/gcc32dbg_pgm.filelist
+END

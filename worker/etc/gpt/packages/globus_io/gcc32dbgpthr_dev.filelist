@@ -1,0 +1,6 @@
+/lib/libglobus_io_gcc32dbgpthr.a
+/lib/libglobus_io_gcc32dbgpthr.la
+/include/gcc32dbgpthr/globus_io.h
+/include/gcc32dbgpthr/globus_io_error_hierarchy.h
+/etc/globus_packages/globus_io/gcc32dbgpthr_dev.filelist
+/etc/globus_packages/globus_io/pkg_data_gcc32dbgpthr_dev.gpt

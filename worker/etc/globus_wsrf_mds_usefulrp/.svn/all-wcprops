@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_usefulrp
+END
+glue-batch-test.sh
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_usefulrp/glue-batch-test.sh
+END
+glue-cluster-test.sh
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_usefulrp/glue-cluster-test.sh
+END
+glue-batch-test.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_usefulrp/glue-batch-test.xml
+END
+glue-cluster-test.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_usefulrp/glue-cluster-test.xml
+END
+ganglia_to_glue.xslt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_usefulrp/ganglia_to_glue.xslt
+END
+gluerp.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_usefulrp/gluerp.xml
+END

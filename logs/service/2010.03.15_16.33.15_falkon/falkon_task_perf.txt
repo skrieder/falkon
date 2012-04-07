@@ -1,0 +1,4 @@
+//taskNum taskID workerID startTimeStamp execTimeStamp resultsQueueTimeStamp endTimeStamp waitQueueTime execTime resultsQueueTime totalTime exitCode
+//0-time is 1268688801642ms
+1 falkon:50932:1_90939999 falkon01:50415 6768 6874 7182 7184 106 308 2 416 0
+2 falkon:50932:2_1418788487 falkon01:50415 7756 7868 8061 8062 112 193 1 306 0

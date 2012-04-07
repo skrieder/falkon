@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gpt_package_metadata SYSTEM "globus_package.dtd">
+<gpt_package_metadata Format_Version="0.01" Name="globus_wsrf_gram_service_java_setup_multi" >
+<Aging_Version Age="0" Major="0" Minor="0" />
+<Description >MultiJob GRAM Setup</Description>
+<Functional_Group >ResourceManagement</Functional_Group>
+<Version_Stability Release="Beta" />
+<PackagingTool ToolName="GPT" ToolVersion="3.2" />
+<pgm_pkg >
+<Flavor ColocateLibraries="yes" >noflavor</Flavor>
+<Post_Install_Message >
+         Run setup-gram-service-multi to configure a MultiJob Resource for the Managed Executable Job Factory Service.
+     </Post_Install_Message>
+<Post_Install_Program >
+         setup-gram-service-multi
+     </Post_Install_Program>
+<Setup Name="globus_wsrf_gram_service_java_setup" >
+<Aging_Version Age="0" Major="0" Minor="0" />
+</Setup>
+</pgm_pkg>
+</gpt_package_metadata>

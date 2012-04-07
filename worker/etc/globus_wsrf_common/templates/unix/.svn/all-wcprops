@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_common/templates/unix
+END
+ant-launcher-template
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_common/templates/unix/ant-launcher-template
+END
+launcher-template
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_common/templates/unix/launcher-template
+END

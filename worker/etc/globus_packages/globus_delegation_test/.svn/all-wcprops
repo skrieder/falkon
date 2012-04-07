@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_delegation_test
+END
+undeploy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_delegation_test/undeploy.xml
+END

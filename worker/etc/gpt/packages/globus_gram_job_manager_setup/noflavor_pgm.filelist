@@ -1,0 +1,7 @@
+/etc/globus_packages/globus_gram_job_manager_setup/noflavor_pgm.filelist
+/etc/globus_packages/globus_gram_job_manager_setup/pkg_data_noflavor_pgm.gpt
+/setup/globus/globus-job-manager-script.in
+/setup/globus/setup-globus-gram-job-manager
+/setup/globus/setup-globus-gram-job-manager.pl
+/setup/globus/globus-job-manager-service.in
+/setup/globus/globus-job-manager-mds-provider.in

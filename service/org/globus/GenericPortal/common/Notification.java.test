@@ -1,0 +1,616 @@
+package org.globus.GenericPortal.common;
+
+import java.net.*;
+import java.io.Serializable;
+import java.io.*;
+import java.util.*;
+import org.globus.GenericPortal.common.*;
+import org.globus.wsrf.encoding.ObjectDeserializer;
+import java.io.FileInputStream;
+import java.io.StringBufferInputStream;
+import java.io.InputStream;
+import org.globus.GenericPortal.services.core.WS.impl.GPConstants;
+
+import org.globus.wsrf.ResourceKey;
+import org.globus.wsrf.impl.SimpleResourceKey;
+import javax.xml.namespace.QName;
+
+
+
+public class Notification implements Serializable
+{
+    public int recvPort;    //port on which receive will bind
+    public int SO_TIMEOUT;  //timeout (dynamic depending on the RTT) in ms for receive before retrying again
+    public int RECV_BUFFER_SIZE;
+    //public DatagramSocket  socket;  //used to establish network connectivity via UDP sockets
+    public ServerSocket socket;//used to establish network connectivity via TCP sockets
+    //public ServerSocketChannel socketChannel;
+    //public Selector sel = null;
+
+    public boolean DEBUG;   //used to display debug information
+
+    public int success;     //# of notifications that were successful
+    public int failed;      //# of notifications that failed
+
+    public Notification(int port, int timeout, int maxnr, boolean debug)
+    {
+
+        success = 0;
+        failed = 0;
+        RECV_BUFFER_SIZE = 1024;
+
+        recvPort = port;
+
+
+        try
+        {
+
+            //socket = new DatagramSocket(recvPort);
+            socket = new ServerSocket(recvPort);
+            //notification = new NotificationMessagge();
+
+        } catch (Exception e)
+        {
+            if (DEBUG) System.out.println("error: Notification(int port, int timeout, int maxnr, boolean debug): " + e.getMessage());
+        }
+
+
+
+        SO_TIMEOUT = timeout;
+        DEBUG = debug;
+        DEBUG = true;
+    }
+
+
+    public Notification(int port, int timeout)
+    {
+
+        success = 0;
+        failed = 0;
+        boolean debug = false;
+
+        RECV_BUFFER_SIZE = 1024;
+
+        recvPort = port;
+
+        try
+        {
+            //socket = new DatagramSocket(recvPort);
+            socket = new ServerSocket(recvPort);
+            //socketChannel = socket.getChannel();
+            //socket.setSoTimeout(SO_TIMEOUT);
+
+            //sel = Selector.open();
+            //socketChannel = ServerSocketChannel.open();
+            //socketChannel.configureBlocking(true);
+            //InetAddress ia = InetAddress.getLocalHost();
+            //InetSocketAddress isa = new InetSocketAddress(ia,recvPort);
+            //socketChannel.socket().bind(isa);
+            //socketChannel.;
+
+
+            //notification = new NotificationMessagge();
+
+        } catch (Exception e)
+        {
+            if (DEBUG) System.out.println("error: Notification(int port, int timeout): " + e.getMessage());
+        }
+
+        SO_TIMEOUT = timeout;
+        DEBUG = debug;
+
+        DEBUG = true;
+    }
+
+
+    public Notification(int timeout)
+    {
+
+        success = 0;
+        failed = 0;
+        boolean debug = false;
+        int port = 50100;
+        int port_max = 50999;
+
+        RECV_BUFFER_SIZE = 1024;
+
+        recvPort = port;
+        boolean socket_bind = false;
+
+        while (recvPort < port_max && socket_bind == false)
+        {
+            try
+            {
+                //socket = new DatagramSocket(recvPort);
+                socket = new ServerSocket(recvPort);
+
+                socket_bind = true;
+            } catch (Exception e)
+            {
+                //if(DEBUG) System.out.println("error: Notification(int timeout): socket = new DatagramSocket(recvPort); " + e.getMessage());
+                if (DEBUG) System.out.println("error: Notification(int timeout): socket = new ServerSocket(recvPort); " + e.getMessage());
+                recvPort++;
+            }
+        }
+
+        try
+        {
+            //notification = new NotificationMessagge();
+        } catch (Exception e)
+        {
+            if (DEBUG) System.out.println("error: Notification(int timeout): notification = new NotificationMessagge();" + e.getMessage());
+        }
+
+        SO_TIMEOUT = timeout;
+        DEBUG = debug;
+
+        DEBUG = true;
+    }
+
+
+    public boolean send(String dest, ResourceKey key)
+    //public boolean send(String dest, String key)
+    {
+
+        //////NotificationMessagge notification;   //notification message
+        InetAddress addr = null;
+        SocketAddress sockaddr = null;
+        Socket sock = null;
+
+        if (DEBUG) System.out.println("send() function...");
+        try
+        {
+            //////if (DEBUG) System.out.println("send(): creating notification...");
+
+            //////notification = new NotificationMessagge();
+
+            String[] args = dest.split(":");
+            String host = args[0];
+            int port = Integer.parseInt(args[1]);
+
+            // Create a socket with a timeout
+            try {
+                addr = InetAddress.getByName(host);
+                //int port = 80;
+                sockaddr = new InetSocketAddress(addr, port);
+
+                // Create an unbound socket
+                sock = new Socket();
+
+                // This method will block no more than timeoutMs.
+                // If the timeout occurs, SocketTimeoutException is thrown.
+                //int timeoutMs = 2000;   // 2 seconds
+                sock.connect(sockaddr, SO_TIMEOUT);
+            } catch (UnknownHostException e) {
+
+                if (DEBUG) System.out.println("error: send(String dest, ResourceKey key) UnknownHostException: " + e.getMessage());
+                failed++;
+                return false;
+            } catch (SocketTimeoutException e) {
+
+                if (DEBUG) System.out.println("error: send(String dest, ResourceKey key) SocketTimeoutException: " + e.getMessage());
+                failed++;
+                return false;
+            } catch (IOException e) {
+
+                if (DEBUG) System.out.println("error: send(String dest, ResourceKey key) IOException: " + e.getMessage());
+                failed++;
+                return false;
+
+            }
+
+
+
+
+
+
+            //DatagramPacket  packet;
+            //InetAddress     address;
+            //byte[]          buffer = new byte[10];
+            //notification.incSeq();
+            if (DEBUG) System.out.println("NOTIFICATION: key="+String.valueOf(key));
+
+            //notification.setResourceKey(key);
+            //////if (DEBUG) System.out.println("NOTIFICATION: notification.getResourceKey()="+String.valueOf(notification.getResourceKey()));
+
+
+            //address=InetAddress.getByName(host);
+
+            //socket.setSoTimeout(SO_TIMEOUT);
+            //int maxNumRetries = MAX_NUM_RETRIES;
+            //int retryNum = 0;
+
+            //long start = 0;
+            //long end = 0;
+
+            //while (true)
+            //{
+               // try
+               // {
+                    //packet = new DatagramPacket(notification.toBytes(), notification.length(), address, port);
+                  //////  if (DEBUG) System.out.println("Notification: send() " + notification.length() + " bytes...");
+                 //   start = System.currentTimeMillis();
+                    if (DEBUG) System.out.println("Sending notification...");
+                    //socket.send(packet);
+                    BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(sock.getOutputStream()));
+                    //wr.write("aString");
+                  //////  wr.write(notification.toString());
+
+                    ByteArrayOutputStream bos = new ByteArrayOutputStream() ;
+
+                    ObjectOutput out = new ObjectOutputStream(bos) ;
+                    out.writeObject(key);
+                    out.close();
+
+                    // Get the bytes of the serialized object
+                    String sendString = bos.toString();
+                    bos.close();
+
+                      wr.write(sendString);
+                    wr.flush();
+                    if (DEBUG) System.out.println("Notification sent...");
+
+                    //if (DEBUG) System.out.println("Waiting for notification ack for "+ SO_TIMEOUT +" ms");
+
+                    //socket.receive(packet);
+                   // end = System.currentTimeMillis();
+
+                    //NotificationMessagge notRecv = new NotificationMessagge(packet.getData()); 
+
+                    //checkNotification(notRecv);
+                    //if (DEBUG) System.out.println("Received notification ack: " + notRecv.seq + " " + notRecv.ack + " " + notRecv.idle_state + " " + notRecv.eta + " " + notRecv.getResourceKey().getValue());
+
+                    success++;
+
+                    wr.close();
+                    //sock.close();
+                    return true;
+             //   } catch (Exception e)
+              //  {
+             //
+             //       if (DEBUG) System.out.println("error: send(String dest, ResourceKey key): " + e.getMessage());
+              //      wr.close();
+              //      sock.close();
+              //      return false;
+
+              //  }
+            //}
+        } catch (Exception e)
+        {
+            if (DEBUG) System.out.println("error: send(String dest, ResourceKey key) Exception: " + e.getMessage());
+            failed++;
+
+            //wr.close();
+            //sock.close();
+            return false;
+        }
+    }
+
+
+    public ResourceKey recv() throws Exception
+    //public String recv()   throws Exception
+    {
+
+        try
+        {
+            //DatagramPacket  packet;
+            //ServerPacket pack;
+            
+
+            //byte[] buffer = new byte[RECV_BUFFER_SIZE];
+            //char buffer[] = new char[RECV_BUFFER_SIZE];//String();
+            ResourceKey key = null;
+
+            //try
+            //{
+
+            //    packet = new DatagramPacket(buffer, buffer.length);
+
+            //} catch (Exception e)
+            //{
+            //    throw new Exception("Error in DatagramPacket() creation: " + e);
+            //}
+
+
+            System.out.println("Listening for connection on port " + socket.getLocalPort());
+            Socket srv = socket.accept();
+            System.out.println("Accepted connection from " + (srv.getInetAddress()).getCanonicalHostName());
+
+            System.out.println("Socket isBound: " + srv.isBound());
+            System.out.println("Socket isClosed: " + srv.isClosed());
+            System.out.println("Socket isConnected: " + srv.isConnected());
+            System.out.println("Socket isInputShutdown: " + srv.isInputShutdown());
+            System.out.println("Socket isOutputShutdown: " + srv.isOutputShutdown());
+
+            //srv.configureBlocking(false);
+            //ServerSocketChannel test = new ServerSocketChannel();
+            
+
+            //while (true)
+            //{
+            //if (DEBUG) System.out.println("Waiting for notification for "+ SO_TIMEOUT +" ms");
+            if (DEBUG) System.out.println("Waiting for notification...");
+
+            BufferedReader rd = new BufferedReader(new InputStreamReader(srv.getInputStream()));
+
+            //InputStreamReader rd = new InputStreamReader(srv.getInputStream());
+            
+
+            String str;
+            //while ((str = rd.readLine()) != null)
+            //{
+            //str = rd.readLine();
+            //int numBytes = rd.read(buffer, 0, RECV_BUFFER_SIZE);
+
+            /*
+            while (!rd.ready())
+            {
+                try
+                    {
+                    System.out.println("recv() not ready, sleeping for 1000 ms");
+                    Thread.sleep(1000);
+
+                }
+                catch (Exception e)
+                {
+
+                }
+            } */
+            //////int numBytes = rd.read(buffer, 0, RECV_BUFFER_SIZE);
+
+            String string = null;//new String();
+            string = rd.readLine();
+            //int numBytes = rd.read(string);
+            
+            if (string != null)
+            //if (numBytes > 0)
+            {
+                //////string = new String(buffer);
+
+                ObjectInputStream in =  new ObjectInputStream(new StringBufferInputStream(string));
+                // Deserialize from a byte array
+                key = (ResourceKey) in.readObject();
+                in.close();
+
+                System.out.println("recv() key=" + String.valueOf(key));
+                success++;
+            }
+            else
+            {
+
+                failed++;
+                rd.close();
+                srv.close();
+                throw new Exception("Error in recv(): null");
+            }
+
+            rd.close();
+            srv.close();
+
+
+            //////NotificationMessagge notRecv = new NotificationMessagge(string); 
+
+            //////return notRecv.getResourceKey();
+            //return (ResourceKey)string;
+            return key;
+
+            //Integer mapKey = new Integer(notRecv.seq);
+
+            //}
+        } catch (Exception e)
+        {
+            failed++;
+
+            //rd.close();
+            //srv.close();
+            throw new Exception("Error in recv(): " + e);
+        }
+    }
+
+    public void destroy()
+    {
+        try
+        {
+        
+            socket.close();
+        }
+        catch (Exception e)
+        {
+            System.out.println("Error in closing server socket..." + e);
+        }
+    }
+
+
+    /*
+     public static void main(String[] args)
+                              throws Exception
+        {
+         int numNot = 1000;
+
+         if (args.length != 1)
+         {
+             System.out.println("incorect parameters...");
+             System.exit(0);
+         }
+
+         if (args[0].contains("-server"))
+         {
+
+         
+
+
+            Notification n = new Notification(50009, 60000);
+            for (int i=0;i<numNot;i++)
+            {
+
+            
+            System.out.println(i+": recv()...");
+            ResourceKey KEY = n.recv();
+            System.out.println("received key = " + String.valueOf(KEY));
+            }
+         }
+         else if (args[0].contains("-client"))
+         {
+             Notification n = new Notification(50009, 60000);
+             //ResourceKey KEY = "hello";
+             Object obj = new String("246f54c0-b8bc-11db-98bb-f0495782e0d2");
+             ResourceKey KEY = new SimpleResourceKey(new QName("key"), obj);
+
+             long start = System.currentTimeMillis();
+             for (int i=0;i<numNot;i++)
+             {
+                 System.out.println(i+ ": send()...");
+                 n.send("localhost:50009", KEY);
+             }
+             long elapsedTimeMillis = System.currentTimeMillis()-start;
+             System.out.println("Completed " + numNot + " in " + elapsedTimeMillis + " ms... TP/sec = " + numNot*1.0/(elapsedTimeMillis/1000.0));
+         }
+
+        }
+        */
+  
+        
+}
+
+
+class NotificationMessagge implements Serializable 
+{
+    public int seq;
+    public boolean ack;
+    public boolean idle_state;
+    public int eta;
+    private int SEQ_MAX = 2147483647;
+    public ResourceKey key; //ResourceKey to identify the particular resource where the notificatoin originated
+
+    public NotificationMessagge() throws Exception
+    {
+        seq = 0;
+        ack = false;
+        idle_state = false;
+        eta = 0;
+        key = null;
+    }
+
+    public NotificationMessagge(int s, boolean a, boolean is, int e, ResourceKey k/*EndpointReferenceType er, String k*/) throws Exception
+    {
+        seq = s;
+        ack = a;
+        idle_state = is;
+        eta = e;
+        key = k;
+
+    }
+
+    public byte[] toBytes() throws Exception
+    {  
+        // Serialize to a byte array
+        ByteArrayOutputStream bos = new ByteArrayOutputStream() ;
+        
+        ObjectOutput out = new ObjectOutputStream(bos) ;
+        out.writeInt(seq);
+        out.writeBoolean(ack);
+        out.writeBoolean(idle_state);
+        out.writeInt(eta);
+
+        out.writeObject(key);
+        out.close();
+
+        // Get the bytes of the serialized object
+        byte[] buf = bos.toByteArray();
+
+        return buf;
+    }
+
+
+    public String toString()
+    {  
+        try
+        {
+        
+        // Serialize to a byte array
+        ByteArrayOutputStream bos = new ByteArrayOutputStream() ;
+        
+        ObjectOutput out = new ObjectOutputStream(bos) ;
+        out.writeInt(seq);
+        out.writeBoolean(ack);
+        out.writeBoolean(idle_state);
+        out.writeInt(eta);
+
+        out.writeObject(key);
+        out.close();
+
+        // Get the bytes of the serialized object
+        return bos.toString();
+        }
+        catch (Exception e)
+        {
+            System.out.println("error in toString()" + e);
+            return null;
+        }
+    }
+
+    public NotificationMessagge(byte[] bytes) throws Exception
+    {
+
+        ObjectInputStream in =  new ObjectInputStream(new ByteArrayInputStream(bytes));
+        // Deserialize from a byte array
+        seq = in.readInt();
+        ack = in.readBoolean();
+        idle_state = in.readBoolean();
+        eta = in.readInt();
+        key = (ResourceKey) in.readObject();
+        in.close();
+    }
+
+    public NotificationMessagge(String string) throws Exception
+    {
+        //char[] bytes = string.toCharArray();
+
+        ObjectInputStream in =  new ObjectInputStream(new StringBufferInputStream(string));
+        // Deserialize from a byte array
+        seq = in.readInt();
+        ack = in.readBoolean();
+        idle_state = in.readBoolean();
+        eta = in.readInt();
+        key = (ResourceKey) in.readObject();
+        in.close();
+    }
+
+
+    public void setAck(boolean a) throws Exception
+    {
+        ack = a;
+    }
+
+
+    public void incSeq() throws Exception
+    {
+        if (seq>=SEQ_MAX)
+            seq = 1;
+        else
+            seq++;
+    }
+
+
+    public ResourceKey getResourceKey()
+    {
+        return key; 
+
+    }
+
+
+
+    public void setResourceKey(ResourceKey k)
+    {
+        key = k; 
+
+    }
+
+
+
+    public int length() throws Exception
+    {
+        byte[] buf = toBytes();
+        return buf.length;
+    }
+}

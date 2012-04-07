@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/repos/falkon/!svn/ver/1/service/logs/plot
+END
+task_graph.plot
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/falkon/!svn/ver/1/service/logs/plot/task_graph.plot
+END
+summary_graph.plot
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/falkon/!svn/ver/1/service/logs/plot/summary_graph.plot
+END
+executor_graph.plot
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/falkon/!svn/ver/1/service/logs/plot/executor_graph.plot
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/falkon/!svn/ver/358/service/org/globus/GenericPortal/services/core/WS
+END
+deploy-jndi-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/services/core/WS/deploy-jndi-config.xml
+END
+deploy-server.wsdd
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/falkon/!svn/ver/137/service/org/globus/GenericPortal/services/core/WS/deploy-server.wsdd
+END

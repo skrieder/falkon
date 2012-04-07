@@ -1,0 +1,7 @@
+etc/gpt/./packages/globus_wsrf_rendezvous_service/undeploy.xml
+etc/globus_wsrf_rendezvous_service/jndi-config.xml
+etc/globus_wsrf_rendezvous_service/server-config.wsdd
+lib/globus_wsrf_rendezvous_service.jar
+bin/rendezvous-test-client
+etc/gpt/packages/globus_wsrf_rendezvous_service_java/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_rendezvous_service_java/pkg_data_noflavor_pgm.gpt

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/falkon/!svn/ver/1/container/share/schema/core/samples/authzService
+END
+authzService_bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/falkon/!svn/ver/1/container/share/schema/core/samples/authzService/authzService_bindings.wsdl
+END
+authzService_service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/falkon/!svn/ver/1/container/share/schema/core/samples/authzService/authzService_service.wsdl
+END
+authzService_flattened.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/falkon/!svn/ver/1/container/share/schema/core/samples/authzService/authzService_flattened.wsdl
+END

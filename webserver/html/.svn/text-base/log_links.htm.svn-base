@@ -1,0 +1,21 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>header</title>
+<base target="middle">
+</head>
+
+<body>
+
+<p><b>Log Files:</b></p>
+<ul>
+	<li><a target="_blank" href="service_logs/">Service Logs</a></li>
+	<li><a target="_blank" href="worker_logs/">Worker Logs</a></li>
+</ul>
+
+</body>
+
+</html>

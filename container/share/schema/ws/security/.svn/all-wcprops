@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/falkon/!svn/ver/1/container/share/schema/ws/security
+END
+oasis-200401-wss-wssecurity-utility-1.0.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/falkon/!svn/ver/1/container/share/schema/ws/security/oasis-200401-wss-wssecurity-utility-1.0.xsd
+END
+xmldsig-core-schema.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/falkon/!svn/ver/1/container/share/schema/ws/security/xmldsig-core-schema.xsd
+END
+oasis-200401-wss-wssecurity-secext-1.0.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/falkon/!svn/ver/1/container/share/schema/ws/security/oasis-200401-wss-wssecurity-secext-1.0.xsd
+END

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gpt_package_metadata SYSTEM "globus_package.dtd">
+<gpt_package_metadata Format_Version="0.02" Name="myproxy" >
+<Aging_Version Age="0" Major="3" Minor="6" />
+<Description >
+ MyProxy Online Credential Repository
+ </Description>
+<Functional_Group ></Functional_Group>
+<Version_Stability Release="stable" />
+<PackagingTool ToolName="GPT" ToolVersion="3.2" />
+<doc_pkg >
+<Flavor ColocateLibraries="yes" >noflavor</Flavor>
+<Version_Label >NCSA MyProxy v3.6 10 Aug 2006</Version_Label>
+</doc_pkg>
+</gpt_package_metadata>

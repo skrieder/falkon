@@ -1,0 +1,74 @@
+#Provisioner config file
+#KEY=VALUE
+#if multiple lines have the same key, the previous value will be overwritten with the new value
+#all paths are relative
+
+#resources numbers
+MinNumExecutors=196
+MaxNumExecutors=196
+ExecutorsPerHost=2
+
+#resources times
+MinResourceAllocationTime_min=60
+MaxResourceAllocationTime_min=60
+
+#resources types
+HostType=any
+#HostType=ia32-compute
+#HostType=ia64-compute
+
+#allocation strategies
+#AllocationStrategy=one_at_a_time
+AllocationStrategy=additive
+#AllocationStrategy=exponential
+#AllocationStrategy=all_at_a_time
+MinNumHostsPerAllocation=1
+MaxNumHostsPerAllocation=1
+
+#de-allocation strategies, 0 means never de-allocate due to idle time
+DeAllocationIdleTime_sec=600000
+
+#Falkon information
+#FalkonServiceURI=http://127.0.0.1:50001/wsrf/services/GenericPortal/core/WS/GPFactoryService
+FalkonServiceURI=http://gto.ci.uchicago.edu:50001/wsrf/services/GenericPortal/core/WS/GPFactoryService
+EPR_FileName=WorkerEPR.txt
+FalkonServiceName_FileName=ServiceName.txt
+FalkonStatePollTime_sec=15
+
+#GRAM4 details
+#TG UC/ANL
+GRAM4_Location=tg-grid1.uc.teragrid.org
+#default
+#GRAM4_Location=localhost
+GRAM4_FactoryType=PBS
+#GRAM4_FactoryType=FORK
+#GRAM4_FactoryType=LSF
+#GRAM4_FactoryType=CONDOR
+
+#project accounting information
+Project=TG-CCR070008T
+#Project=default
+
+#Executor script
+#used to set the FALKON_HOME path to something other than the current install, used to launch the workers on remote sites in different installed paths
+#FALKON_HOME=
+# java version... data caching disabled
+#ExecutorScript=run.worker.sh
+#ExecutorScript=run.worker-uc-tg.sh
+#ExecutorScript=run.worker.sh
+# java version... data caching enabled
+#ExecutorScript=run.worker-caching-uc-tg.sh
+# C version
+ExecutorScript=run.worker-c.sh
+
+#Security Descriptor File
+SecurityFile=etc/client-security-config.xml
+
+#logging
+DRP_Log=drp-status.txt
+
+#enable debug statements
+DIPERF=false
+#DIPERF=true
+
+

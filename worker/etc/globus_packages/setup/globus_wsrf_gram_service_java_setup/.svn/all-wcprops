@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/setup/globus_wsrf_gram_service_java_setup
+END
+globus_wsrf_gram_service_java_setup_common.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/setup/globus_wsrf_gram_service_java_setup/globus_wsrf_gram_service_java_setup_common.gpt
+END
+globus_wsrf_gram_service_java_setup_multi.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/setup/globus_wsrf_gram_service_java_setup/globus_wsrf_gram_service_java_setup_multi.gpt
+END
+globus_wsrf_gram_service_java_setup_fork.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/setup/globus_wsrf_gram_service_java_setup/globus_wsrf_gram_service_java_setup_fork.gpt
+END

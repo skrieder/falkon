@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/properties
+END
+WS-ResourceProperties_bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/properties/WS-ResourceProperties_bindings.wsdl
+END
+WS-ResourceProperties.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/properties/WS-ResourceProperties.wsdl
+END
+WS-ResourceProperties_service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/properties/WS-ResourceProperties_service.wsdl
+END
+WS-ResourceProperties.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/properties/WS-ResourceProperties.xsd
+END

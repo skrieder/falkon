@@ -1,0 +1,13 @@
+/lib/libglobus_xio_test_drivers_gcc32dbg.a
+/lib/libglobus_xio_test_drivers_gcc32dbg.la
+/include/gcc32dbg/globus_xio_stack_driver.h
+/include/gcc32dbg/globus_xio_null_pass.h
+/include/gcc32dbg/globus_xio_bounce.h
+/include/gcc32dbg/globus_xio_test_transport.h
+/include/gcc32dbg/globus_xio_op.h
+/include/gcc32dbg/globus_xio_debug.h
+/include/gcc32dbg/globus_xio_verify.h
+/include/gcc32dbg/globus_xio_smtp.h
+/include/gcc32dbg/globus_xio_null.h
+/etc/globus_packages/globus_xio_test/gcc32dbg_dev.filelist
+/etc/globus_packages/globus_xio_test/pkg_data_gcc32dbg_dev.gpt

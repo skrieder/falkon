@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_wsrf_rft_client_java
+END
+noflavorpgm.format
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_wsrf_rft_client_java/noflavorpgm.format
+END
+noflavor_pgm.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_wsrf_rft_client_java/noflavor_pgm.filelist
+END
+pkg_data_noflavor_pgm.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_wsrf_rft_client_java/pkg_data_noflavor_pgm.gpt
+END

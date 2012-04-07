@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_libtool/gcc32dbg/shared
+END
+pkg_data_gcc32dbg_pgm.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_libtool/gcc32dbg/shared/pkg_data_gcc32dbg_pgm.gpt
+END
+gcc32dbg_pgm.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_libtool/gcc32dbg/shared/gcc32dbg_pgm.filelist
+END

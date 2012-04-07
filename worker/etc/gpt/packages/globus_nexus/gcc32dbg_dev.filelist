@@ -1,0 +1,7 @@
+/lib/libglobus_nexus_gcc32dbg.a
+/lib/libglobus_nexus_gcc32dbg.la
+/include/gcc32dbg/globus_nexus.h
+/include/gcc32dbg/nexus.h
+/include/gcc32dbg/nx_ver.h
+/etc/globus_packages/globus_nexus/gcc32dbg_dev.filelist
+/etc/globus_packages/globus_nexus/pkg_data_gcc32dbg_dev.gpt

@@ -1,0 +1,6 @@
+/bin/globus-personal-gatekeeper
+/libexec/globus-job-manager
+/libexec/globus-gram-rsl-reporter
+/libexec/globus-personal-gatekeeper-version.sh
+/etc/globus_packages/globus_gram_job_manager/gcc32dbg_pgm.filelist
+/etc/globus_packages/globus_gram_job_manager/pkg_data_gcc32dbg_pgm.gpt

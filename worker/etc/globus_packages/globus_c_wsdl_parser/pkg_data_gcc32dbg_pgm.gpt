@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gpt_package_metadata SYSTEM "globus_package.dtd">
+<gpt_package_metadata Format_Version="0.01" Name="globus_c_wsdl_parser" >
+<Aging_Version Age="0" Major="0" Minor="10" />
+<Description >Globus WSDL Parser</Description>
+<Functional_Group >C WS Core</Functional_Group>
+<Version_Stability Release="Experimental" />
+<PackagingTool ToolName="GPT" ToolVersion="3.2" />
+<pgm_pkg >
+<Flavor ColocateLibraries="yes" >gcc32dbg</Flavor>
+<Binary_Dependencies Type="Runtime_Link" >
+<Dependency Name="globus_common" Package="rtl" >
+<Version >
+<Simple_Version Major="4" />
+</Version>
+</Dependency>
+<Dependency Name="globus_core" Package="rtl" >
+<Version >
+<Simple_Version Major="3" />
+</Version>
+</Dependency>
+<Dependency Name="globus_js" Package="rtl" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+<Dependency Name="globus_libxml2" Package="rtl" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+</Binary_Dependencies>
+</pgm_pkg>
+</gpt_package_metadata>

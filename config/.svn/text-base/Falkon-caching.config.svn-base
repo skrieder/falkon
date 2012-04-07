@@ -1,0 +1,67 @@
+#DeeF config file
+#KEY=VALUE
+
+#log files
+#to be found under ${FALKON_LOGS}/service/date_time/...
+#GenericPortalWS=falkon_task_submission_history.txt
+GenericPortalWS_perf_per_sec=falkon_summary.txt
+GenericPortalWS_taskPerf=falkon_task_perf.txt
+#GenericPortalWS_task=falkon_task_status.txt
+#GenericPortalWS_user=falkon_users_info.txt
+#GenericPortalWS_workers=falkon_workers_info.txt
+
+#optimizations
+enablePiggyBacking=true
+MAX_EXECS_PER_CALL=1
+MIN_WORK_SIZE=1
+MAX_WORK_SIZE=10
+
+#settings for task retries upon known errors (i.e. stale NFS file handle) and max number of knownn failures per node before suspending the coresponding node
+maxNumErrorsPerTask=0
+maxNumErrorsPerExecutor=0
+suspendTimeoutInterval_ms=30000
+
+###################################################
+#Advanced options, no need to change these unless you understand their implications
+###################################################
+
+#throttling of notifications to executors, 0 means no throttling
+MAX_NOT_PER_SEC=1000
+
+#emulation settings
+EMULATION=false
+EMULATION_NUM_EXECUTORS=1000
+
+
+#data caching options
+#persistantCachePath=3DcacheGridGlobalGeneric/
+#setting DATA_AWARE_SCHEDULER and CACHE_GRID_GLOBAL to false enables FIRST_AVAILABLE scheduling policy
+#setting DATA_AWARE_SCHEDULER to false and CACHE_GRID_GLOBAL to true enables FIRST_CACHE_AVAILABLE scheduling policy
+#setting DATA_AWARE_SCHEDULER and CACHE_GRID_GLOBAL to true enables either MAX_COMPUTE_UTIL policy; you can overide the default by setting MAX_CACHE_HIT to true and MAX_COMPUTE_UTIL to false
+#setting MAX_COMPUTE_UTIL=false and MAX_CACHE_HIT=true and CPU_UTILIZATION_THRESHOLD=0.9 will use the GOOD_CACHE_COMPUTE policy with a threshold of 90%
+CACHE_GRID_GLOBAL=true
+DATA_AWARE_SCHEDULER=true
+MAX_COMPUTE_UTIL=false
+MAX_CACHE_HIT=true
+CPU_UTILIZATION_THRESHOLD=0.9
+MAX_CACHE_WINDOW_SIZE=10000
+CACHE_WINDOW_SIZE_FOLLOWS_REGISTERED_EXECUTORS=true
+CACHE_WINDOW_SIZE_MULTIPLIER=1000
+
+#TCPCore options
+useTCPCore=false
+TCPCore_RECV_PORT=55000
+TCPCore_SEND_PORT=55001
+
+#Pool Thread Sizes
+maxNumNotificationWorkerThreads=16
+maxNumNotificationUserThreads=1
+
+#0 means to output across client sessions... >0 means to output at regular intervals
+performanceProfile=false
+performanceProfileOutputInterval=0
+performanceProfileOutputFile=performance_profile.txt
+
+#used to enable load balancer
+LOAD_BALANCER=false
+

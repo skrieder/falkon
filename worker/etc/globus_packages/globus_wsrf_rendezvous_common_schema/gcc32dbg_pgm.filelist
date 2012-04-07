@@ -1,0 +1,12 @@
+etc/gpt/./packages/globus_wsrf_rendezvous_schemas/undeploy.xml
+share/schema/rendezvous/rendezvous_bindings.wsdl
+share/schema/rendezvous/rendezvous_factory_service.wsdl
+share/schema/rendezvous/rendezvous_data.wsdl
+share/schema/rendezvous/rendezvous_port_type.wsdl
+share/schema/rendezvous/rendezvous_data.xsd
+share/schema/rendezvous/rendezvous_service.wsdl
+share/schema/rendezvous/rendezvous_factory_bindings.wsdl
+share/schema/rendezvous/rendezvous_types.xsd
+share/schema/rendezvous/rendezvous_factory_port_type.wsdl
+etc/gpt/packages/globus_wsrf_rendezvous_common_schema/gcc32dbg_pgm.filelist
+etc/gpt/packages/globus_wsrf_rendezvous_common_schema/pkg_data_gcc32dbg_pgm.gpt

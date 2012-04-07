@@ -1,0 +1,8 @@
+lib/globus_delegation_service.jar
+etc/gpt/./packages/globus_delegation_service/undeploy.xml
+etc/globus_delegation_service/service-security-config.xml
+etc/globus_delegation_service/factory-security-config.xml
+etc/globus_delegation_service/server-config.wsdd
+etc/globus_delegation_service/jndi-config.xml
+etc/gpt/packages/globus_wsrf_delegation_service_java/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_delegation_service_java/pkg_data_noflavor_pgm.gpt

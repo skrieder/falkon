@@ -1,0 +1,4 @@
+/sbin/globus-start-container-detached
+/sbin/globus-stop-container-detached
+/etc/globus_packages/globus_java_container_admin_tools/gcc32dbg_pgm.filelist
+/etc/globus_packages/globus_java_container_admin_tools/pkg_data_gcc32dbg_pgm.gpt

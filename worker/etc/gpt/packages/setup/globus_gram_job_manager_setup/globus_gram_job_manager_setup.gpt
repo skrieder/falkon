@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gpt_package_metadata SYSTEM "globus_package.dtd">
+<gpt_package_metadata Format_Version="0.02" Name="globus_gram_job_manager_setup" >
+<Aging_Version Age="0" Major="3" Minor="4" />
+<Description >GRAM Job Manager Setup</Description>
+<Functional_Group >ResourceManagement</Functional_Group>
+<Version_Stability Release="Experimental" />
+<PackagingTool ToolName="GPT" ToolVersion="3.2" />
+<pgm_pkg >
+<Flavor ColocateLibraries="yes" >noflavor</Flavor>
+
+<Setup_Dependency Name="globus_common_setup" >
+<Version >
+<Simple_Version Major="2" />
+</Version>
+</Setup_Dependency>
+
+
+<Setup_Dependency Name="globus_gatekeeper_setup" >
+<Version >
+<Simple_Version Major="2" />
+</Version>
+</Setup_Dependency>
+
+<Post_Install_Message >
+        The setup-globus-gram-job-manager setup script must be run before using the job manager.
+      </Post_Install_Message>
+<Post_Install_Program >
+        setup-globus-gram-job-manager
+      </Post_Install_Program>
+<Setup Name="globus_gram_job_manager_setup" >
+<Aging_Version Age="0" Major="3" Minor="0" />
+</Setup>
+</pgm_pkg>
+</gpt_package_metadata>

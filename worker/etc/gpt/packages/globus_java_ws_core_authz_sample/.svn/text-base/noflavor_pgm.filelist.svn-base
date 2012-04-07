@@ -1,0 +1,7 @@
+lib/wsrf_core_samples_authzService.jar
+lib/wsrf_core_samples_authzService_stubs.jar
+etc/gpt/./packages/globus_wsrf_core_samples_authzService/undeploy.xml
+etc/globus_wsrf_core_samples_authzService/server-config.wsdd
+etc/globus_wsrf_core_samples_authzService/jndi-config.xml
+etc/gpt/packages/globus_java_ws_core_authz_sample/noflavor_pgm.filelist
+etc/gpt/packages/globus_java_ws_core_authz_sample/pkg_data_noflavor_pgm.gpt

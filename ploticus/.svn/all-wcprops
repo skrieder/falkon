@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/repos/falkon/!svn/ver/393/ploticus
+END
+summary_graph.ps
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/1/ploticus/summary_graph.ps
+END
+summary_graph.png
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/ploticus/summary_graph.png
+END
+summary_graph.pl
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/1/ploticus/summary_graph.pl
+END
+executor_graph.pl
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/ploticus/executor_graph.pl
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/repos/falkon/!svn/ver/1/ploticus/README
+END
+task_graph.pl
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/task_graph.pl
+END
+plot_summary.png
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/1/ploticus/plot_summary.png
+END

@@ -1,0 +1,6 @@
+lib/globus_cas_unit_test.jar
+etc/globus_cas_unit_test/casTestProperties
+share/globus_cas_unit_test/cas-test-build.xml
+etc/gpt/./packages/globus_cas_unit_test/undeploy.xml
+etc/gpt/packages/globus_wsrf_cas_service_unit_test/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_cas_service_unit_test/pkg_data_noflavor_pgm.gpt

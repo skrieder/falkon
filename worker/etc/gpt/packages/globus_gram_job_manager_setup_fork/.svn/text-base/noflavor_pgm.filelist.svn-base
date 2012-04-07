@@ -1,0 +1,6 @@
+/etc/globus_packages/globus_gram_job_manager_setup_fork/noflavor_pgm.filelist
+/etc/globus_packages/globus_gram_job_manager_setup_fork/pkg_data_noflavor_pgm.gpt
+/setup/globus/fork.in
+/setup/globus/find-fork-tools
+/setup/globus/setup-globus-job-manager-fork
+/setup/globus/setup-globus-job-manager-fork.pl

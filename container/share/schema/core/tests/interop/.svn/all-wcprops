@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/interop
+END
+notification_consumer_factory_service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/interop/notification_consumer_factory_service.wsdl
+END
+widget_port_type.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/interop/widget_port_type.wsdl
+END
+widget_notification_service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/interop/widget_notification_service.wsdl
+END
+notification_consumer_factory_port_type.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/interop/notification_consumer_factory_port_type.wsdl
+END
+widget_notification_flattened.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/interop/widget_notification_flattened.wsdl
+END
+widget_bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/interop/widget_bindings.wsdl
+END
+widget_service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/interop/widget_service.wsdl
+END
+notification_consumer_factory_bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/interop/notification_consumer_factory_bindings.wsdl
+END
+widget_notification_bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/interop/widget_notification_bindings.wsdl
+END

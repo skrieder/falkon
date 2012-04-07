@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gpt_package_metadata SYSTEM "globus_package.dtd">
+<gpt_package_metadata Format_Version="0.02" Name="myproxy" >
+<Aging_Version Age="0" Major="3" Minor="6" />
+<Description >
+ MyProxy Online Credential Repository
+ </Description>
+<Functional_Group ></Functional_Group>
+<Version_Stability Release="stable" />
+<PackagingTool ToolName="GPT" ToolVersion="3.2" />
+<rtl_pkg >
+<Flavor ColocateLibraries="yes" >gcc32dbg</Flavor>
+<Version_Label >NCSA MyProxy v3.6 10 Aug 2006</Version_Label>
+<Binary_Dependencies Type="Runtime_Link" >
+<Dependency Name="globus_gss_assist" Package="rtl" >
+<Version >
+<Simple_Version Major="3" />
+</Version>
+</Dependency>
+<Dependency Name="globus_gssapi_gsi" Package="rtl" >
+<Version >
+<Version_Range Lower_Major="3" Lower_Minor="2" Upper_Major="3" Upper_Minor="42" />
+<Simple_Version Major="4" />
+</Version>
+</Dependency>
+</Binary_Dependencies>
+</rtl_pkg>
+</gpt_package_metadata>

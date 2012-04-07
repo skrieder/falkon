@@ -1,0 +1,781 @@
+package org.globus.GenericPortal.common;
+
+import java.net.*;
+import java.io.Serializable;
+import java.io.*;
+import java.util.*;
+import org.globus.GenericPortal.common.*;
+import org.globus.wsrf.encoding.ObjectDeserializer;
+import java.io.FileInputStream;
+import java.io.StringBufferInputStream;
+import java.io.InputStream;
+import org.globus.GenericPortal.services.core.WS.impl.GPConstants;
+
+import org.globus.wsrf.ResourceKey;
+
+
+
+public class Notification implements Serializable
+   {
+    public int recvPort;	//port on which receive will bind
+    public NotificationMessagge notification;  	//notification message
+    public int SO_TIMEOUT;	//timeout (dynamic depending on the RTT) in ms for receive before retrying again
+    public int SO_TIMEOUT_MAX;	//max timeout in ms for receive before retrying again
+    public int MAX_NUM_RETRIES;	//max # of retranmissions before failing
+    public int RECV_BUFFER_SIZE;
+    public DatagramSocket  socket;	//used to establish network connectivity via UDP sockets
+    public boolean DEBUG;	//used to display debug information
+
+    public int success;		//# of notifications that were successful
+    public int failed;		//# of notifications that failed
+    public int retransmited;	//# of notifications that had to be retranmitted
+    public int out_of_order;	//# of out of order notifications received
+    public int duplicate;	//# of duplicate notifications received
+
+    public long RTT;	//last round trip time, used to increase sleep time before retransmiting
+
+    // Create cache
+    public final int MAX_ENTRIES; //size of the cache for notifications received, used to detect duplicates
+    public Map cache;  //cache for notifications received, used to detect duplicates
+    Boolean mapObject; //object element to store in cache
+    //ResourceKey curKey;	//current key for the Resource which performed the send... valid only after after a recv()... must be set before a send()
+
+    public Notification(int port, int timeout, int maxnr, boolean debug)
+    {
+	//curKey = null;
+        MAX_ENTRIES = 10;
+        cache = new LinkedHashMap(MAX_ENTRIES+1, .75F, false) {
+            // This method is called just after a new entry has been added
+            public boolean removeEldestEntry(Map.Entry eldest) {
+                return size() > MAX_ENTRIES;
+            }
+        };
+
+        // If the cache is to be used by multiple threads,
+        // the cache must be wrgpped with code to synchronize the methods
+        cache = (Map)Collections.synchronizedMap(cache);
+
+        mapObject = new Boolean("true");
+
+        success = 0;
+        failed = 0;
+        retransmited = 0;
+        out_of_order=0;
+
+        RTT = timeout;
+        SO_TIMEOUT_MAX = 10000;
+	RECV_BUFFER_SIZE = 1024;
+
+        recvPort = port;
+
+
+        try
+        {
+        
+            socket = new DatagramSocket(recvPort);
+            notification = new NotificationMessagge();
+
+            }
+            catch (Exception e) {
+                  if(DEBUG) System.out.println("error: Notification(int port, int timeout, int maxnr, boolean debug): " + e.getMessage());
+          }
+
+        SO_TIMEOUT = timeout;
+        MAX_NUM_RETRIES = maxnr;
+        DEBUG = debug;
+        DEBUG = true;
+    }
+
+
+    public Notification(int port, int timeout)
+    {
+	//curKey = null;
+        MAX_ENTRIES = 10;
+        cache = new LinkedHashMap(MAX_ENTRIES+1, .75F, false) {
+            // This method is called just after a new entry has been added
+            public boolean removeEldestEntry(Map.Entry eldest) {
+                return size() > MAX_ENTRIES;
+            }
+        };
+
+        // If the cache is to be used by multiple threads,
+        // the cache must be wrgpped with code to synchronize the methods
+        cache = (Map)Collections.synchronizedMap(cache);
+        mapObject = new Boolean("true");
+
+        success = 0;
+        failed = 0;
+        retransmited = 0;
+        //int timeout = 1000;
+        int maxnr = 10;
+        out_of_order=0;
+
+        SO_TIMEOUT_MAX = 10000;
+        boolean debug = false;
+
+	RECV_BUFFER_SIZE = 1024;
+
+        RTT = timeout;
+
+        recvPort = port;
+
+        try
+        {
+            socket = new DatagramSocket(recvPort);
+            notification = new NotificationMessagge();
+
+            }
+            catch (Exception e) {
+                  if(DEBUG) System.out.println("error: Notification(int port, int timeout): " + e.getMessage());
+          }
+
+        SO_TIMEOUT = timeout;
+        MAX_NUM_RETRIES = maxnr;
+        DEBUG = debug;
+
+        DEBUG = true;
+    }
+
+
+    public Notification(int timeout)
+    {
+	//curKey = null;
+        MAX_ENTRIES = 10;
+        cache = new LinkedHashMap(MAX_ENTRIES+1, .75F, false) {
+            // This method is called just after a new entry has been added
+            public boolean removeEldestEntry(Map.Entry eldest) {
+                return size() > MAX_ENTRIES;
+            }
+        };
+
+        // If the cache is to be used by multiple threads,
+        // the cache must be wrgpped with code to synchronize the methods
+        cache = (Map)Collections.synchronizedMap(cache);
+        mapObject = new Boolean("true");
+
+        success = 0;
+        failed = 0;
+        retransmited = 0;
+        out_of_order=0;
+
+        //int timeout = 1000;
+        int maxnr = 10;
+        boolean debug = false;
+        int port = 50100;
+        int port_max = 50999;
+
+        RTT = timeout;
+
+        SO_TIMEOUT_MAX = 10000;
+
+	RECV_BUFFER_SIZE = 1024;
+
+        recvPort = port;
+        boolean socket_bind = false;
+
+        while (recvPort < port_max && socket_bind == false) 
+        {
+            try
+            {
+                socket = new DatagramSocket(recvPort);
+                socket_bind = true;
+                }
+                catch (Exception e) {
+                      if(DEBUG) System.out.println("error: Notification(int timeout): socket = new DatagramSocket(recvPort); " + e.getMessage());
+                      recvPort++;
+              }
+        }
+
+        try
+        {
+            notification = new NotificationMessagge();
+            }
+            catch (Exception e) {
+                  if(DEBUG) System.out.println("error: Notification(int timeout): notification = new NotificationMessagge();" + e.getMessage());
+          }
+
+        SO_TIMEOUT = timeout;
+        MAX_NUM_RETRIES = maxnr;
+        DEBUG = debug;
+
+        DEBUG = true;
+    }
+
+    public void checkNotification(NotificationMessagge curNotification) throws Exception
+    {
+        if (notification.seq == curNotification.seq && curNotification.ack == true) 
+        {
+            if(DEBUG) System.out.println("Notification check successful");
+        }
+        else
+        {
+            out_of_order++;
+            throw new Exception("Received ACK from notification " + curNotification.seq + " while it was expecting ACK from notification " + notification.seq);
+        }
+    }
+    /*
+
+    public boolean sendString(String dest, String key)
+    {
+	try
+	{
+
+
+	    String[] args = dest.split(":");
+	    String host = args[0];
+	    int port = Integer.parseInt(args[1]);
+
+
+       DatagramPacket  packet;
+       InetAddress     address;
+       byte[]          buffer = new byte[10];
+       notification.incSeq();
+       notification.setResourceKeyString(key);
+
+
+       address=InetAddress.getByName(host);
+
+       socket.setSoTimeout(SO_TIMEOUT);
+       int maxNumRetries = MAX_NUM_RETRIES;
+       int retryNum = 0;
+
+       long start = 0;
+       long end = 0;
+
+       while (true) 
+       {
+	   try
+	   {
+	       //Thread.sleep(10);
+	       packet = new DatagramPacket(notification.toBytes(), notification.length(), address, port);
+	       start = System.currentTimeMillis();
+	       if(DEBUG) System.out.println("Sending notification...");
+	       socket.send(packet);
+	       if(DEBUG) System.out.println("Notification sent...");
+
+	       if(DEBUG) System.out.println("Waiting for notification ack for "+ SO_TIMEOUT +" ms");
+
+	       socket.receive(packet);
+	       end = System.currentTimeMillis();
+	       RTT = end - start;
+
+	       NotificationMessagge notRecv = new NotificationMessagge(packet.getData()); 
+
+	       checkNotification(notRecv);
+	       if(DEBUG) System.out.println("Received notification ack: " + notRecv.seq + " " + notRecv.ack + " " + notRecv.idle_state + " " + notRecv.eta + " " + notRecv.getResourceKey().getValue());
+
+	       success++;
+	       return true;
+	   }
+	   catch (Exception e) {
+		retryNum++;
+		 if (RTT < 1) 
+		 {
+		     RTT = 1;
+		 }
+		 else if (RTT >= SO_TIMEOUT_MAX/2) 
+		 {
+		     RTT = SO_TIMEOUT_MAX;
+		 }
+		 else
+		     RTT = RTT * 2;
+		 socket.setSoTimeout((int)(RTT));
+
+		 if(DEBUG) System.out.println("error #" + retryNum + ": " + e.getMessage());
+		 if(DEBUG) System.out.println("trying again " + (maxNumRetries - retryNum) + " more times... in " + (int)(RTT) + " ms");  //forever
+
+		 retransmited++;
+		 if (retryNum > maxNumRetries)
+		 {
+		     failed++;
+		     return false;
+		 }
+
+	   }
+       }
+	}
+	catch (Exception e) {
+	      if(DEBUG) System.out.println("error: " + e.getMessage());
+	      failed++;
+	      return false;
+      }
+    }
+	 */
+
+    public int sendSize(ResourceKey key)
+    {
+
+	try
+	{
+	
+	notification.setResourceKey(key);
+	return notification.length();
+	}
+	catch (Exception e)
+	{
+	    System.out.println("Error in sendSize(): " + e);
+	    return -1;
+	}
+
+
+    }
+
+    public boolean send(String dest, ResourceKey key)
+    //public boolean send(String dest, String key)
+    {
+        try
+        {
+
+
+            String[] args = dest.split(":");
+            String host = args[0];
+            int port = Integer.parseInt(args[1]);
+
+
+       DatagramPacket  packet;
+       InetAddress     address;
+       byte[]          buffer = new byte[10];
+       notification.incSeq();
+       System.out.println("NOTIFICATION: key="+String.valueOf(key));
+       
+       notification.setResourceKey(key);
+       System.out.println("NOTIFICATION: notification.getResourceKey()="+String.valueOf(notification.getResourceKey()));
+       
+
+       address=InetAddress.getByName(host);
+
+       socket.setSoTimeout(SO_TIMEOUT);
+       int maxNumRetries = MAX_NUM_RETRIES;
+       int retryNum = 0;
+
+       long start = 0;
+       long end = 0;
+
+       while (true) 
+       {
+           try
+           {
+               //Thread.sleep(10);
+               packet = new DatagramPacket(notification.toBytes(), notification.length(), address, port);
+	       if (DEBUG) System.out.println("Notification: send() " + notification.length() + " bytes...");
+               start = System.currentTimeMillis();
+               if(DEBUG) System.out.println("Sending notification...");
+               socket.send(packet);
+               if(DEBUG) System.out.println("Notification sent...");
+
+               if(DEBUG) System.out.println("Waiting for notification ack for "+ SO_TIMEOUT +" ms");
+
+               socket.receive(packet);
+               end = System.currentTimeMillis();
+               RTT = end - start;
+               
+               NotificationMessagge notRecv = new NotificationMessagge(packet.getData()); 
+
+               checkNotification(notRecv);
+               if(DEBUG) System.out.println("Received notification ack: " + notRecv.seq + " " + notRecv.ack + " " + notRecv.idle_state + " " + notRecv.eta + " " + notRecv.getResourceKey().getValue());
+	       //if(DEBUG) System.out.println("Received notification ack: " + notRecv.seq + " " + notRecv.ack + " " + notRecv.idle_state + " " + notRecv.eta + " " + notRecv.getResourceKey());
+
+               success++;
+               return true;
+           }
+           catch (Exception e) {
+                retryNum++;
+                 if (RTT < 1) 
+                 {
+                     RTT = 1;
+                 }
+                 else if (RTT >= SO_TIMEOUT_MAX/2) 
+                 {
+                     RTT = SO_TIMEOUT_MAX;
+                 }
+                 else
+                     RTT = RTT * 2;
+                 socket.setSoTimeout((int)(RTT));
+                 
+                 if(DEBUG) System.out.println("error #" + retryNum + ": " + e.getMessage());
+                 if(DEBUG) System.out.println("trying again " + (maxNumRetries - retryNum) + " more times... in " + (int)(RTT) + " ms");  //forever
+
+                 retransmited++;
+                 if (retryNum > maxNumRetries)
+                 {
+                     failed++;
+                     return false;
+                 }
+
+           }
+       }
+        }
+        catch (Exception e) {
+              if(DEBUG) System.out.println("error: send(String dest, ResourceKey key): " + e.getMessage());
+              failed++;
+              return false;
+      }
+    }
+
+
+    public boolean duplicate(Integer key) throws Exception
+    {
+    // Get object
+        Object o = cache.get(key);
+        if (o == null && !cache.containsKey(key)) {
+            return false;
+        // Object not in cache. If null is not a possible value in the cache,
+        // the call to cache.contains(key) is not needed
+        }
+        else
+        {
+            duplicate++;
+            //throw new Exception("Received duplicate notification # " + key);
+            //hack... should not accept duplicates, but we will for now...
+            return false;
+        }
+    
+    }
+
+    public ResourceKey recv() throws Exception
+    //public String recv()   throws Exception
+    {
+	//System.out.println("recv(): SO_TIMEOUT = " + SO_TIMEOUT);
+
+        try
+        {
+       DatagramPacket  packet;
+
+       //byte[] buf;
+       //try
+       //{
+       
+       //buf = notification.toBytes();
+       //}
+       //catch (Exception e)
+       //{
+//	   throw new Exception("Error in toBytes() conversion: " + e);
+  //     }
+
+       byte[] buffer = new byte[RECV_BUFFER_SIZE];
+
+       try
+       {
+       
+	   packet = new DatagramPacket(buffer, buffer.length);
+
+	   //if (DEBUG) System.out.println("Notification: recv() " + buffer.length + " bytes...");
+       }
+       catch (Exception e)
+       {
+	   throw new Exception("Error in DatagramPacket() creation: " + e);
+       }
+
+       socket.setSoTimeout(SO_TIMEOUT);
+       int maxNumRetries = MAX_NUM_RETRIES;
+       int retryNum = 0;
+
+       while (true) 
+       {
+           try
+           {
+               if(DEBUG) System.out.println("Waiting for notification for "+ SO_TIMEOUT +" ms");
+
+	       try
+	       {
+	       
+               socket.receive(packet);
+	       }
+	       catch (Exception e)
+	       {
+		   throw new Exception("Error in receive(): " + e);
+	       }
+               NotificationMessagge notRecv = new NotificationMessagge(packet.getData()); 
+
+               Integer mapKey = new Integer(notRecv.seq);
+
+               if (duplicate(mapKey) == false) 
+               {
+               // Add to cache
+               //Object key = "key";
+               cache.put(mapKey, mapObject);
+
+               //if(DEBUG) System.out.println("Received: " + received);
+               if(DEBUG) System.out.println("Received notification: " + notRecv.seq + " " + notRecv.ack + " " + notRecv.idle_state + " " + notRecv.eta + " " + notRecv.getResourceKey().getValue());
+	       //if(DEBUG) System.out.println("Received notification: " + notRecv.seq + " " + notRecv.ack + " " + notRecv.idle_state + " " + notRecv.eta + " " + notRecv.getResourceKey());
+
+               notRecv.setAck(true); 
+
+               packet = new DatagramPacket(notRecv.toBytes(), notRecv.length(), packet.getAddress(), packet.getPort());
+
+               if(DEBUG) System.out.println("Sending ack...");
+               socket.send(packet);
+               if(DEBUG) System.out.println("Ack sent...");
+               success++;
+	       return notRecv.getResourceKey();
+	       //return true;
+               }
+               else
+               {
+                   //should never reach here because of Exception thrown...
+                   if(DEBUG) System.out.println("Exception thrown... should not see this message :(");
+
+               }
+           }
+           catch (Exception e) {
+	       throw new Exception("Error in recv()... while(): " + e);
+	       /*
+	       retryNum++;
+                 if(DEBUG) System.out.println("error #" + retryNum + ": " + e.getMessage());
+                 if(DEBUG) System.out.println("trying again " + (maxNumRetries - retryNum) + " more times...");  //forever
+                 retransmited++;
+                 if (retryNum > maxNumRetries)
+                 {
+                     failed++;
+                     //return false;
+		     return null;
+                 }
+		 */
+
+           }
+       }
+        }
+        catch (Exception e) {
+              //if(DEBUG) System.out.println("error: " + e.getMessage());
+	    failed++;
+	    throw new Exception("Error in recv(): " + e);
+              //return false;
+	      //return null;
+      }
+	//throw new Exception("Unkown error in recv()...");
+    }
+
+    /*
+    public String recvString()
+    {
+
+	System.out.println("recvString(): SO_TIMEOUT = " + SO_TIMEOUT);
+	try
+        {
+       DatagramPacket  packet;
+       System.out.println("recvString(): packet created...");
+       byte[] buffer = notification.toBytes();
+       System.out.println("recvString(): buffer created...");
+
+       packet = new DatagramPacket(buffer, buffer.length);
+       System.out.println("recvString(): packet initialized...");
+
+       socket.setSoTimeout(SO_TIMEOUT);
+       System.out.println("recvString(): SO_TIMEOUT set...");
+
+       int maxNumRetries = MAX_NUM_RETRIES;
+       int retryNum = 0;
+
+       while (true) 
+       {
+           try
+           {
+               if(DEBUG) System.out.println("Waiting for notification for "+ SO_TIMEOUT +" ms");
+
+               socket.receive(packet);
+               NotificationMessagge notRecv = new NotificationMessagge(packet.getData()); 
+
+               Integer mapKey = new Integer(notRecv.seq);
+
+               if (duplicate(mapKey) == false) 
+               {
+               // Add to cache
+               //Object key = "key";
+               cache.put(mapKey, mapObject);
+
+               //if(DEBUG) System.out.println("Received: " + received);
+               if(DEBUG) System.out.println("Received notification: " + notRecv.seq + " " + notRecv.ack + " " + notRecv.idle_state + " " + notRecv.eta + " " + notRecv.getResourceKeyString());
+
+               notRecv.setAck(true); 
+
+               packet = new DatagramPacket(notRecv.toBytes(), notRecv.length(), packet.getAddress(), packet.getPort());
+
+               if(DEBUG) System.out.println("Sending ack...");
+               socket.send(packet);
+               if(DEBUG) System.out.println("Ack sent...");
+               success++;
+	       return notRecv.getResourceKeyString();
+	       //return true;
+               }
+               else
+               {
+                   //should never reach here because of Exception thrown...
+                   if(DEBUG) System.out.println("Exception thrown... should not see this message :(");
+
+               }
+           }
+           catch (Exception e) {
+                retryNum++;
+                 if(DEBUG) System.out.println("error #" + retryNum + ": " + e.getMessage());
+                 if(DEBUG) System.out.println("trying again " + (maxNumRetries - retryNum) + " more times...");  //forever
+                 retransmited++;
+                 if (retryNum > maxNumRetries)
+                 {
+                     failed++;
+                     //return false;
+		     return null;
+                 }
+
+           }
+       }
+        }
+        catch (Exception e) {
+              if(DEBUG) System.out.println("error: " + e.getMessage());
+              failed++;
+              //return false;
+	      return null;
+      }
+    }
+    */
+
+
+    public void destroy()
+    {
+        socket.close();
+    }
+
+  /*
+   public static void main(String[] args)
+                            throws Exception
+      {
+      }
+
+      */
+   }
+
+
+class NotificationMessagge implements Serializable 
+{
+    public int seq;
+    public boolean ack;
+    public boolean idle_state;
+    public int eta;
+    private int SEQ_MAX = 2147483647;
+    //public EndpointReferenceType epr;
+    public ResourceKey key; //ResourceKey to identify the particular resource where the notificatoin originated
+    //public String key;
+                        
+    public NotificationMessagge() throws Exception
+    {
+        seq = 0;
+        ack = false;
+        idle_state = false;
+        eta = 0;
+	//epr = null;
+	//key = "";
+	key = null;
+    }
+
+    public NotificationMessagge(int s, boolean a, boolean is, int e, ResourceKey k/*EndpointReferenceType er, String k*/) throws Exception
+    {
+        seq = s;
+        ack = a;
+        idle_state = is;
+        eta = e;
+	//epr = er;
+	key = k;
+	//sKey = sk;
+
+    }
+
+    public byte[] toBytes() throws Exception
+    {  
+        // Serialize to a byte array
+        ByteArrayOutputStream bos = new ByteArrayOutputStream() ;
+        ObjectOutput out = new ObjectOutputStream(bos) ;
+        out.writeInt(seq);
+        out.writeBoolean(ack);
+        out.writeBoolean(idle_state);
+        out.writeInt(eta);
+	//String eprString = ObjectSerializer.toString(epr, GPConstants.RESOURCE_REFERENCE);
+	//out.writeUTF(eprString);
+	
+	//out.writeUTF(key.getValue()/*.toString()*/);
+	out.writeObject(key);
+	//out.writeUTF(key);
+        out.close();
+    
+        // Get the bytes of the serialized object
+        byte[] buf = bos.toByteArray();
+
+        return buf;
+    }
+
+    public NotificationMessagge(byte[] bytes) throws Exception
+    {
+        ObjectInputStream in =  new ObjectInputStream(new ByteArrayInputStream(bytes));
+         // Deserialize from a byte array
+         seq = in.readInt();
+         ack = in.readBoolean();
+         idle_state = in.readBoolean();
+         eta = in.readInt();
+	 //String eprString = in.readUTF();
+	 //FileInputStream fis = new FileInputStream(fileEPR);
+	 //InputStream is = new InputStream;
+	 //StringBufferInputStream sbis = new StringBufferInputStream(eprString);
+	 //new InputStreamReader(System.in);
+
+	 //InputSource nis = new InputSource(
+	 //homeEPR = (EndpointReferenceType) ObjectDeserializer.deserialize(new InputSource(fis),EndpointReferenceType.class);
+	 //homeEPR = (EndpointReferenceType) ObjectDeserializer.deserialize(new InputSource(sbis),EndpointReferenceType.class);
+	 key = (ResourceKey) in.readObject();
+	 //key = in.readUTF();
+         in.close();
+    }
+
+    public void setAck(boolean a) throws Exception
+    {
+        ack = a;
+    }
+
+
+    public void incSeq() throws Exception
+    {
+        if (seq>=SEQ_MAX)
+	    seq = 1;
+	else
+	    seq++;
+    }
+
+    
+    public ResourceKey getResourceKey()
+    {
+	return key; 
+
+    }
+    
+
+    /*
+    public String getResourceKey()
+    {
+	return key; 
+
+    } */
+
+
+    
+    public void setResourceKey(ResourceKey k)
+    {
+	key = k; 
+
+    }
+    
+
+    /*
+    public void setResourceKey(String k)
+    {
+	key = k; 
+
+    } */
+
+    public int length() throws Exception
+    {
+        byte[] buf = toBytes();
+        return buf.length;
+    }
+    /*
+    public String getEPRtoString()
+    {
+	return ObjectSerializer.toString(epr, GPConstants.RESOURCE_REFERENCE);
+    } */
+}

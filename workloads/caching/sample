@@ -1,0 +1,2 @@
+/home/iraicu/falkon/workloads/caching/cat.sh in out %%% in %%% /home/iraicu/in %%% out %%% /home/iraicu/out %%%
+/home/iraicu/falkon/workloads/caching/cat.sh out out_final %%% out %%% /home/iraicu/out %%% out_final %%% /home/iraicu/out_final %%%

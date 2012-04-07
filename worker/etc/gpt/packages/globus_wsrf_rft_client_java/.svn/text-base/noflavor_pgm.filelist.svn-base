@@ -1,0 +1,9 @@
+etc/gpt/./packages/globus_wsrf_rft_client/undeploy.xml
+share/globus_wsrf_rft_client/delete.xfr
+share/globus_wsrf_rft_client/dir_transfer.xfr
+share/globus_wsrf_rft_client/transfer.xfr
+lib/globus_wsrf_rft_client.jar
+bin/rft
+bin/rft-delete
+etc/gpt/packages/globus_wsrf_rft_client_java/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_rft_client_java/pkg_data_noflavor_pgm.gpt

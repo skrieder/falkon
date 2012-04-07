@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/falkon/!svn/ver/351/service/org/globus/GenericPortal/common
+END
+NanoHTTPD.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/falkon/!svn/ver/45/service/org/globus/GenericPortal/common/NanoHTTPD.java
+END
+FileUtility.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/falkon/!svn/ver/156/service/org/globus/GenericPortal/common/FileUtility.java
+END
+CPUInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/common/CPUInfo.java
+END
+Utility.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/common/Utility.java
+END
+Notification.java.test
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/common/Notification.java.test
+END
+Notification.java.non-persistent.good
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/common/Notification.java.non-persistent.good
+END
+StringUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/falkon/!svn/ver/132/service/org/globus/GenericPortal/common/StringUtil.java
+END
+WebServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/common/WebServer.java
+END
+Notification.java.persistent.bad
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/common/Notification.java.persistent.bad
+END
+WorkerState.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/falkon/!svn/ver/351/service/org/globus/GenericPortal/common/WorkerState.java
+END
+Notification.java.tcp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/common/Notification.java.tcp
+END
+Notification.java.persistent.good
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/common/Notification.java.persistent.good
+END
+StopWatch.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/falkon/!svn/ver/161/service/org/globus/GenericPortal/common/StopWatch.java
+END
+Notification.java.udp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/common/Notification.java.udp
+END
+StopWatch.java.1.4
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/falkon/!svn/ver/5/service/org/globus/GenericPortal/common/StopWatch.java.1.4
+END
+GramClientThread.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/common/GramClientThread.java
+END
+StopWatch.java.1.6
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/falkon/!svn/ver/5/service/org/globus/GenericPortal/common/StopWatch.java.1.6
+END
+StopWatch.java.original
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/falkon/!svn/ver/7/service/org/globus/GenericPortal/common/StopWatch.java.original
+END
+MyProcess.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/falkon/!svn/ver/351/service/org/globus/GenericPortal/common/MyProcess.java
+END
+GramClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/common/GramClient.java
+END
+WorkerSet.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/falkon/!svn/ver/22/service/org/globus/GenericPortal/common/WorkerSet.java
+END
+Notification.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/falkon/!svn/ver/350/service/org/globus/GenericPortal/common/Notification.java
+END
+CacheStrategy.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/common/CacheStrategy.java
+END
+WorkQueue.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/common/WorkQueue.java
+END
+DiskSpace2.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/falkon/!svn/ver/404/service/org/globus/GenericPortal/common/DiskSpace2.java
+END
+CacheIndex.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/falkon/!svn/ver/156/service/org/globus/GenericPortal/common/CacheIndex.java
+END
+CacheResp.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/falkon/!svn/ver/39/service/org/globus/GenericPortal/common/CacheResp.java
+END
+StatCalc.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/falkon/!svn/ver/31/service/org/globus/GenericPortal/common/StatCalc.java
+END

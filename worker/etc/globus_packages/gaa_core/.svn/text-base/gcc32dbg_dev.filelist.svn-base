@@ -1,0 +1,7 @@
+/lib/libglobus_gaa_core_gcc32dbg.a
+/lib/libglobus_gaa_core_gcc32dbg.la
+/include/gcc32dbg/gaa.h
+/include/gcc32dbg/gaa_constants.h
+/include/gcc32dbg/gaa_core.h
+/etc/globus_packages/gaa_core/gcc32dbg_dev.filelist
+/etc/globus_packages/gaa_core/pkg_data_gcc32dbg_dev.gpt

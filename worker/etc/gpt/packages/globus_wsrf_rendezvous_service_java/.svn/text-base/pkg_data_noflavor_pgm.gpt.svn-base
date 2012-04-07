@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gpt_package_metadata SYSTEM "globus_package.dtd">
+<gpt_package_metadata Format_Version="0.01" Name="globus_wsrf_rendezvous_service_java" >
+<Aging_Version Age="0" Major="0" Minor="1" />
+<Description > Rendezvous resource, operation provider; demo factory and client</Description>
+<Functional_Group >Execution</Functional_Group>
+<Version_Stability Release="alpha" />
+<PackagingTool ToolName="GPT" ToolVersion="3.2" />
+<pgm_pkg >
+<Flavor ColocateLibraries="yes" >noflavor</Flavor>
+<Version_Label >0.1.0</Version_Label>
+<Binary_Dependencies Type="Runtime" >
+<Dependency Name="globus_wsrf_rendezvous_common_schema" Package="pgm" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+</Binary_Dependencies>
+</pgm_pkg>
+</gpt_package_metadata>

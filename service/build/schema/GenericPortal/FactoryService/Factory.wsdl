@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="FactoryService"
+    targetNamespace="http://www.globus.org/namespaces/GenericPortal/FactoryService"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:tns="http://www.globus.org/namespaces/GenericPortal/FactoryService"
+    xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" 
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+<!--============================================================
+
+                      T Y P E S
+                      
+  ============================================================-->
+<types>
+<xsd:schema targetNamespace="http://www.globus.org/namespaces/GenericPortal/FactoryService"
+    xmlns:tns="http://www.globus.org/namespaces/GenericPortal/FactoryService"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:import
+	    namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing"                
+	    schemaLocation="../../ws/addressing/WS-Addressing.xsd" />
+
+
+	<!-- REQUESTS AND RESPONSES -->
+
+	<xsd:element name="createResource">
+		<xsd:complexType/>
+	</xsd:element>
+	<xsd:element name="createResourceResponse">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="wsa:EndpointReference"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	</xsd:element>
+        
+</xsd:schema>
+</types>
+
+
+<!--============================================================
+
+                       M E S S A G E S
+                      
+  ============================================================-->
+<message name="CreateResourceRequest">
+	<part name="request" element="tns:createResource"/>
+</message>
+<message name="CreateResourceResponse">
+	<part name="response" element="tns:createResourceResponse"/>
+</message>
+
+
+
+<!--============================================================
+
+                       P O R T T Y P E
+                      
+  ============================================================-->
+<portType name="FactoryPortType">
+
+	<operation name="createResource">
+		<input message="tns:CreateResourceRequest"/>
+		<output message="tns:CreateResourceResponse"/>
+	</operation>
+
+</portType>
+
+</definitions>

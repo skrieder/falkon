@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/repos/falkon/!svn/ver/349/monitor
+END
+schema
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/repos/falkon/!svn/ver/1/monitor/schema
+END
+clean.monitor.sh
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/monitor/clean.monitor.sh
+END
+client-config.wsdd
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/monitor/client-config.wsdd
+END
+run.monitor.sh
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/349/monitor/run.monitor.sh
+END
+lib
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/repos/falkon/!svn/ver/1/monitor/lib
+END
+monitor.log
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/repos/falkon/!svn/ver/1/monitor/monitor.log
+END
+fmon.sh
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/repos/falkon/!svn/ver/114/monitor/fmon.sh
+END
+etc
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/repos/falkon/!svn/ver/1/monitor/etc
+END
+make.monitor.sh
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/monitor/make.monitor.sh
+END
+run.monitor-get-workers-tasks.sh
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/falkon/!svn/ver/23/monitor/run.monitor-get-workers-tasks.sh
+END
+WorkerEPR.txt
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/83/monitor/WorkerEPR.txt
+END

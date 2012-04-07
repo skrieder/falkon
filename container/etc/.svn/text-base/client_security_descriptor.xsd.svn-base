@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.globus.org" elementFormDefault="qualified" xmlns:tns="http://www.globus.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:import schemaLocation="security_descriptor.xsd" namespace="http://www.globus.org" />
+	<xs:element name="GSISecureConversation">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="tns:integrity" minOccurs="0"/>
+				<xs:element ref="tns:privacy" minOccurs="0"/>
+				<xs:element name="delegation" type="tns:valStringType" minOccurs="0"/>
+				<xs:element name="anonymous" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GSISecureMessage">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="tns:integrity" minOccurs="0"/>
+				<xs:element ref="tns:privacy" minOccurs="0"/>
+				<xs:element name="peer-credentials" type="tns:valStringType" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<!-- Client Security Config -->
+	<xs:element name="securityConfig">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="credential" type="tns:credentialType" minOccurs="0"/>
+				<xs:element ref="tns:authz" minOccurs="0"/>
+				<xs:element ref="tns:context-lifetime" minOccurs="0"/>
+				<xs:element ref="tns:GSISecureConversation" minOccurs="0"/>
+				<xs:element ref="tns:GSISecureMessage" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

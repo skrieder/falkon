@@ -1,0 +1,70 @@
+10
+
+dir
+403
+https://svn.globus.org/repos/falkon/container/etc/globus_packages
+https://svn.globus.org/repos/falkon
+
+
+
+2008-02-02T20:06:41.035861Z
+56
+iraicu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1f19993a-f93e-0410-91d9-c634b3d9fdf5
+
+globus_wsrf_common
+dir
+
+globus_wsrf_core
+dir
+
+globus_wsrf_core_samples_authzService
+dir
+
+org_globus_GenericPortal_services_core_WS
+dir
+
+globus_usage_core
+dir
+
+globus_wsrf_core_samples_counter
+dir
+
+globus_wsrf_test_unit
+dir
+
+globus_wsrf_test
+dir
+
+globus_wsrf_test_interop
+dir
+
+globus_wsrf_tools_test
+dir
+
+globus_wsrf_core_registry
+dir
+
+globus_wsrf_core_samples_mgmt
+dir
+
+globus_wsrf_schema
+dir
+
+globus_wsrf_tools
+dir
+

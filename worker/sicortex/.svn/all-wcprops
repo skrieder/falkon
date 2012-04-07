@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/repos/falkon/!svn/ver/369/worker/sicortex
+END
+ServiceName.txt
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/falkon/!svn/ver/123/worker/sicortex/ServiceName.txt
+END
+create.tunnel.sh
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/falkon/!svn/ver/369/worker/sicortex/create.tunnel.sh
+END
+run.worker-c-ram.sh
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/falkon/!svn/ver/369/worker/sicortex/run.worker-c-ram.sh
+END
+workers-list.txt
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/falkon/!svn/ver/123/worker/sicortex/workers-list.txt
+END
+run.worker-c-ram-ip.sh
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/falkon/!svn/ver/369/worker/sicortex/run.worker-c-ram-ip.sh
+END
+run.worker-c-debug.sh
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/falkon/!svn/ver/369/worker/sicortex/run.worker-c-debug.sh
+END
+run.drp-slurm-ram-reset.sh
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/falkon/!svn/ver/369/worker/sicortex/run.drp-slurm-ram-reset.sh
+END
+run.drp-slurm.sh
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/falkon/!svn/ver/369/worker/sicortex/run.drp-slurm.sh
+END
+ServiceName-viper.txt
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/falkon/!svn/ver/123/worker/sicortex/ServiceName-viper.txt
+END
+run.worker-c.sh
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/falkon/!svn/ver/369/worker/sicortex/run.worker-c.sh
+END
+ServiceName-fd.txt
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/falkon/!svn/ver/123/worker/sicortex/ServiceName-fd.txt
+END
+ServiceName-gto.txt
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/falkon/!svn/ver/123/worker/sicortex/ServiceName-gto.txt
+END
+ServiceName-s8.txt
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/falkon/!svn/ver/123/worker/sicortex/ServiceName-s8.txt
+END
+run.worker-c-bgp.sh
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/falkon/!svn/ver/369/worker/sicortex/run.worker-c-bgp.sh
+END
+make.worker-c.sh
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/falkon/!svn/ver/369/worker/sicortex/make.worker-c.sh
+END
+run.drp-slurm-ram.sh
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/falkon/!svn/ver/369/worker/sicortex/run.drp-slurm-ram.sh
+END

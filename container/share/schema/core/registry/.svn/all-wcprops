@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/falkon/!svn/ver/1/container/share/schema/core/registry
+END
+registry_service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/falkon/!svn/ver/1/container/share/schema/core/registry/registry_service.wsdl
+END
+registry_entry_service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/falkon/!svn/ver/1/container/share/schema/core/registry/registry_entry_service.wsdl
+END
+registry_flattened.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/falkon/!svn/ver/1/container/share/schema/core/registry/registry_flattened.wsdl
+END
+registry_entry_flattened.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/falkon/!svn/ver/1/container/share/schema/core/registry/registry_entry_flattened.wsdl
+END
+registry_bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/falkon/!svn/ver/1/container/share/schema/core/registry/registry_bindings.wsdl
+END
+registry_entry_bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/falkon/!svn/ver/1/container/share/schema/core/registry/registry_entry_bindings.wsdl
+END

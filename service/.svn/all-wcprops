@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/repos/falkon/!svn/ver/358/service
+END
+make.service.sh
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/service/make.service.sh
+END
+make.stubs.sh
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/22/service/make.stubs.sh
+END
+globus-devel-env.sh
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/service/globus-devel-env.sh
+END
+clean.service.sh
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/56/service/clean.service.sh
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/repos/falkon/!svn/ver/1/service/build.xml
+END
+globus-build-service.sh
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/1/service/globus-build-service.sh
+END
+run.service_ec2.sh
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/service/run.service_ec2.sh
+END
+build-falkon.xml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/22/service/build-falkon.xml
+END
+lib
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/repos/falkon/!svn/ver/1/service/lib
+END
+namespace2package.mappings
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/falkon/!svn/ver/1/service/namespace2package.mappings
+END
+etc
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/repos/falkon/!svn/ver/1/service/etc
+END
+build.mappings
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/service/build.mappings
+END
+run.service.sh
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/245/service/run.service.sh
+END
+globus-build-service.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/1/service/globus-build-service.py
+END
+run.service_stdout.sh
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/195/service/run.service_stdout.sh
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/notification
+END
+WS-BaseN_bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/notification/WS-BaseN_bindings.wsdl
+END
+WS-Topics.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/notification/WS-Topics.xsd
+END
+WS-BaseN.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/notification/WS-BaseN.wsdl
+END
+WS-BaseN_service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/notification/WS-BaseN_service.wsdl
+END
+WS-BaseN.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/notification/WS-BaseN.xsd
+END

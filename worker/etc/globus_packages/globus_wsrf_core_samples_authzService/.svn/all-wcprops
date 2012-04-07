@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_wsrf_core_samples_authzService
+END
+undeploy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_wsrf_core_samples_authzService/undeploy.xml
+END

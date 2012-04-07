@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/myproxy
+END
+pkg_data_gcc32dbg_rtl.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/myproxy/pkg_data_gcc32dbg_rtl.gpt
+END
+noflavor_doc.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/myproxy/noflavor_doc.filelist
+END
+gcc32dbg_dev.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/myproxy/gcc32dbg_dev.filelist
+END
+gcc32dbgrtl.format
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/myproxy/gcc32dbgrtl.format
+END
+noflavor_data.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/myproxy/noflavor_data.filelist
+END
+gcc32dbg_pgm.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/myproxy/gcc32dbg_pgm.filelist
+END
+pkg_data_noflavor_doc.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/myproxy/pkg_data_noflavor_doc.gpt
+END
+pkg_data_gcc32dbg_dev.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/myproxy/pkg_data_gcc32dbg_dev.gpt
+END
+pkg_data_noflavor_data.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/myproxy/pkg_data_noflavor_data.gpt
+END
+noflavordoc.format
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/myproxy/noflavordoc.format
+END
+pkg_data_gcc32dbg_pgm.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/myproxy/pkg_data_gcc32dbg_pgm.gpt
+END
+gcc32dbgdev.format
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/myproxy/gcc32dbgdev.format
+END
+noflavordata.format
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/myproxy/noflavordata.format
+END
+gcc32dbgpgm.format
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/myproxy/gcc32dbgpgm.format
+END
+gcc32dbg_rtl.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/myproxy/gcc32dbg_rtl.filelist
+END

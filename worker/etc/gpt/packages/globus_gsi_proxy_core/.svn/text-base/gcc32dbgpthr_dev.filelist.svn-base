@@ -1,0 +1,6 @@
+/lib/libglobus_gsi_proxy_core_gcc32dbgpthr.a
+/lib/libglobus_gsi_proxy_core_gcc32dbgpthr.la
+/include/gcc32dbgpthr/globus_gsi_proxy.h
+/include/gcc32dbgpthr/globus_gsi_proxy_constants.h
+/etc/globus_packages/globus_gsi_proxy_core/gcc32dbgpthr_dev.filelist
+/etc/globus_packages/globus_gsi_proxy_core/pkg_data_gcc32dbgpthr_dev.gpt

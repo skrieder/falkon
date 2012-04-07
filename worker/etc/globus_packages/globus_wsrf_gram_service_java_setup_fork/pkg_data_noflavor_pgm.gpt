@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gpt_package_metadata SYSTEM "globus_package.dtd">
+<gpt_package_metadata Format_Version="0.01" Name="globus_wsrf_gram_service_java_setup_fork" >
+<Aging_Version Age="0" Major="0" Minor="1" />
+<Description >Fork GRAM Setup</Description>
+<Functional_Group >ResourceManagement</Functional_Group>
+<Version_Stability Release="Beta" />
+<PackagingTool ToolName="GPT" ToolVersion="3.2" />
+<pgm_pkg >
+<Flavor ColocateLibraries="yes" >noflavor</Flavor>
+<Binary_Dependencies Type="Runtime" >
+<Dependency Name="globus_fork_starter" Package="pgm" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+</Binary_Dependencies>
+<Post_Install_Message >
+         Run setup-gram-service-fork to configure a Fork Resource for the Managed Executable Job Factory Service.
+     </Post_Install_Message>
+<Post_Install_Program >
+         setup-gram-service-fork
+     </Post_Install_Program>
+<Setup Name="globus_wsrf_gram_service_java_setup" >
+<Aging_Version Age="0" Major="0" Minor="0" />
+</Setup>
+</pgm_pkg>
+</gpt_package_metadata>

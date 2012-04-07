@@ -1,0 +1,8 @@
+lib/wsrf_core_registry_stubs.jar
+lib/wsrf_core_registry.jar
+share/globus_wsrf_core_registry/NStoPkg.properties
+etc/gpt/./packages/globus_wsrf_core_registry/undeploy.xml
+etc/globus_wsrf_core_registry/server-config.wsdd
+etc/globus_wsrf_core_registry/jndi-config.xml
+etc/gpt/packages/globus_java_ws_core_registry/noflavor_pgm.filelist
+etc/gpt/packages/globus_java_ws_core_registry/pkg_data_noflavor_pgm.gpt

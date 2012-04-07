@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/repos/falkon/!svn/ver/1/worker/etc/gpt
+END
+gpt_rpm.spec
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/worker/etc/gpt/gpt_rpm.spec
+END
+globus_flavor_labels.conf
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/falkon/!svn/ver/1/worker/etc/gpt/globus_flavor_labels.conf
+END
+globus_core-src.tar.gz
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/falkon/!svn/ver/1/worker/etc/gpt/globus_core-src.tar.gz
+END
+gpt_scripts_list
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/1/worker/etc/gpt/gpt_scripts_list
+END

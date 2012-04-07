@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/falkon/!svn/ver/1/container/share/schema/ws/policy
+END
+utility.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/falkon/!svn/ver/1/container/share/schema/ws/policy/utility.xsd
+END
+policy.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/falkon/!svn/ver/1/container/share/schema/ws/policy/policy.xsd
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/falkon/!svn/ver/1/worker/etc/globus_cas_service/casDbSchema
+END
+cas_mysql_database_schema.sql
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/falkon/!svn/ver/1/worker/etc/globus_cas_service/casDbSchema/cas_mysql_database_schema.sql
+END
+cas_pgsql_database_schema.sql
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/falkon/!svn/ver/1/worker/etc/globus_cas_service/casDbSchema/cas_pgsql_database_schema.sql
+END

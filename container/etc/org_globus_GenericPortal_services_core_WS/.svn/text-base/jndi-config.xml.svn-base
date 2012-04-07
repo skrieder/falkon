@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiConfig xmlns="http://wsrf.globus.org/jndi/config">
+
+<!-- Instance service -->
+<service name="GenericPortal/core/WS/GPService">
+	<resource name="home" type="org.globus.GenericPortal.services.core.WS.impl.GPResourceHome">
+	<resourceParams>
+
+		<parameter>
+			<name>resourceClass</name>
+			<value>org.globus.GenericPortal.services.core.WS.impl.GPResource</value>
+		</parameter>
+
+		<parameter>
+			<name>factory</name>
+			<value>org.globus.wsrf.jndi.BeanFactory</value>
+		</parameter>
+
+		<parameter>
+			<name>resourceKeyType</name>
+			<value>java.lang.String</value>
+		</parameter>
+
+		<parameter>
+			<name>resourceKeyName</name>
+			<value>{http://www.globus.org/namespaces/GenericPortal/GPService_instance}GPResourceKey</value>
+		</parameter>
+
+		<parameter>
+			<name>instanceServicePath</name>
+			<value>GenericPortal/core/WS/GPService</value>
+		</parameter>
+		
+		<parameter>
+			<name>cacheLocation</name>
+			<value>java:comp/env/services/GenericPortal/core/WS/GPService/cache</value>
+		</parameter>
+		
+	</resourceParams>
+	</resource>
+	
+	<resource name="cache" type="org.globus.wsrf.utils.cache.LRUCache">
+	<resourceParams>
+		<parameter>
+			<name>factory</name>
+			<value>org.globus.wsrf.jndi.BeanFactory</value>
+		</parameter>
+		<parameter>
+			<name>timeout</name>
+			<value>120000</value>
+		</parameter>
+	</resourceParams>
+	</resource>
+	
+</service>
+
+<!-- Factory service -->
+<service name="GenericPortal/core/WS/GPFactoryService">
+	<resourceLink name="instanceHome" target="java:comp/env/services/GenericPortal/core/WS/GPService/home"/>
+</service>
+
+</jndiConfig>

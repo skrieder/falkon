@@ -1,0 +1,16 @@
+lib/webmds/WEB-INF/classes/client-config.wsdd
+lib/webmds/WEB-INF/lib/cog-axis.jar
+lib/webmds/WEB-INF/lib/commons-logging.jar
+lib/webmds/WEB-INF/lib/cryptix32.jar
+lib/webmds/WEB-INF/lib/cryptix-asn1.jar
+lib/webmds/WEB-INF/lib/cryptix.jar
+lib/webmds/WEB-INF/lib/globus_wsrf_servicegroup_stubs.jar
+lib/webmds/WEB-INF/lib/jce-jdk13-125.jar
+lib/webmds/WEB-INF/lib/log4j-1.2.8.jar
+lib/webmds/WEB-INF/lib/puretls.jar
+lib/webmds/WEB-INF/lib/webmds-resource-property-source-0.1.jar
+lib/webmds/WEB-INF/lib/wsdl4j.jar
+lib/webmds/WEB-INF/lib/wss4j.jar
+lib/webmds/WEB-INF/lib/xmlsec.jar
+etc/gpt/packages/globus_wsrf_mds_webmds_resource_property_source/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_mds_webmds_resource_property_source/pkg_data_noflavor_pgm.gpt

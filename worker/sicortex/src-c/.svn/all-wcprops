@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/123/worker/sicortex/src-c
+END
+BGexec_mips
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/falkon/!svn/ver/123/worker/sicortex/src-c/BGexec_mips
+END
+BGexec_mips_static
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/falkon/!svn/ver/123/worker/sicortex/src-c/BGexec_mips_static
+END
+BGexec.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/falkon/!svn/ver/123/worker/sicortex/src-c/BGexec.c
+END

@@ -1,0 +1,13 @@
+lib/globus_cas_common.jar
+share/schema/cas/cas_faults.wsdl
+share/schema/cas/cas_query_port_type.wsdl
+share/schema/cas/cas_flattened.wsdl
+share/schema/cas/cas_service.wsdl
+share/schema/cas/cas_bindings.wsdl
+share/schema/cas/cas_types.xsd
+share/schema/cas/cas_admin_port_type.wsdl
+share/globus_cas_common/NStoPkg.properties
+share/globus_cas_common/build.xml
+etc/gpt/./packages/globus_cas_common/undeploy.xml
+etc/gpt/packages/globus_wsrf_cas_common/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_cas_common/pkg_data_noflavor_pgm.gpt

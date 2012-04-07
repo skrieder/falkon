@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/falkon/!svn/ver/1/container/share/schema/core/samples/counter
+END
+counter_bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/falkon/!svn/ver/1/container/share/schema/core/samples/counter/counter_bindings.wsdl
+END
+counter_service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/falkon/!svn/ver/1/container/share/schema/core/samples/counter/counter_service.wsdl
+END
+counter_flattened.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/falkon/!svn/ver/1/container/share/schema/core/samples/counter/counter_flattened.wsdl
+END

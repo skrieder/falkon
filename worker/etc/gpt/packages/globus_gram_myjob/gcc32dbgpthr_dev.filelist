@@ -1,0 +1,5 @@
+/lib/libglobus_gram_myjob_gcc32dbgpthr.a
+/lib/libglobus_gram_myjob_gcc32dbgpthr.la
+/include/gcc32dbgpthr/globus_gram_myjob.h
+/etc/globus_packages/globus_gram_myjob/gcc32dbgpthr_dev.filelist
+/etc/globus_packages/globus_gram_myjob/pkg_data_gcc32dbgpthr_dev.gpt

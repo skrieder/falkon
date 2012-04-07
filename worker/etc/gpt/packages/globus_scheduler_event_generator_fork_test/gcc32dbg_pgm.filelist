@@ -1,0 +1,5 @@
+/test/globus_scheduler_event_generator_fork_test/test-data.txt
+/test/globus_scheduler_event_generator_fork_test/TESTS.pl
+/test/globus_scheduler_event_generator_fork_test/test-fork-seg.pl
+/etc/globus_packages/globus_scheduler_event_generator_fork_test/gcc32dbg_pgm.filelist
+/etc/globus_packages/globus_scheduler_event_generator_fork_test/pkg_data_gcc32dbg_pgm.gpt

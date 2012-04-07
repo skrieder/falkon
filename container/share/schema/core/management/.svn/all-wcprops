@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/falkon/!svn/ver/1/container/share/schema/core/management
+END
+shutdown_bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/falkon/!svn/ver/1/container/share/schema/core/management/shutdown_bindings.wsdl
+END
+shutdown_service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/falkon/!svn/ver/1/container/share/schema/core/management/shutdown_service.wsdl
+END
+shutdown_port_type.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/falkon/!svn/ver/1/container/share/schema/core/management/shutdown_port_type.wsdl
+END

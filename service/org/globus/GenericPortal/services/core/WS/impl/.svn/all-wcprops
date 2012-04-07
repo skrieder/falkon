@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/falkon/!svn/ver/358/service/org/globus/GenericPortal/services/core/WS/impl
+END
+TCPCore.java.zhao
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/falkon/!svn/ver/159/service/org/globus/GenericPortal/services/core/WS/impl/TCPCore.java.zhao
+END
+TCPCore.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/falkon/!svn/ver/284/service/org/globus/GenericPortal/services/core/WS/impl/TCPCore.java
+END
+GPConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/services/core/WS/impl/GPConstants.java
+END
+CacheHitMiss.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/falkon/!svn/ver/355/service/org/globus/GenericPortal/services/core/WS/impl/CacheHitMiss.java
+END
+NotificationEngineWorker.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/falkon/!svn/ver/160/service/org/globus/GenericPortal/services/core/WS/impl/NotificationEngineWorker.java
+END
+NotificationTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/services/core/WS/impl/NotificationTask.java
+END
+TaskTerminate.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/services/core/WS/impl/TaskTerminate.java
+END
+NotificationEngineUser.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/falkon/!svn/ver/186/service/org/globus/GenericPortal/services/core/WS/impl/NotificationEngineUser.java
+END
+NotificationObject.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/services/core/WS/impl/NotificationObject.java
+END
+GPResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/falkon/!svn/ver/358/service/org/globus/GenericPortal/services/core/WS/impl/GPResource.java
+END
+GPFactoryService.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/falkon/!svn/ver/137/service/org/globus/GenericPortal/services/core/WS/impl/GPFactoryService.java
+END
+ActiveTasks.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/services/core/WS/impl/ActiveTasks.java
+END
+PerformanceProfile.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/falkon/!svn/ver/5/service/org/globus/GenericPortal/services/core/WS/impl/PerformanceProfile.java
+END
+TaskPerformance.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/falkon/!svn/ver/64/service/org/globus/GenericPortal/services/core/WS/impl/TaskPerformance.java
+END
+WorkerEmulate.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/falkon/!svn/ver/358/service/org/globus/GenericPortal/services/core/WS/impl/WorkerEmulate.java
+END
+CacheLRU.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/falkon/!svn/ver/358/service/org/globus/GenericPortal/services/core/WS/impl/CacheLRU.java
+END
+GPService.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/falkon/!svn/ver/186/service/org/globus/GenericPortal/services/core/WS/impl/GPService.java
+END
+GPResourceHome.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/falkon/!svn/ver/358/service/org/globus/GenericPortal/services/core/WS/impl/GPResourceHome.java
+END
+GPResourceCommon.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/falkon/!svn/ver/358/service/org/globus/GenericPortal/services/core/WS/impl/GPResourceCommon.java
+END
+WorkerDeregister.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/falkon/!svn/ver/356/service/org/globus/GenericPortal/services/core/WS/impl/WorkerDeregister.java
+END
+HashMapDuo.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/services/core/WS/impl/HashMapDuo.java
+END
+PendingTasks.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/services/core/WS/impl/PendingTasks.java
+END
+NotificationBroker.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/falkon/!svn/ver/1/service/org/globus/GenericPortal/services/core/WS/impl/NotificationBroker.java
+END
+CacheIndex.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/falkon/!svn/ver/343/service/org/globus/GenericPortal/services/core/WS/impl/CacheIndex.java
+END

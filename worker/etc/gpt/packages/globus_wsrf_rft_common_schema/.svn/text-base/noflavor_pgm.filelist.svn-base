@@ -1,0 +1,11 @@
+etc/gpt/./packages/globus_wsrf_rft_schemas/undeploy.xml
+share/schema/transfer/reliable/reliable_transfer_bindings.wsdl
+share/schema/transfer/reliable/reliable_transfer_factory_bindings.wsdl
+share/schema/transfer/reliable/reliable_transfer_factory_port_type.wsdl
+share/schema/transfer/reliable/reliable_transfer_factory_service.wsdl
+share/schema/transfer//reliable/reliable_transfer_port_type.wsdl
+share/schema/transfer/reliable/reliable_transfer_service.wsdl
+share/schema/transfer/reliable/reliable_transfer_types.wsdl
+share/schema/transfer/reliable/reliable_transfer_types.xsd
+etc/gpt/packages/globus_wsrf_rft_common_schema/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_rft_common_schema/pkg_data_noflavor_pgm.gpt

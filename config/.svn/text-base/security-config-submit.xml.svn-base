@@ -1,0 +1,29 @@
+<securityConfig xmlns="http://www.globus.org" xmlns:falkon="http://www.globus.org/namespaces/GenericPortal/GPService_instance">
+<!--    <authz value="none"/>
+    <GSISecureMessage>
+     <integrity/>    
+     <peer-credentials value="/home/iraicu/.globus/usercert.pem"/>   
+    </GSISecureMessage>
+    
+</securityConfig>
+ -->
+
+<!--<authz value="none"/>-->
+<!--<authz value="selfAuthz:org.globus.wsrf.impl.security.authorization.SelfAuthorization"/>-->
+<authz value="gridmap:org.globus.wsrf.impl.security.authorization.GridMapAuthorization"/>
+<!--<gridmap value="/home/iraicu/.globus/grid-mapfile"/>-->
+<gridmap value="/home/iraicu/.globus/grid-mapfile"/>
+<!--<authz value="samlAuthz:org.globus.wsrf.impl.security.authorization.SAMLAuthorizationCallout"/>-->
+
+<method name="falkon:userJob">
+  <auth-method>
+    <GSISecureConversation>
+      <protection-level>
+        <!--<integrity/>-->
+        <privacy/>
+      </protection-level>
+    </GSISecureConversation>
+  </auth-method>
+</method>
+
+</securityConfig>

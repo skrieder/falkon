@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_gram_job_manager_setup
+END
+noflavorpgm.format
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_gram_job_manager_setup/noflavorpgm.format
+END
+noflavor_pgm.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_gram_job_manager_setup/noflavor_pgm.filelist
+END
+noflavordoc.format
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_gram_job_manager_setup/noflavordoc.format
+END
+noflavor_doc.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_gram_job_manager_setup/noflavor_doc.filelist
+END
+pkg_data_noflavor_pgm.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_gram_job_manager_setup/pkg_data_noflavor_pgm.gpt
+END
+pkg_data_noflavor_doc.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_gram_job_manager_setup/pkg_data_noflavor_doc.gpt
+END

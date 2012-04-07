@@ -1,0 +1,35 @@
+Ploticus data display engine software     
+
+ploticus data display engine.  Software, documentation, and examples.  
+Copyright 1998-2006 Stephen C. Grubb  (scg@jax.org).
+Covered under GPL; see the file ./Copyright for details.
+
+For overview & complete documentation: http://ploticus.sourceforge.net
+
+To install pre-compiled binaries:
+   The pre-compiled executable is in ./bin ... move the executable to a bin
+   in your command PATH.  Then set environment variable PLOTICUS_PREFABS
+   to the full path name of the directory (./prefabs) where prefab files
+   reside.
+
+To build from source code: 
+   The Makefile is ready to go for Linux with PNG capability.  For other 
+   platforms and configurations, edit the Makefile and follow the simple 
+   3 step process.  Then type:  make
+   Detailed build instructions can be seen at
+   http://ploticus.sourceforge.net/doc/buildinfo.html
+
+
+To demo:
+
+Go to the ./pltestsuite directory.  Unix users w/ X11 can type: pl stock2.htm
+and see the results interactively.. otherwise type: pl -gif stock2.htm to 
+produce a GIF file.
+
+You can also type: run_script_test  ... to run thru about 25 plots.
+
+You can also type: run_prefabs_test ... to run the prefab examples.
+
+The "Troubleshooting & Support" manual page has some additional hints to get 
+you started  (http://ploticus.sourceforge.net/doc/support.html)
+

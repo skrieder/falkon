@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/falkon/!svn/ver/1/worker/etc/globus_delegation_service
+END
+jndi-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/falkon/!svn/ver/1/worker/etc/globus_delegation_service/jndi-config.xml
+END
+service-security-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/falkon/!svn/ver/1/worker/etc/globus_delegation_service/service-security-config.xml
+END
+server-config.wsdd
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/falkon/!svn/ver/1/worker/etc/globus_delegation_service/server-config.wsdd
+END
+factory-security-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/falkon/!svn/ver/1/worker/etc/globus_delegation_service/factory-security-config.xml
+END

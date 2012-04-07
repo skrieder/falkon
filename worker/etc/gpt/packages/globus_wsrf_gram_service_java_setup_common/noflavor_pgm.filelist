@@ -1,0 +1,9 @@
+/etc/globus_packages/globus_wsrf_gram_service_java_setup_common/noflavor_pgm.filelist
+/etc/globus_packages/globus_wsrf_gram_service_java_setup_common/pkg_data_noflavor_pgm.gpt
+/setup/globus/setup-gram-service-common
+/setup/globus/setup-gram-common.pl
+/setup/globus/setup-gram-manager.pl
+/setup/globus/build-gram-service-gar.xml
+/setup/globus/gram-common-deploy-jndi-config.xml.in
+/setup/globus/globus_gram_fs_map_config.xml
+/setup/globus/gram-manager-deploy-jndi-config.xml.in

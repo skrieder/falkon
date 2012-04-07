@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/falkon/!svn/ver/1/container/etc/globus_packages/org_globus_GenericPortal_services_core_WS
+END
+undeploy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/falkon/!svn/ver/1/container/etc/globus_packages/org_globus_GenericPortal_services_core_WS/undeploy.xml
+END

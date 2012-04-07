@@ -1,0 +1,7 @@
+<ns1:GPResourceReference xsi:type="ns2:EndpointReferenceType" xmlns:ns1="http://www.globus.org/namespaces/GenericPortal/GPService_instance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns2="http://schemas.xmlsoap.org/ws/2004/03/addressing">
+ <ns2:Address xsi:type="ns2:AttributedURI">http://128.135.160.252:50001/wsrf/services/GenericPortal/core/WS/GPService</ns2:Address>
+ <ns2:ReferenceProperties xsi:type="ns2:ReferencePropertiesType">
+  <ns1:GPResourceKey>dde22020-dcf3-11dc-9b4c-b390f2a5bfbd</ns1:GPResourceKey>
+ </ns2:ReferenceProperties>
+ <ns2:ReferenceParameters xsi:type="ns2:ReferenceParametersType"/>
+</ns1:GPResourceReference>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_c_wsrf_providers_test_wsdl
+END
+pkg_data_noflavor_data.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_c_wsrf_providers_test_wsdl/pkg_data_noflavor_data.gpt
+END
+noflavordata.format
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_c_wsrf_providers_test_wsdl/noflavordata.format
+END
+noflavor_data.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_c_wsrf_providers_test_wsdl/noflavor_data.filelist
+END

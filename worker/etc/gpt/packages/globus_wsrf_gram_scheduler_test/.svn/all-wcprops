@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_wsrf_gram_scheduler_test
+END
+noflavorpgm.format
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_wsrf_gram_scheduler_test/noflavorpgm.format
+END
+pkg_data_noflavor_data.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_wsrf_gram_scheduler_test/pkg_data_noflavor_data.gpt
+END
+noflavor_pgm.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_wsrf_gram_scheduler_test/noflavor_pgm.filelist
+END
+noflavordata.format
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_wsrf_gram_scheduler_test/noflavordata.format
+END
+noflavor_data.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_wsrf_gram_scheduler_test/noflavor_data.filelist
+END
+pkg_data_noflavor_pgm.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_wsrf_gram_scheduler_test/pkg_data_noflavor_pgm.gpt
+END

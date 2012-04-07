@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/worker/etc/grid-services
+END
+jobmanager-fork
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/falkon/!svn/ver/1/worker/etc/grid-services/jobmanager-fork
+END
+jobmanager
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/falkon/!svn/ver/1/worker/etc/grid-services/jobmanager
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/repos/falkon/!svn/ver/1/workloads/astro
+END
+stacking-queries-uniform-10K.txt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/falkon/!svn/ver/1/workloads/astro/stacking-queries-uniform-10K.txt
+END
+stacking-queries-zipf-0.1-10K.txt
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/falkon/!svn/ver/1/workloads/astro/stacking-queries-zipf-0.1-10K.txt
+END
+stacking-queries-zipf-1.0-10K.txt
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/falkon/!svn/ver/1/workloads/astro/stacking-queries-zipf-1.0-10K.txt
+END
+stacking-queries-zipf-2.0-10K.txt
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/falkon/!svn/ver/1/workloads/astro/stacking-queries-zipf-2.0-10K.txt
+END

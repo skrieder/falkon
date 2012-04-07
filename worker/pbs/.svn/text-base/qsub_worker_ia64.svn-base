@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#PBS -N Falcon
+#PBS -l nodes=1:ia64-compute
+#PBS -l walltime=2:30:00
+#PBS -V
+
+cd /home/iraicu/java/DeeF_v0.7/worker
+./run.worker.sh 0 0 tp-login1 50020 etc/client-security-config.xml

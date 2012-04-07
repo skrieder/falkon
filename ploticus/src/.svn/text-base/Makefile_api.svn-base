@@ -1,0 +1,216 @@
+######## This Makefile will build the libploticus C API library.  
+######## This currently supports static libraries on unix platforms only.
+######## X11, postscript, and svg are disabled by default (you can enable in step 3)
+######## Root is not required to do this build.
+########
+######## Follow the simple 4-step procedure below to choose OS platform, options, etc.
+########
+######## Then type:  make clean;  make -f Makefile_api
+########
+######## The result (libploticus.a) will be placed into this directory.  You can move
+######## it manually to the desired lib directory or do "make install" (root may be required)
+########
+######## Applications will need environment variable PLOTICUS_PREFABS set to the full pathname
+######## of the ./prefabs directory.  
+########
+######## Note: if you build both libploticus.a and the pl executable from the same source code,
+######## you MUST do a 'make clean' in between...
+########
+######## PLOTICUS data display engine.  Software, documentation, and examples.  
+######## Copyright 1998-2005 Stephen C. Grubb  (stevegrubb@gmail.com)
+######## Covered by GPL; see the file ./Copyright for details. 
+
+# defaults..
+CC = gcc
+ARCOM = ar r
+PLATFORM = UNIX
+RMCOM = rm -f
+XOBJ = x11.o interact.o
+ZFLAG = -DWZ
+LIBEXT = a
+
+
+######## Step 1. What's your OS platform?
+#######         Choose one of the following.   All others should be commented out.
+
+#### For Linux and FreeBSD uncomment the following..
+XINCLUDEDIR = -I/usr/X11R6/include
+
+#### For Solaris 2.x uncomment the following..
+# INCLUDEDIR = -I/usr/openwin/include
+
+#### For Windows/NT compiled using MinGW uncomment the following..
+#### (this is not yet supported)
+# PLATFORM = WIN32
+# RMCOM = del
+# XOBJ = 
+# NOXFLAG = -DNOX11
+# NORLIMFLAG = -DNORLIMIT
+
+#### To build libploticus as a Max OS X static lib uncomment the following.. 
+# CC = cc
+# XINCLUDEDIR = -I/usr/X11R6/include
+
+#### To build libploticus as a Max OS X dynamic lib uncomment the following..
+# CC = cc -fno-common
+# XINCLUDEDIR = -I/usr/X11R6/include
+# ARCOM = gcc -dynamiclib -flat_namespace -undefined suppress -o 
+# LIBEXT = dylib
+
+#### For Cygwin uncomment the following..
+# PLATFORM = WIN32
+# XINCLUDEDIR = -I/usr/X11R6/include
+# NORLIMFLAG = -DNORLIMIT
+
+#### For AIX 3.2.5, HP-UX 10.20 uncomment the following..
+# XINCLUDEDIR = -I/usr/X11/include
+## ..note for HP-UX it was necessary to do: ln gd_io.h gd16 by hand to get the png compiled
+
+#### For SunOS4, Irix, other BSD uncomment the following..
+# XINCLUDEDIR = -I/usr/include
+## ..note the following additional lines were necessary on the Irix system we used:  CC = cc    FLAGS = -o32
+
+#### For UnixWare uncomment the following..
+# XINCLUDEDIR = -I/usr/X11/include
+## ..note: the following was necessary on the UnixWare system we used: CC = cc
+## ..note: these libs may be required when linking: -lnsl -lresolv -L/usr/ucblib -lucb
+
+#### For MPE/iX uncomment the following..
+# XINCLUDEDIR = -I/usr/local/include
+# FLAGS = -D_POSIX_SOURCE
+# CC = /usr/local/bin/gcc  
+
+
+######## Step 2. GD image library (www.boutelle.com/gd) support for PNG, JPEG, etc. 
+######## Which version of GD (if any) do you wish to use?  Uncomment one of the following:
+
+#### GD version 1.6 (png)
+GDLEVEL = -DGD16 
+
+#### GD 1.8 or higher (png, jpeg)
+# GDLEVEL = -DGD18
+
+#### GD 1.3 (psuedo-gif)
+# GDLEVEL = -DGD13
+
+#### No GD at all
+# NOGDFLAG = -DNOGD
+
+
+####### Step 3. It is possible to bundle GD code (1.3 or 1.6) directly into libploticus.  
+####### (For PNG support you need your own copy of zlib and libpng)
+####### Do you wish to do this? Uncomment one of the following:
+
+#### Yes, version 1.6 (png)
+GDOBJ = gd16.o gd_io.o gd_io_dp.o gd_io_file.o gd_png.o gdfontg.o gdfontl.o gdfontmb.o gdfonts.o gdfontt.o
+GDINC = -I./gd16
+
+#### Yes, version 1.3 (pseudo-gif)
+# GDOBJ = gd13.o gdfontg.o gdfontl.o gdfontmb.o gdfonts.o gdfontt.o
+# GDINC = -I./gd13
+
+#### No.  I will link to my own copy of GD, or not at all.
+# GDOBJ =
+
+
+#### If Yes above, and if your GD, PNG, ZLIB, etc. header files (eg. png.h) are in a non-standard place,
+#### supply the following line, eg. GDHEADERS = -I/home/fred/include
+# GDHEADERS = 
+# eg. GDHEADERS = -I/home/scg/lib
+
+#### If No, and you will be linking to your own copy of GD 1.84+ and want FreeType2 support, 
+#### uncomment the following..
+# GDFREETYPE = -DGDFREETYPE
+
+#### Additional libraries you must have available:
+#### If you're using GD 1.6 you will also need libpng and zlib.
+#### If you're using GD 1.84+ you will also need libpng, zlib, libjpeg, and maybe libfreetype.
+#### If you're using GD 1.3 no additional libs are required.
+
+
+
+######## Step 4. Other options and exclusions
+########
+
+#### Where do you want libploticus.a to be moved if you do a "make install" ?
+LIBDIR = /usr/local/lib
+
+#### If ZLIB will NOT be available, uncomment the following..
+# ZFLAG =  
+
+#### To disable all X11 output capability from any of the above unix builds, uncomment the following 3 lines..
+NOXFLAG = -DNOX11
+XOBJ =
+XINCLUDEDIR = 
+
+#### To disable all PostScript / EPS output capability, uncomment the following..
+# NOPSFLAG = -DNOPS
+
+#### To disable all SVG output capability, uncomment the following..
+# NOSVGFLAG = -DNOSVG
+
+#### If you want SWF (flash) output capability, uncomment the following (SWF requires ming library)
+# ..and if your ming.h is in a nonstandard place add a line like this: MINGH = -I/home/fred/lib
+#### Otherwise, for no SWF output capability, uncomment the following.. 
+NOSWFFLAG = -DNOSWF
+
+#### To completely remove safety limits on cpu time uncomment the following..
+NORLIMFLAG = -DNORLIMIT
+
+#### To set a hard-coded directory for prefabs files, uncomment & edit the following.. 
+#### If done, users won't be required to have PLOTICUS_PREFABS environment variable defined.
+#### This option not available for win32
+# PREFABS_DIR = "/usr/lib/ploticus"
+
+#### For LOCALE support (non-roman alphabets & collation), uncomment the following..
+# LOCALEOBJ = localef.o
+# LOCALE_FLAG = -DLOCALE
+
+
+#### To see all possible compiler warnings, uncomment the following line..
+# WALL = -Wall
+
+
+
+######## Done.  Now save this file and type:  make clean; make -f Makefile_api
+########
+######## You probably won't have to change anything below this point...
+
+
+
+
+CFLAGS = $(WALL) -DPLOTICUS -D$(PLATFORM) -DTDH_NOREC $(ZFLAG) $(FLAGS) $(LOCALE_FLAG) $(GDLEVEL) $(GDHEADERS) $(GDINC)\
+  $(NOGDFLAG) $(NOXFLAG) $(NOPSFLAG) $(NOSVGFLAG) $(NOSWFFLAG) $(XINCLUDEDIR) $(MINGH) $(NORLIMFLAG) \
+  -DPREFABS_DIR=\"$(PREFABS_DIR)\"
+
+OBJ = proc_annotate.o proc_areadef.o proc_axis.o proc_bars.o proc_rect.o proc_breakaxis.o \
+  proc_categories.o proc_curvefit.o proc_settings.o proc_defineunits.o proc_drawcommands.o \
+  proc_getdata.o proc_import.o proc_legend.o proc_legendentry.o proc_line.o proc_lineplot.o \
+  proc_page.o proc_pie.o proc_print.o proc_rangebar.o proc_rangesweep.o proc_usedata.o \
+  proc_scatterplot.o proc_vector.o proc_symbol.o proc_processdata.o proc_tabulate.o proc_venndisk.o clickmap.o\
+  plhead.o execscriptfile.o execline.o lib.o details.o parse.o units.o preliminaries.o \
+  process_arg.o plvalue_subst.o cats.o fieldnames.o autorange.o nearest.o select.o memstuff.o \
+  color.o plg.o init.o arrow.o mark.o block.o pcode.o ps.o svg.o swf.o stub.o winscale.o lineclip.o smoothfit.o \
+  condex.o dates.o dbinterface.o err.o functions.o glroutines.o reslimits.o secondaryops.o  \
+  shell.o sinterp.o tdhkit.o times.o value.o value_subst.o variable.o custom.o datetime.o \
+  api.o devstuff.o grgd.o \
+  $(LOCALEOBJ)
+
+libploticus: $(OBJ) $(GDOBJ) $(XOBJ)
+	$(RMCOM) libploticus.$(LIBEXT)
+	$(ARCOM) libploticus.$(LIBEXT) $(OBJ) $(GDOBJ) $(XOBJ)
+
+
+install: libploticus
+	mv libploticus.$(LIBEXT) $(LIBDIR)
+
+api_test: api_test.o
+	echo "note: you may need to edit Makefile_api to specify additional libs for the following command.."
+#	$(CC) api_test.o libploticus.$(LIBEXT) -lm -o api_test
+	$(CC) api_test.o libploticus.a /home/scg/lib/libpng.a /home/scg/lib/libz.a -lm -o api_test
+
+#         some additional libraries likely will be required here..
+
+clean:
+	$(RMCOM) *.o gd??files
+

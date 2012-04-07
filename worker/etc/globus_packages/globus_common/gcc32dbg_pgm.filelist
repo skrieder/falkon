@@ -1,0 +1,16 @@
+/bin/globus-sh-exec
+/bin/globus-version
+/libexec/globus-libc-hostname
+/libexec/globus-is-local-user
+/sbin/globus-update-doxygen-index
+/sbin/globus-vararg-enums-doxygen-filter.pl
+/bin/globus-hostname
+/bin/globus-domainname
+/bin/globus-makefile-header
+/bin/globus-makefile-header.gpt1
+/libexec/globus-args-parser-header
+/libexec/globus-sh-tools.sh
+/sbin/globus-build-doxygen-dependencies
+/sbin/config.guess
+/etc/globus_packages/globus_common/gcc32dbg_pgm.filelist
+/etc/globus_packages/globus_common/pkg_data_gcc32dbg_pgm.gpt

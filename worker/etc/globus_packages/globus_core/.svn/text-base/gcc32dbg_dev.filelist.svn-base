@@ -1,0 +1,4 @@
+/etc/globus_core/flavor_gcc32dbg.gpt
+/include/gcc32dbg/globus_config.h
+/etc/globus_packages/globus_core/gcc32dbg_dev.filelist
+/etc/globus_packages/globus_core/pkg_data_gcc32dbg_dev.gpt

@@ -1,0 +1,6 @@
+bin/globus-edit-wsdd
+etc/gpt/./packages/globus_wsrf_tools/undeploy.xml
+lib/wsrf_tools.jar
+share/globus_wsrf_tools/build-stubs.xml
+etc/gpt/packages/globus_java_ws_core_tools/noflavor_pgm.filelist
+etc/gpt/packages/globus_java_ws_core_tools/pkg_data_noflavor_pgm.gpt

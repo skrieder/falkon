@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="GPService" targetNamespace="http://www.globus.org/namespaces/GenericPortal/GPService_instance/bindings" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:porttype="http://www.globus.org/namespaces/GenericPortal/GPService_instance" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:import namespace="http://www.globus.org/namespaces/GenericPortal/GPService_instance" location="GP_flattened.wsdl"/>
+  <wsdl:binding name="GPPortTypeSOAPBinding" type="porttype:GPPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="workerRegistration">
+      <soap:operation soapAction="http://www.globus.org/namespaces/GenericPortal/GPService_instance/GPPortType/workerRegistrationRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="workerDeRegistration">
+      <soap:operation soapAction="http://www.globus.org/namespaces/GenericPortal/GPService_instance/GPPortType/workerDeRegistrationRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userJob">
+      <soap:operation soapAction="http://www.globus.org/namespaces/GenericPortal/GPService_instance/GPPortType/userJobRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userResult">
+      <soap:operation soapAction="http://www.globus.org/namespaces/GenericPortal/GPService_instance/GPPortType/userResultRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="workerWork">
+      <soap:operation soapAction="http://www.globus.org/namespaces/GenericPortal/GPService_instance/GPPortType/workerWorkRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="workerResult">
+      <soap:operation soapAction="http://www.globus.org/namespaces/GenericPortal/GPService_instance/GPPortType/workerResultRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="init">
+      <soap:operation soapAction="http://www.globus.org/namespaces/GenericPortal/GPService_instance/GPPortType/initRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deInit">
+      <soap:operation soapAction="http://www.globus.org/namespaces/GenericPortal/GPService_instance/GPPortType/deInitRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="status">
+      <soap:operation soapAction="http://www.globus.org/namespaces/GenericPortal/GPService_instance/GPPortType/statusRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="statusUser">
+      <soap:operation soapAction="http://www.globus.org/namespaces/GenericPortal/GPService_instance/GPPortType/statusUserRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="monitorConfig">
+      <soap:operation soapAction="http://www.globus.org/namespaces/GenericPortal/GPService_instance/GPPortType/monitorConfigRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="monitorState">
+      <soap:operation soapAction="http://www.globus.org/namespaces/GenericPortal/GPService_instance/GPPortType/monitorStateRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="monitorWorkerState">
+      <soap:operation soapAction="http://www.globus.org/namespaces/GenericPortal/GPService_instance/GPPortType/monitorWorkerStateRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="monitorTaskState">
+      <soap:operation soapAction="http://www.globus.org/namespaces/GenericPortal/GPService_instance/GPPortType/monitorTaskStateRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Destroy">
+      <soap:operation soapAction="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/Destroy"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ResourceUnknownFault">
+        <soap:fault name="ResourceUnknownFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ResourceNotDestroyedFault">
+        <soap:fault name="ResourceNotDestroyedFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetTerminationTime">
+      <soap:operation soapAction="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/SetTerminationTime"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ResourceUnknownFault">
+        <soap:fault name="ResourceUnknownFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnableToSetTerminationTimeFault">
+        <soap:fault name="UnableToSetTerminationTimeFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="TerminationTimeChangeRejectedFault">
+        <soap:fault name="TerminationTimeChangeRejectedFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceProperty">
+      <soap:operation soapAction="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetResourceProperty"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InvalidResourcePropertyQNameFault">
+        <soap:fault name="InvalidResourcePropertyQNameFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ResourceUnknownFault">
+        <soap:fault name="ResourceUnknownFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_rendezvous_service
+END
+jndi-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_rendezvous_service/jndi-config.xml
+END
+server-config.wsdd
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_rendezvous_service/server-config.wsdd
+END

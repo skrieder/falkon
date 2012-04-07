@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/repos/falkon/!svn/ver/1/worker/etc/ssh
+END
+ssh_config
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/1/worker/etc/ssh/ssh_config
+END
+sshd_config
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/worker/etc/ssh/sshd_config
+END
+ssh_host_key.pub
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/1/worker/etc/ssh/ssh_host_key.pub
+END
+moduli
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repos/falkon/!svn/ver/1/worker/etc/ssh/moduli
+END
+ssh_prng_cmds
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/worker/etc/ssh/ssh_prng_cmds
+END
+ssh_host_rsa_key.pub
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/falkon/!svn/ver/1/worker/etc/ssh/ssh_host_rsa_key.pub
+END
+ssh_host_dsa_key.pub
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/falkon/!svn/ver/1/worker/etc/ssh/ssh_host_dsa_key.pub
+END

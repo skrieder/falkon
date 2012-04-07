@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/basic
+END
+test_bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/basic/test_bindings.wsdl
+END
+test_service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/basic/test_service.wsdl
+END
+TestRPCService.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/basic/TestRPCService.wsdl
+END
+test_flattened.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/basic/test_flattened.wsdl
+END

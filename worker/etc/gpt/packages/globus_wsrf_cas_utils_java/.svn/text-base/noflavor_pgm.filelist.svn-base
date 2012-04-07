@@ -1,0 +1,6 @@
+lib/globus_cas_utils.jar
+etc/globus_cas_utils/database_delete.sql
+etc/globus_cas_utils/database_view.sql
+etc/gpt/./packages/globus_cas_utils/undeploy.xml
+etc/gpt/packages/globus_wsrf_cas_utils_java/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_cas_utils_java/pkg_data_noflavor_pgm.gpt

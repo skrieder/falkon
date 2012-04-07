@@ -1,0 +1,5 @@
+/lib/libglobus_gaa_gss_generic_gcc32dbg.a
+/lib/libglobus_gaa_gss_generic_gcc32dbg.la
+/include/gcc32dbg/gaa_gss_generic.h
+/etc/globus_packages/gaa_gss_generic/gcc32dbg_dev.filelist
+/etc/globus_packages/gaa_gss_generic/pkg_data_gcc32dbg_dev.gpt

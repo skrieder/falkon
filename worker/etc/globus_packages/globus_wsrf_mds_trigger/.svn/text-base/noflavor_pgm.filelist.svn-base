@@ -1,0 +1,12 @@
+etc/globus_wsrf_mds_trigger/glue-trigger-action.sh
+etc/globus_wsrf_mds_trigger/test-trigger-action.sh
+etc/globus_wsrf_mds_trigger/trigger-aggregator-registration.xml
+etc/globus_wsrf_mds_trigger/jndi-config.xml
+etc/globus_wsrf_mds_trigger/server-config.wsdd
+etc/gpt/./packages/globus_wsrf_mds_trigger/undeploy.xml
+lib/wsrf_mds_trigger.jar
+lib/wsrf_mds_trigger_stubs.jar
+share/schema/mds/trigger/trigger-types.wsdl
+share/schema/mds/trigger/trigger-types.xsd
+etc/gpt/packages/globus_wsrf_mds_trigger/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_mds_trigger/pkg_data_noflavor_pgm.gpt

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/falkon/!svn/ver/5/container/etc/globus_wsrf_core
+END
+client-jndi-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/falkon/!svn/ver/1/container/etc/globus_wsrf_core/client-jndi-config.xml
+END
+global_security_descriptor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/falkon/!svn/ver/1/container/etc/globus_wsrf_core/global_security_descriptor.xml
+END
+client-server-config.wsdd
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/falkon/!svn/ver/1/container/etc/globus_wsrf_core/client-server-config.wsdd
+END
+jndi-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/falkon/!svn/ver/1/container/etc/globus_wsrf_core/jndi-config.xml
+END
+server-config.wsdd
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/falkon/!svn/ver/5/container/etc/globus_wsrf_core/server-config.wsdd
+END

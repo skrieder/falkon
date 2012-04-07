@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_user_env
+END
+pkg_data_noflavor_data.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_user_env/pkg_data_noflavor_data.gpt
+END
+noflavordata.format
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_user_env/noflavordata.format
+END
+noflavor_data.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_user_env/noflavor_data.filelist
+END

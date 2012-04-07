@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_wsrf_mds_hawkeye
+END
+noflavorpgm.format
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_wsrf_mds_hawkeye/noflavorpgm.format
+END
+noflavor_pgm.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_wsrf_mds_hawkeye/noflavor_pgm.filelist
+END
+pkg_data_noflavor_pgm.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_wsrf_mds_hawkeye/pkg_data_noflavor_pgm.gpt
+END

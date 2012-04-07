@@ -1,0 +1,121 @@
+<html><h1>volunteers</h1><img src="volunteers.gif"><p>
+<a href="gall.using.html">How to download and try this example</a><br>
+<a href="volunteers.ps">Download the PostScript equivalent</a><pre><b>
+
+Usage: pl -gif volunteers.htm
+or for postscript output: pl -ps volunteers.htm | lp 
+<hr></b>
+
+
+// <b> specify data using <a href="../doc/getdata.html">proc getdata</a></b>
+#proc getdata
+data:
+// yymm | %filled | #who worked | #trained | (#term) | #vol
+9708 75 37 3 6 -
+9709 90 41 3 0 -
+9710 96 39 8 2 -
+9711 96 44 6 2 -
+9712 97 49 3 3 -
+9801 95 41 5 3 -
+9802 96 42 0 4 -
+9803 97 41 0 1 -
+9804 96 49 3 0 -
+9805 90 47 2 2 -
+9806 95 39 3 8 -
+9807 89 33 2 4 -
+9808 69 28 2 4 -
+9809 70 35 1 0 33
+9810 78 38 2 1 34
+9811 82 30 4 0 36
+9812 81 37 4 1 38
+9901 81 31 4 0 40
+9902 82 35 4 0 41
+9903 76 36 1 0 38
+9904 72 35 0 0 39
+
+// <b> do page title using <a href="../doc/page.html">proc page</a></b>
+#proc page
+pagesize: 8.5 11
+#if @DEVICE in gif,png   // make a reduced GIF
+  scale: 0.5
+#endif
+dobackground: no
+titledetails: size=15
+title: River Valley Cleanup
+Volunteer Report
+Through April '99
+
+// <b> define an areadef template using #procdef <a href="../doc/areadef.html">(proc areadef)</a>
+// #procdef defines a proc without rendering it; it may then be cloned.  </b>
+#procdef areadef
+titledetails: size=12 style=BI
+box: 6.1 1
+xscaletype: date yymm
+xrange: 9707 9905
+xaxis.stubs: inc 1
+xaxis.stubformat: M
+yaxis.stubs: inc 10
+xaxis.autoyears: yyyy
+#saveas: A
+
+// <b> set up the topmost plotting area.. 
+// clone the template and alter some things <a href="../doc/areadef.html">(proc areadef)</a></b>
+#proc areadef
+#clone: A
+title: Percent of volunteer time filled
+location: 1.2 8 
+yrange: 50 110
+yaxis.stubrange 50 100
+yaxis.stubs: inc 10
+
+// <b> do the topmost set of bars using <a href="../doc/bars.html">proc bars</a></b>
+#proc bars
+locfield: 1
+lenfield: 2
+showvalues: yes
+barwidth: 0.15
+#saveas: B
+
+// <b> 2nd bargraph</b>
+#proc areadef
+#clone: A
+location: 1.2 6.2
+yrange: 0 60
+yaxis.stubrange: 0 60
+title: Number of volunteers who worked
+
+#proc bars
+#clone: B
+lenfield: 3
+
+// <b> 3rd bargraph</b>
+#proc areadef
+#clone: A
+location: 1.2 4.4
+yrange: 0 60
+yaxis.stubs: inc 10
+title: Number of monthly volunteers
+
+#proc annotate
+location: 1.77473 4.73333
+textdetails: size=8 align=L
+text: (This information not 
+reported until 9/98)
+
+#proc bars
+#clone: B
+lenfield: 6
+
+// <b> 4th bargraph</b>
+#proc areadef
+#clone: A
+location: 1.2 2.6
+yrange: 0 10
+yaxis.stubs: inc 2
+title: Number of new volunteers trained
+
+#proc bars
+#clone: B
+lenfield: 4
+labelzerovalue: yes
+

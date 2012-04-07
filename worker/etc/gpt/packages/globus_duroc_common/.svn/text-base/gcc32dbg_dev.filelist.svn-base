@@ -1,0 +1,9 @@
+/lib/libglobus_duroc_common_gcc32dbg.a
+/lib/libglobus_duroc_common_gcc32dbg.la
+/include/gcc32dbg/globus_i_duroc_common.h
+/include/gcc32dbg/globus_duroc_common.h
+/include/gcc32dbg/globus_i_duroc_common_nxbuff.h
+/include/gcc32dbg/globus_i_duroc_common_rsl.h
+/include/gcc32dbg/globus_i_duroc_common_utils.h
+/etc/globus_packages/globus_duroc_common/gcc32dbg_dev.filelist
+/etc/globus_packages/globus_duroc_common/pkg_data_gcc32dbg_dev.gpt

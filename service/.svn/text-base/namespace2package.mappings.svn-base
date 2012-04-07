@@ -1,0 +1,8 @@
+http\://www.globus.org/namespaces/GenericPortal/FactoryService=org.globus.GenericPortal.stubs.Factory
+http\://www.globus.org/namespaces/GenericPortal/FactoryService/bindings=org.globus.GenericPortal.stubs.Factory.bindings
+http\://www.globus.org/namespaces/GenericPortal/FactoryService/service=org.globus.GenericPortal.stubs.Factory.service
+
+http\://www.globus.org/namespaces/GenericPortal/GPService_instance=org.globus.GenericPortal.stubs.GPService_instance
+http\://www.globus.org/namespaces/GenericPortal/GPService_instance/bindings=org.globus.GenericPortal.stubs.GPService_instance.bindings
+http\://www.globus.org/namespaces/GenericPortal/GPService_instance/service=org.globus.GenericPortal.stubs.GPService_instance.service
+

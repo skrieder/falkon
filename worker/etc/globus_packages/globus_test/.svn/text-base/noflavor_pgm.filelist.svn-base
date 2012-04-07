@@ -1,0 +1,8 @@
+/test/globus_test/test-toolkit
+/test/globus_test/testcred.pem
+/test/globus_test/dc31a685.0
+/test/globus_test/dc31a685.signing_policy
+/test/globus_test/testcred-env.sh
+/test/globus_test/testcred-setup.sh
+/etc/globus_packages/globus_test/noflavor_pgm.filelist
+/etc/globus_packages/globus_test/pkg_data_noflavor_pgm.gpt

@@ -1,0 +1,15 @@
+/test/globus_io_test/dc31a685.0
+/test/globus_io_test/dc31a685.signing_policy
+/test/globus_io_test/testcred.pem
+/test/globus_io_test/globus_io_tcp_test
+/test/globus_io_test/globus_io_tcp_test_server
+/test/globus_io_test/globus_io_tcp_test_client
+/test/globus_io_test/globus_io_file_test
+/test/globus_io_test/globus_io_authorization_test
+/test/globus_io_test/TESTS.pl
+/test/globus_io_test/globus-io-authorization-test.pl
+/test/globus_io_test/globus-io-file-test.pl
+/test/globus_io_test/globus-io-tcp-test.pl
+/test/globus_io_test/run-io-tests.pl
+/etc/globus_packages/globus_io_test/noflavor_data.filelist
+/etc/globus_packages/globus_io_test/pkg_data_noflavor_data.gpt

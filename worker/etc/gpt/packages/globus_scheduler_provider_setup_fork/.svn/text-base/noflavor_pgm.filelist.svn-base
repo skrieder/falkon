@@ -1,0 +1,6 @@
+/etc/globus_packages/globus_scheduler_provider_setup_fork/noflavor_pgm.filelist
+/etc/globus_packages/globus_scheduler_provider_setup_fork/pkg_data_noflavor_pgm.gpt
+/setup/globus/globus-scheduler-provider-fork.in
+/setup/globus/setup-globus-scheduler-provider-fork
+/setup/globus/setup-globus-scheduler-provider-fork.pl
+/setup/globus/find-fork-provider-tools

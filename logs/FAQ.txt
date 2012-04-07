@@ -1,0 +1,30 @@
+Common errors:
+
+BG/P Specific, Cobalt Resource Manager:
+"Cioman::processControlNodeMsg: error reading message prefix: 172.16.4.116: 5 Input/output error"
+
+Effect: allocation never started, I/O nodes failed to start:
+
+Jun 18 08:14:24 (I) [4398426092080] iraicu:ANL-R06-1024 {715}.0: Starting GPFS
+Jun 18 08:14:28 (I) [4398426092080] iraicu:ANL-R06-1024 {715}.0: Jun 18 08:14:05 ion-R07-4 syslogd 1.4.1: restart.
+Jun 18 08:18:38 (I) [4398426092080] iraicu:ANL-R06-1024 {715}.0: Jun 18 08:18:15 ion-R07-4 ntpd[600]: synchronized to 172.17.5.1, stratum 4
+Jun 18 08:24:30 (I) [4398426092080] iraicu:ANL-R06-1024 {715}.0: /etc/init.d/rc3.d/S40gpfs: GPFS did not come up on I/O node ion-R07-4 : 172.16.4.116 
+Jun 18 08:24:30 (I) [4398426092080] iraicu:ANL-R06-1024 {715}.0: warning: cannot change to home directory
+Jun 18 08:24:30 (I) [4398426092080] iraicu:ANL-R06-1024 {715}.0: -sh: /home/falkon/falkon/bin/falkon-ion-start.sh: not found
+Jun 18 08:24:30 (I) [4398426092080] iraicu:ANL-R06-1024 {715}.0: Zoid startup
+Jun 18 08:24:30 (I) [4398426092080] iraicu:ANL-R06-1024 {715}.0: Zoid startup done
+Jun 18 08:24:30 (I) [4398426092080] iraicu:ANL-R06-1024 {715}.0: Zepto ION startup-99
+Jun 18 08:24:30 (I) [4398426092080] iraicu:ANL-R06-1024 {715}.0: Zepto ION startup-99 done
+Jun 18 08:24:31 (I) [4398426092080] iraicu:ANL-R06-1024 {715}.0: Jun 18 13:24:30 ion-R07-4 init: Starting pid 2117, console /dev/console: '/bin/sh'
+Jun 18 08:24:31 (I) [4398426092080] iraicu:ANL-R06-1024 {715}.0: BusyBox v1.4.2 (2008-05-07 02:58:20 UTC) Built-in shell (ash)
+Jun 18 08:24:31 (I) [4398426092080] iraicu:ANL-R06-1024 {715}.0: Enter 'help' for a list of built-in commands.
+Jun 18 08:24:31 (I) [4398426092080] iraicu:ANL-R06-1024 {715}.0: /bin/sh: can't access tty; job control turned off
+Jun 18 08:24:32 (I) [4398426092080] iraicu:ANL-R06-1024 {715}.0: ~ # 
+Jun 18 08:24:38 (I) [4398426092080] iraicu:ANL-R06-1024 {715}.0: initial chdir: No such file or directory
+Jun 18 08:24:38 (I) [4398426092080] iraicu:ANL-R06-1024 {715}.0: zoid exited with return code 1
+Jun 18 08:24:44 (I) [4398426092080] iraicu:ANL-R06-1024 {715}.0: SysRq : Halt node
+
+Reason: GPFS failed to initialize on the I/O nodes, and hence the I/O nodes failed to boot succesfully.
+
+Solution: Write tech support, and try the job again.
+

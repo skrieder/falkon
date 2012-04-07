@@ -1,0 +1,8 @@
+/lib/libglobus_oldgaa_gcc32dbg.a
+/lib/libglobus_gsi_callback_gcc32dbg.a
+/lib/libglobus_oldgaa_gcc32dbg.la
+/lib/libglobus_gsi_callback_gcc32dbg.la
+/include/gcc32dbg/globus_gsi_callback.h
+/include/gcc32dbg/globus_gsi_callback_constants.h
+/etc/globus_packages/globus_gsi_callback/gcc32dbg_dev.filelist
+/etc/globus_packages/globus_gsi_callback/pkg_data_gcc32dbg_dev.gpt

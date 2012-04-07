@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/repos/falkon/!svn/ver/1/webserver
+END
+run.webserver.sh
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/webserver/run.webserver.sh
+END
+run.www.sh
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/falkon/!svn/ver/1/webserver/run.www.sh
+END
+run.www-graphs.sh
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/webserver/run.www-graphs.sh
+END
+www-server.properties
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/1/webserver/www-server.properties
+END
+WebServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/webserver/WebServer.java
+END
+WebServerLog.txt
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/webserver/WebServerLog.txt
+END
+make.webserver.sh
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/webserver/make.webserver.sh
+END
+clean.www.sh
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/webserver/clean.www.sh
+END

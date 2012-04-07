@@ -1,0 +1,4 @@
+/test/globus_gridmap_and_execute_test/TESTS.pl
+/test/globus_gridmap_and_execute_test/gridmap-and-execute-test.pl
+/etc/globus_packages/globus_gridmap_and_execute_test/noflavor_data.filelist
+/etc/globus_packages/globus_gridmap_and_execute_test/pkg_data_noflavor_data.gpt

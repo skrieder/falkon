@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/servicegroup
+END
+WS-ServiceGroup.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/servicegroup/WS-ServiceGroup.xsd
+END
+WS-ServiceGroup_bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/servicegroup/WS-ServiceGroup_bindings.wsdl
+END
+WS-ServiceGroup.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/servicegroup/WS-ServiceGroup.wsdl
+END
+WS-ServiceGroup_service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/servicegroup/WS-ServiceGroup_service.wsdl
+END

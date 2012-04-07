@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_common_test
+END
+pkg_data_noflavor_data.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_common_test/pkg_data_noflavor_data.gpt
+END
+pkg_data_gcc32dbg_pgm.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_common_test/pkg_data_gcc32dbg_pgm.gpt
+END
+noflavordata.format
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_common_test/noflavordata.format
+END
+gcc32dbgpgm.format
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_common_test/gcc32dbgpgm.format
+END
+noflavor_data.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_common_test/noflavor_data.filelist
+END
+gcc32dbg_pgm.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_common_test/gcc32dbg_pgm.filelist
+END

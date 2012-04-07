@@ -1,0 +1,761 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/repos/falkon/!svn/ver/393/ploticus/src
+END
+gd13.c
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/repos/falkon/!svn/ver/1/ploticus/src/gd13.c
+END
+proc_page.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/ploticus/src/proc_page.c
+END
+proc_pie.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/ploticus/src/proc_pie.c
+END
+dbfunc.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repos/falkon/!svn/ver/1/ploticus/src/dbfunc.c
+END
+proc_drawcommands.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/falkon/!svn/ver/1/ploticus/src/proc_drawcommands.c
+END
+init.c
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/repos/falkon/!svn/ver/1/ploticus/src/init.c
+END
+proc_legendentry.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/1/ploticus/src/proc_legendentry.c
+END
+proc_rangebar.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/ploticus/src/proc_rangebar.c
+END
+localef.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/localef.c
+END
+dbinterface.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/ploticus/src/dbinterface.c
+END
+process_arg.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/ploticus/src/process_arg.c
+END
+api_test.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/ploticus/src/api_test.c
+END
+functions.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/ploticus/src/functions.c
+END
+proc_categories.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/falkon/!svn/ver/1/ploticus/src/proc_categories.c
+END
+proc_lineplot.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/ploticus/src/proc_lineplot.c
+END
+custom.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repos/falkon/!svn/ver/1/ploticus/src/custom.c
+END
+proc_curvefit.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/ploticus/src/proc_curvefit.c
+END
+smoothfit.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/ploticus/src/smoothfit.c
+END
+proc_print.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/1/ploticus/src/proc_print.c
+END
+proc_rect.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/ploticus/src/proc_rect.c
+END
+proc_legend.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/ploticus/src/proc_legend.c
+END
+proc_rangesweep.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/falkon/!svn/ver/1/ploticus/src/proc_rangesweep.c
+END
+proc_tabulate.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/ploticus/src/proc_tabulate.c
+END
+Makefile_api
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/1/ploticus/src/Makefile_api
+END
+autorange.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/ploticus/src/autorange.c
+END
+Copyright
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/Copyright
+END
+.sh_history
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/ploticus/src/.sh_history
+END
+mark.c
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/repos/falkon/!svn/ver/1/ploticus/src/mark.c
+END
+cats.c
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/repos/falkon/!svn/ver/1/ploticus/src/cats.c
+END
+glroutines.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/1/ploticus/src/glroutines.c
+END
+stock.csv
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/stock.csv
+END
+value_subst.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/ploticus/src/value_subst.c
+END
+proc_getdata.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/ploticus/src/proc_getdata.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/93/ploticus/src/Makefile
+END
+gdfontl.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/gdfontl.c
+END
+plhead.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repos/falkon/!svn/ver/1/ploticus/src/plhead.c
+END
+svg.c
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/repos/falkon/!svn/ver/1/ploticus/src/svg.c
+END
+gdfontmb.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/ploticus/src/gdfontmb.c
+END
+dates.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/falkon/!svn/ver/1/ploticus/src/dates.c
+END
+gdfontl.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/gdfontl.h
+END
+gd_io_dp.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/ploticus/src/gd_io_dp.c
+END
+winscale.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/ploticus/src/winscale.c
+END
+gdfontmb.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/ploticus/src/gdfontmb.h
+END
+gdfontt.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/gdfontt.c
+END
+x11shades.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/ploticus/src/x11shades.h
+END
+shell.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/falkon/!svn/ver/1/ploticus/src/shell.c
+END
+pixpt.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/falkon/!svn/ver/1/ploticus/src/pixpt.h
+END
+secondaryops.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/ploticus/src/secondaryops.c
+END
+proc_usedata.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/ploticus/src/proc_usedata.c
+END
+gdfontt.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/gdfontt.h
+END
+proc_line.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/ploticus/src/proc_line.c
+END
+pl.c
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/repos/falkon/!svn/ver/1/ploticus/src/pl.c
+END
+volunteers.htm
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/ploticus/src/volunteers.htm
+END
+value.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/falkon/!svn/ver/1/ploticus/src/value.c
+END
+color.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/falkon/!svn/ver/1/ploticus/src/color.c
+END
+gd_io_file.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/1/ploticus/src/gd_io_file.c
+END
+pl.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/repos/falkon/!svn/ver/93/ploticus/src/pl.h
+END
+times.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/falkon/!svn/ver/1/ploticus/src/times.c
+END
+gd_io.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/falkon/!svn/ver/1/ploticus/src/gd_io.c
+END
+variable.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/ploticus/src/variable.c
+END
+gd_io.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/falkon/!svn/ver/1/ploticus/src/gd_io.h
+END
+memstuff.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/ploticus/src/memstuff.c
+END
+tdhkit.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repos/falkon/!svn/ver/1/ploticus/src/tdhkit.c
+END
+proc_scatterplot.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/1/ploticus/src/proc_scatterplot.c
+END
+block.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/falkon/!svn/ver/1/ploticus/src/block.c
+END
+proc_processdata.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/1/ploticus/src/proc_processdata.c
+END
+tdhkit.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repos/falkon/!svn/ver/1/ploticus/src/tdhkit.h
+END
+proc_breakaxis.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repos/falkon/!svn/ver/1/ploticus/src/proc_breakaxis.c
+END
+proc_annotate.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/ploticus/src/proc_annotate.c
+END
+gd00files
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/gd00files
+END
+proc_import.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/ploticus/src/proc_import.c
+END
+gd_png.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repos/falkon/!svn/ver/1/ploticus/src/gd_png.c
+END
+swf.c
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/repos/falkon/!svn/ver/1/ploticus/src/swf.c
+END
+nearest.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/nearest.c
+END
+gd16.c
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/repos/falkon/!svn/ver/1/ploticus/src/gd16.c
+END
+units.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/falkon/!svn/ver/1/ploticus/src/units.c
+END
+gd16files
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/gd16files
+END
+preliminaries.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/ploticus/src/preliminaries.c
+END
+proc_venndisk.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/ploticus/src/proc_venndisk.c
+END
+special_chars.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/ploticus/src/special_chars.h
+END
+fieldnames.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/1/ploticus/src/fieldnames.c
+END
+getdata.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/getdata.c
+END
+api.c
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/repos/falkon/!svn/ver/1/ploticus/src/api.c
+END
+execscriptfile.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repos/falkon/!svn/ver/1/ploticus/src/execscriptfile.c
+END
+x11.c
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/repos/falkon/!svn/ver/1/ploticus/src/x11.c
+END
+stub.c
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/repos/falkon/!svn/ver/1/ploticus/src/stub.c
+END
+select.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repos/falkon/!svn/ver/1/ploticus/src/select.c
+END
+condex.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repos/falkon/!svn/ver/1/ploticus/src/condex.c
+END
+plg.c
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/repos/falkon/!svn/ver/1/ploticus/src/plg.c
+END
+proc_settings.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/ploticus/src/proc_settings.c
+END
+clickmap.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/ploticus/src/clickmap.c
+END
+proc_vector.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/ploticus/src/proc_vector.c
+END
+plg.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/repos/falkon/!svn/ver/1/ploticus/src/plg.h
+END
+err.c
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/repos/falkon/!svn/ver/1/ploticus/src/err.c
+END
+api_try1.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/ploticus/src/api_try1.c
+END
+gdfontg.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/gdfontg.c
+END
+arrow.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/falkon/!svn/ver/1/ploticus/src/arrow.c
+END
+execline.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/ploticus/src/execline.c
+END
+gdfontg.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/gdfontg.h
+END
+lineclip.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/ploticus/src/lineclip.c
+END
+gd13alt.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/gd13alt.c
+END
+proc_defineunits.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/1/ploticus/src/proc_defineunits.c
+END
+gdfonts.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/gdfonts.c
+END
+lib.c
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/repos/falkon/!svn/ver/1/ploticus/src/lib.c
+END
+testsup.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/testsup.c
+END
+header
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/repos/falkon/!svn/ver/1/ploticus/src/header
+END
+test.pl
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/falkon/!svn/ver/1/ploticus/src/test.pl
+END
+gdfonts.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/gdfonts.h
+END
+interact.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/ploticus/src/interact.c
+END
+parse.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/falkon/!svn/ver/1/ploticus/src/parse.c
+END
+proc_bars.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/ploticus/src/proc_bars.c
+END
+proc_areadef.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/ploticus/src/proc_areadef.c
+END
+reslimits.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/ploticus/src/reslimits.c
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/repos/falkon/!svn/ver/1/ploticus/src/README
+END
+GPL.txt
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/falkon/!svn/ver/1/ploticus/src/GPL.txt
+END
+ps.c
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/repos/falkon/!svn/ver/1/ploticus/src/ps.c
+END
+grgd.c
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/repos/falkon/!svn/ver/1/ploticus/src/grgd.c
+END
+sinterp.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/sinterp.c
+END
+details.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/details.c
+END
+devstuff.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/ploticus/src/devstuff.c
+END
+proc_axis.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/94/ploticus/src/proc_axis.c
+END
+proc_symbol.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/ploticus/src/proc_symbol.c
+END
+plvalue_subst.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/ploticus/src/plvalue_subst.c
+END
+stock.htm
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/ploticus/src/stock.htm
+END
+pcode.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/falkon/!svn/ver/1/ploticus/src/pcode.c
+END
+datetime.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/ploticus/src/datetime.c
+END

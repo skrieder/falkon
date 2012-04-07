@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/falkon/!svn/ver/1/container/share/globus_wsrf_common
+END
+build-packages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/falkon/!svn/ver/1/container/share/globus_wsrf_common/build-packages.xml
+END
+build-launcher.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/falkon/!svn/ver/1/container/share/globus_wsrf_common/build-launcher.xml
+END

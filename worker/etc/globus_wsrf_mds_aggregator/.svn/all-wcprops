@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_aggregator
+END
+example-aggregator-registration.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_aggregator/example-aggregator-registration.xml
+END
+client-server-config.wsdd
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_aggregator/client-server-config.wsdd
+END
+example-ping-exec
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_aggregator/example-ping-exec
+END
+server-config.wsdd
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_aggregator/server-config.wsdd
+END
+aggregator-exec-test.sh
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_aggregator/aggregator-exec-test.sh
+END

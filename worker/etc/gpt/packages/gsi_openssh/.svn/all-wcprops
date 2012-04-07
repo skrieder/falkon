@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gsi_openssh
+END
+pkg_data_gcc32dbg_pgm.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gsi_openssh/pkg_data_gcc32dbg_pgm.gpt
+END
+gcc32dbgpgm.format
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gsi_openssh/gcc32dbgpgm.format
+END
+gcc32dbg_pgm.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gsi_openssh/gcc32dbg_pgm.filelist
+END

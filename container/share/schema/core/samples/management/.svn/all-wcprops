@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/falkon/!svn/ver/1/container/share/schema/core/samples/management
+END
+management_bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/falkon/!svn/ver/1/container/share/schema/core/samples/management/management_bindings.wsdl
+END
+management_service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/falkon/!svn/ver/1/container/share/schema/core/samples/management/management_service.wsdl
+END
+management_flattened.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/falkon/!svn/ver/1/container/share/schema/core/samples/management/management_flattened.wsdl
+END

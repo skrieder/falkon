@@ -1,0 +1,6 @@
+/lib/libglobus_proxy_ssl_gcc32dbg.a
+/lib/libglobus_proxy_ssl_gcc32dbg.la
+/include/gcc32dbg/proxycertinfo.h
+/include/gcc32dbg/proxypolicy.h
+/etc/globus_packages/globus_gsi_proxy_ssl/gcc32dbg_dev.filelist
+/etc/globus_packages/globus_gsi_proxy_ssl/pkg_data_gcc32dbg_dev.gpt

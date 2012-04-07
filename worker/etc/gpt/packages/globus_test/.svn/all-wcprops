@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_test
+END
+noflavorrtl.format
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_test/noflavorrtl.format
+END
+noflavor_rtl.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_test/noflavor_rtl.filelist
+END
+noflavorpgm.format
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_test/noflavorpgm.format
+END
+noflavor_pgm.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_test/noflavor_pgm.filelist
+END
+pkg_data_noflavor_rtl.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_test/pkg_data_noflavor_rtl.gpt
+END
+pkg_data_noflavor_pgm.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_test/pkg_data_noflavor_pgm.gpt
+END

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gpt_package_metadata SYSTEM "globus_package.dtd">
+<gpt_package_metadata Format_Version="0.01" Name="globus_c_wsrf_core_bindings" >
+<Aging_Version Age="0" Major="0" Minor="7" />
+<Description >WSRF Core Bindings</Description>
+<Functional_Group >C WS Core</Functional_Group>
+<Version_Stability Release="Experimental" />
+<PackagingTool ToolName="GPT" ToolVersion="3.2" />
+<dev_pkg >
+<Flavor ColocateLibraries="yes" >gcc32dbg</Flavor>
+<Binary_Dependencies Type="Build_Link" >
+<Dependency Name="globus_c_ws_messaging" Package="dev" >
+<Version >
+<Simple_Version Major="0" />
+<Simple_Version Major="1" />
+<Simple_Version Major="2" />
+</Version>
+</Dependency>
+<Dependency Name="globus_common" Package="dev" >
+<Version >
+<Simple_Version Major="6" />
+</Version>
+</Dependency>
+<Dependency Name="globus_libxml2" Package="dev" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+</Binary_Dependencies>
+<Binary_Dependencies Type="Compile" >
+<Dependency Name="globus_c_ws_messaging" Package="dev" >
+<Version >
+<Simple_Version Major="0" />
+<Simple_Version Major="1" />
+<Simple_Version Major="2" />
+</Version>
+</Dependency>
+<Dependency Name="globus_c_wsdl_parser" Package="pgm" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+<Dependency Name="globus_c_wsrf_cgen" Package="pgm" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+<Dependency Name="globus_common" Package="dev" >
+<Version >
+<Simple_Version Major="6" />
+</Version>
+</Dependency>
+<Dependency Name="globus_ws_core_schema" Package="pgm" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+</Binary_Dependencies>
+<Build_Environment >
+<cflags > -I\$(GLOBUS_LOCATION)/include/\$(GLOBUS_FLAVOR_NAME)/wsrf/services</cflags>
+<external_includes ></external_includes>
+<pkg_libs >-lglobus_wsa_bindings_gcc32dbg -lglobus_ds_bindings_gcc32dbg -lglobus_wsu_bindings_gcc32dbg -lglobus_wsp_bindings_gcc32dbg -lglobus_wst_bindings_gcc32dbg -lglobus_wsse_bindings_gcc32dbg -lglobus_wsseu_bindings_gcc32dbg -lglobus_wsc_bindings_gcc32dbg -lglobus_wsbf_bindings_gcc32dbg -lglobus_wsnt_bindings_gcc32dbg -lglobus_wsrl_bindings_gcc32dbg -lglobus_wsrp_bindings_gcc32dbg -lglobus_wssg_bindings_gcc32dbg -lglobus_notification_consumer_bindings_gcc32dbg -lglobus_subscription_manager_bindings_gcc32dbg</pkg_libs>
+<external_libs ></external_libs>
+</Build_Environment>
+</dev_pkg>
+</gpt_package_metadata>

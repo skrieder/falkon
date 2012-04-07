@@ -1,0 +1,45 @@
+<project default="all">
+
+  <property name="here" location="." />
+  <property environment="env" />
+  <property name="globus.location" location="${env.GLOBUS_LOCATION}" />
+
+<target name="all">
+
+  <delete file="${globus.location}/lib/org_globus_GenericPortal_common.jar"/>
+  <delete file="org_globus_GenericPortal_common.jar"/>
+
+
+  <jar destfile="org_globus_GenericPortal_common.jar"
+       basedir="." includes="org/**/*.class" />
+
+  <copy file="org_globus_GenericPortal_common.jar"
+        todir="${globus.location}/lib/" />
+
+  <delete file="org_globus_GenericPortal_services_core_WS.gar" />
+  <delete dir="build/" />
+
+  <exec executable="./globus-build-service.sh" failonerror="true">
+    <arg value="GenericPortal" />
+  </exec>
+
+  <exec executable="globus-deploy-gar" failonerror="true">
+    <arg value="org_globus_GenericPortal_services_core_WS.gar" />
+  </exec>
+
+  <javac srcdir="." destdir="." />
+
+  <delete file="${globus.location}/lib/org_globus_GenericPortal_common.jar"/>
+  <delete file="org_globus_GenericPortal_common.jar"/>
+
+
+  <jar destfile="org_globus_GenericPortal_common.jar"
+       basedir="." includes="org/**/*.class" />
+
+  <copy file="org_globus_GenericPortal_common.jar"
+        todir="${globus.location}/lib/" />
+
+
+</target>
+
+</project>

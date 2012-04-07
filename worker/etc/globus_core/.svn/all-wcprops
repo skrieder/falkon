@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/worker/etc/globus_core
+END
+flavor_gcc32dbg.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/falkon/!svn/ver/1/worker/etc/globus_core/flavor_gcc32dbg.gpt
+END
+flavor_gcc32dbgpthr.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/falkon/!svn/ver/1/worker/etc/globus_core/flavor_gcc32dbgpthr.gpt
+END

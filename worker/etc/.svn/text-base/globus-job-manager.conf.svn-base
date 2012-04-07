@@ -1,0 +1,11 @@
+	-home "/scratch/local/iraicu/GT4.0.3"
+	-globus-gatekeeper-host tg-v037.uc.teragrid.org
+	-globus-gatekeeper-port 2119
+	-globus-gatekeeper-subject "unavailable at time of install"
+	-globus-host-cputype i686
+	-globus-host-manufacturer pc
+	-globus-host-osname Linux
+	-globus-host-osversion 2.4.21-309.tg1
+	-save-logfile on_error
+	-state-file-dir /scratch/local/iraicu/GT4.0.3/tmp/gram_job_state
+	-machine-type unknown

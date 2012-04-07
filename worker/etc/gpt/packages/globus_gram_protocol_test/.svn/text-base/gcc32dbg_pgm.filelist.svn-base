@@ -1,0 +1,16 @@
+/test/globus_gram_protocol_test/dc31a685.0
+/test/globus_gram_protocol_test/dc31a685.signing_policy
+/test/globus_gram_protocol_test/testcred.pem
+/test/globus_gram_protocol_test/globus-gram-protocol-allow-attach-test
+/test/globus_gram_protocol_test/globus-gram-protocol-delegation-test
+/test/globus_gram_protocol_test/globus-gram-protocol-error-test
+/test/globus_gram_protocol_test/globus-gram-protocol-io-test
+/test/globus_gram_protocol_test/globus-gram-protocol-pack-test
+/test/globus_gram_protocol_test/TESTS.pl
+/test/globus_gram_protocol_test/globus-gram-protocol-allow-attach-test.pl
+/test/globus_gram_protocol_test/globus-gram-protocol-error-test.pl
+/test/globus_gram_protocol_test/globus-gram-protocol-io-test.pl
+/test/globus_gram_protocol_test/globus-gram-protocol-pack-test.pl
+/test/globus_gram_protocol_test/globus-gram-protocol-run-tests.pl
+/etc/globus_packages/globus_gram_protocol_test/gcc32dbg_pgm.filelist
+/etc/globus_packages/globus_gram_protocol_test/pkg_data_gcc32dbg_pgm.gpt

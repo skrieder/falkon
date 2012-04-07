@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/security
+END
+security_test_flattened.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/security/security_test_flattened.wsdl
+END
+security_test_bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/security/security_test_bindings.wsdl
+END
+security_test_service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/falkon/!svn/ver/1/container/share/schema/core/tests/security/security_test_service.wsdl
+END

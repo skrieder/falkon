@@ -1,0 +1,5 @@
+/test/globus_c_wsrf_sample_counter_client_test/test-counter
+/test/globus_c_wsrf_sample_counter_client_test/test-secure-transport-counter
+/test/globus_c_wsrf_sample_counter_client_test/test-secure-message-counter
+/etc/globus_packages/globus_c_wsrf_sample_counter_client_test/noflavor_data.filelist
+/etc/globus_packages/globus_c_wsrf_sample_counter_client_test/pkg_data_noflavor_data.gpt

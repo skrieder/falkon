@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_c_wsrf_notification_test
+END
+pkg_data_noflavor_data.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_c_wsrf_notification_test/pkg_data_noflavor_data.gpt
+END
+pkg_data_gcc32dbg_pgm.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_c_wsrf_notification_test/pkg_data_gcc32dbg_pgm.gpt
+END
+noflavordata.format
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_c_wsrf_notification_test/noflavordata.format
+END
+gcc32dbgpgm.format
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_c_wsrf_notification_test/gcc32dbgpgm.format
+END
+noflavor_data.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_c_wsrf_notification_test/noflavor_data.filelist
+END
+gcc32dbg_pgm.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_c_wsrf_notification_test/gcc32dbg_pgm.filelist
+END

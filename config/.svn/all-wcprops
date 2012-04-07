@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/repos/falkon/!svn/ver/373/config
+END
+worker-security-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/falkon/!svn/ver/13/config/worker-security-config.xml
+END
+Provisioner-emulated.config
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/falkon/!svn/ver/358/config/Provisioner-emulated.config
+END
+client-nosecurity-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/falkon/!svn/ver/1/config/client-nosecurity-config.xml
+END
+Provisioner-UC-ANL-TG-JWSCore.config
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/falkon/!svn/ver/351/config/Provisioner-UC-ANL-TG-JWSCore.config
+END
+Client-service-URIs.config2
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/falkon/!svn/ver/224/config/Client-service-URIs.config2
+END
+Provisioner.config
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/48/config/Provisioner.config
+END
+gridftp.conf
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/falkon/!svn/ver/61/config/gridftp.conf
+END
+global_security_descriptor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/falkon/!svn/ver/1/config/global_security_descriptor.xml
+END
+client-security-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/falkon/!svn/ver/56/config/client-security-config.xml
+END
+Falkon-iraicu.config
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/92/config/Falkon-iraicu.config
+END
+Falkon-JWSCore.config
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/falkon/!svn/ver/343/config/Falkon-JWSCore.config
+END
+container-log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/falkon/!svn/ver/5/config/container-log4j.properties
+END
+Provisioner-iraicu.config
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/falkon/!svn/ver/48/config/Provisioner-iraicu.config
+END
+Client-service-URIs.config
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/falkon/!svn/ver/404/config/Client-service-URIs.config
+END
+Provisioner-UC-ANL-TG-TCPCore.config
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/falkon/!svn/ver/156/config/Provisioner-UC-ANL-TG-TCPCore.config
+END
+Falkon-emulated-caching.config
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/falkon/!svn/ver/358/config/Falkon-emulated-caching.config
+END
+Falkon-caching.config
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/falkon/!svn/ver/350/config/Falkon-caching.config
+END
+security-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/config/security-config.xml
+END
+security-config-submit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/falkon/!svn/ver/1/config/security-config-submit.xml
+END
+Falkon-TCPCore.config
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/falkon/!svn/ver/373/config/Falkon-TCPCore.config
+END
+Provisioner-UC-ANL-TG-JWSCore-caching.config
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/falkon/!svn/ver/351/config/Provisioner-UC-ANL-TG-JWSCore-caching.config
+END
+Falkon-emulated.config
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/404/config/Falkon-emulated.config
+END
+Falkon.config
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repos/falkon/!svn/ver/48/config/Falkon.config
+END

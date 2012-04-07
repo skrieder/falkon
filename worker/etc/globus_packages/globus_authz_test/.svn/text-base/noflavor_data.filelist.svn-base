@@ -1,0 +1,4 @@
+/test/globus_authz_test/authtest
+/test/globus_authz_test/authz_cred_test
+/etc/globus_packages/globus_authz_test/noflavor_data.filelist
+/etc/globus_packages/globus_authz_test/pkg_data_noflavor_data.gpt

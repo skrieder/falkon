@@ -1,0 +1,7 @@
+/test/globus_c_wsrf_resource_test/resource-test
+/test/globus_c_wsrf_resource_test/resource-property-test
+/test/globus_c_wsrf_resource_test/TESTS.pl
+/test/globus_c_wsrf_resource_test/resource-test.pl
+/test/globus_c_wsrf_resource_test/resource-property-test.pl
+/etc/globus_packages/globus_c_wsrf_resource_test/noflavor_data.filelist
+/etc/globus_packages/globus_c_wsrf_resource_test/pkg_data_noflavor_data.gpt

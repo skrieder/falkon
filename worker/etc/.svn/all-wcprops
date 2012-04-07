@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/repos/falkon/!svn/ver/1/worker/etc
+END
+worker-security-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/falkon/!svn/ver/1/worker/etc/worker-security-config.xml
+END
+client-nosecurity-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/falkon/!svn/ver/1/worker/etc/client-nosecurity-config.xml
+END
+globus-devel-env.bat
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/1/worker/etc/globus-devel-env.bat
+END
+Provisioner.config
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repos/falkon/!svn/ver/1/worker/etc/Provisioner.config
+END
+client-security-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/falkon/!svn/ver/1/worker/etc/client-security-config.xml
+END
+globus-devel-env.sh
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/falkon/!svn/ver/1/worker/etc/globus-devel-env.sh
+END
+globus-gatekeeper.conf
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/falkon/!svn/ver/1/worker/etc/globus-gatekeeper.conf
+END
+globus-devel-env.csh
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/1/worker/etc/globus-devel-env.csh
+END
+globus_gram_local_proxy_tool.conf
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/falkon/!svn/ver/1/worker/etc/globus_gram_local_proxy_tool.conf
+END
+grid-info-gram-rsl-reporter.schema
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/falkon/!svn/ver/1/worker/etc/grid-info-gram-rsl-reporter.schema
+END
+globus-job-manager.conf
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/falkon/!svn/ver/1/worker/etc/globus-job-manager.conf
+END
+globus-user-env.sh
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repos/falkon/!svn/ver/1/worker/etc/globus-user-env.sh
+END
+globus-user-env.csh
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/falkon/!svn/ver/1/worker/etc/globus-user-env.csh
+END
+globus-devel-setcp.bat
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/falkon/!svn/ver/1/worker/etc/globus-devel-setcp.bat
+END
+globus-fork.conf
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/worker/etc/globus-fork.conf
+END

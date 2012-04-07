@@ -1,0 +1,6 @@
+/lib/libglobus_gsi_sysconfig_gcc32dbgpthr.a
+/lib/libglobus_gsi_sysconfig_gcc32dbgpthr.la
+/include/gcc32dbgpthr/globus_gsi_system_config.h
+/include/gcc32dbgpthr/globus_gsi_system_config_constants.h
+/etc/globus_packages/globus_gsi_sysconfig/gcc32dbgpthr_dev.filelist
+/etc/globus_packages/globus_gsi_sysconfig/pkg_data_gcc32dbgpthr_dev.gpt

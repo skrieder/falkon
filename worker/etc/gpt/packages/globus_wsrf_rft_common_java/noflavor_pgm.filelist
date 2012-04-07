@@ -1,0 +1,5 @@
+etc/gpt/./packages/globus_wsrf_rft_stubs/undeploy.xml
+lib/globus_wsrf_rft_stubs.jar
+share/globus_wsrf_rft_stubs/NStoPkg.properties
+etc/gpt/packages/globus_wsrf_rft_common_java/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_rft_common_java/pkg_data_noflavor_pgm.gpt

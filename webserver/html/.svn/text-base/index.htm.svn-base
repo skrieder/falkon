@@ -1,0 +1,29 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="refresh" content="60">
+<title>Falkon v0.8 -- WebMonitor v0.1</title>
+</head>
+
+<frameset rows="60,150,*">
+	<frame name="top" scrolling="no" noresize target="middle" src="header.htm">
+	
+	<frameset cols="*,200">
+		<frame name="middle" target="bottom" src="service_logs/summary.txt">
+		<frame name="middle" target="bottom" src="log_links.htm">
+	</frameset>
+		
+	<frame name="bottom" src="graphs.htm">
+	<noframes>
+	<body>
+
+	<p>This page uses frames, but your browser doesn't support them.</p>
+
+	</body>
+	</noframes>
+</frameset>
+
+</html>

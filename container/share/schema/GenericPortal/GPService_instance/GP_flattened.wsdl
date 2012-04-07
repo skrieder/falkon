@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="GPService" targetNamespace="http://www.globus.org/namespaces/GenericPortal/GPService_instance" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.globus.org/namespaces/GenericPortal/GPService_instance" xmlns:wsrlw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd">
+  <import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl" location="../../wsrf/lifetime/WS-ResourceLifetime.wsdl"/>
+  <import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" location="../../wsrf/properties/WS-ResourceProperties.wsdl"/>
+  <types>
+    <xsd:schema targetNamespace="http://www.globus.org/namespaces/GenericPortal/GPService_instance" xmlns:rpns0="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.xsd" xmlns:tns="http://www.globus.org/namespaces/GenericPortal/GPService_instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing" schemaLocation="../../ws/addressing/WS-Addressing.xsd"/>
+
+<xsd:import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.xsd" schemaLocation="../../wsrf/lifetime/WS-ResourceLifetime.xsd"/>
+
+
+            <!-- Requests and responses -->
+            <xsd:element name="MonitorState">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="message" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MonitorStateResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="resourceAllocated" type="xsd:int"/>
+                        <xsd:element name="resourceRegistered" type="xsd:int"/>
+                        <xsd:element name="resourceFree" type="xsd:int"/>
+                        <xsd:element name="resourcePending" type="xsd:int"/>
+                        <xsd:element name="resourceActive" type="xsd:int"/>
+                        <xsd:element name="taskNumQueues" type="xsd:int"/>
+                        <xsd:element name="taskSubmit" type="xsd:int"/>
+                        <xsd:element name="taskWaitQueue" type="xsd:int"/>
+                        <xsd:element name="taskDispatch" type="xsd:int"/>
+                        <xsd:element name="taskActive" type="xsd:int"/>
+                        <xsd:element name="taskDeliveryQueue" type="xsd:int"/>
+                        <xsd:element name="taskDelivered" type="xsd:int"/>
+                        <xsd:element name="cacheSize" type="xsd:int"/>
+                        <xsd:element name="cacheHitsGlobal" type="xsd:int"/>
+                        <xsd:element name="cacheHitsLocal" type="xsd:int"/>
+                        <xsd:element name="cacheMisses" type="xsd:int"/>
+                        <xsd:element name="systemNumThreads" type="xsd:int"/>
+                        <xsd:element name="systemCPUuser" type="xsd:int"/>
+                        <xsd:element name="systemCPUsystem" type="xsd:int"/>
+                        <xsd:element name="systemCPUidle" type="xsd:int"/>
+                        <xsd:element name="systemHeapSize" type="xsd:int"/>
+                        <xsd:element name="systemHeapFree" type="xsd:int"/>
+                        <xsd:element name="systemHeapMax" type="xsd:int"/>
+                        <xsd:element name="valid" type="xsd:boolean"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+
+
+
+            <xsd:complexType name="Executable">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="1" minOccurs="0" name="id" type="xsd:string"/>     
+                    <xsd:element maxOccurs="1" minOccurs="0" name="notification" type="xsd:string"/>     
+                    <xsd:element name="command" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="arguements" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="environment" type="xsd:string"/>
+                    <xsd:element name="directory" type="xsd:string"/>
+                    <xsd:element name="wallTime" type="xsd:int"/>
+
+                    <xsd:element name="dataCaching" type="xsd:boolean"/>
+                    <xsd:element name="inputData" type="tns:DataFiles"/>
+                    <xsd:element name="outputData" type="tns:DataFiles"/>
+
+
+                </xsd:sequence>
+            </xsd:complexType>
+
+            <xsd:element name="UserJob">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="userID" type="xsd:string"/>
+                        <xsd:element name="password" type="xsd:string"/>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="executables" type="tns:Executable"/>
+                    <!--    <xsd:element name="numExecs" type="xsd:int"/> -->
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+
+            <xsd:complexType name="ServiceState">
+                <xsd:sequence>
+                    <xsd:element name="resourceAllocated" type="xsd:int"/>
+                    <xsd:element name="resourceRegistered" type="xsd:int"/>
+                    <xsd:element name="resourceFree" type="xsd:int"/>
+                    <xsd:element name="resourcePending" type="xsd:int"/>
+                    <xsd:element name="resourceActive" type="xsd:int"/>
+                    <xsd:element name="taskNumQueues" type="xsd:int"/>
+                    <xsd:element name="taskSubmit" type="xsd:int"/>
+                    <xsd:element name="taskWaitQueue" type="xsd:int"/>
+                    <xsd:element name="taskDispatch" type="xsd:int"/>
+                    <xsd:element name="taskActive" type="xsd:int"/>
+                    <xsd:element name="taskDeliveryQueue" type="xsd:int"/>
+                    <xsd:element name="taskDelivered" type="xsd:int"/>
+                    <xsd:element name="systemNumThreads" type="xsd:int"/>
+                    <xsd:element name="systemCPUuser" type="xsd:int"/>
+                    <xsd:element name="systemCPUsystem" type="xsd:int"/>
+                    <xsd:element name="systemCPUidle" type="xsd:int"/>
+                    <xsd:element name="systemHeapSize" type="xsd:int"/>
+                    <xsd:element name="systemHeapFree" type="xsd:int"/>
+                    <xsd:element name="systemHeapMax" type="xsd:int"/>
+                    <xsd:element name="valid" type="xsd:boolean"/>
+                </xsd:sequence>
+            </xsd:complexType>
+
+            <!-- could return a UID identifying this list of executables... -->
+            <xsd:element name="UserJobResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="valid" type="xsd:boolean"/>
+                        <xsd:element name="service" type="xsd:boolean"/>
+                        <xsd:element name="serviceState" type="tns:ServiceState"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+
+            <!-- could pass in a UID to retrieve the results for the corresponding list of executables... -->
+            <xsd:element name="UserResult">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="valid" type="xsd:boolean"/>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="ids" type="xsd:string"/>   
+                        <xsd:element name="max_per_call" type="xsd:int"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+            <xsd:complexType name="DataCache">
+                <xsd:sequence>
+                    <xsd:element name="numCaches" type="xsd:int"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="cacheLocation" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+
+
+            <xsd:complexType name="DataFiles">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="logicalName" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="fileURL" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="fileSize" type="xsd:int"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="dataCache" type="tns:DataCache"/>
+                </xsd:sequence>
+            </xsd:complexType>
+
+
+            <xsd:complexType name="Task">
+                <xsd:sequence>
+                    <xsd:element name="executable" type="tns:Executable"/>
+                    <xsd:element name="exitCode" type="xsd:int"/>
+                    <xsd:element name="stdout" type="xsd:string"/>
+                    <xsd:element name="stderr" type="xsd:string"/>
+                    <xsd:element name="captureStdout" type="xsd:boolean"/>
+                    <xsd:element name="captureStderr" type="xsd:boolean"/>
+                </xsd:sequence>
+            </xsd:complexType>
+
+            <xsd:element name="UserResultResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="valid" type="xsd:boolean"/>
+                        <xsd:element name="numTasks" type="xsd:int"/>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="tasks" type="tns:Task"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+
+            <xsd:complexType name="Result">
+                <xsd:sequence>
+                    <xsd:element name="name" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+
+            <xsd:element name="WorkerWork">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="valid" type="xsd:boolean"/>
+                        <xsd:element name="machID" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+            <xsd:element name="WorkerWorkResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="tasks" type="tns:Task"/>
+                        <xsd:element name="valid" type="xsd:boolean"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+            <xsd:element name="WorkerResult">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="machID" type="xsd:string"/>
+                        <xsd:element name="numTasks" type="xsd:int"/>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="tasks" type="tns:Task"/>
+                        <xsd:element name="valid" type="xsd:boolean"/>
+                        <xsd:element name="numCacheEvicted" type="xsd:int"/>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="cacheEvicted" type="xsd:string"/>
+                        <xsd:element name="shutingDown" type="xsd:boolean"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+            <xsd:element name="WorkerResultResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="valid" type="xsd:boolean"/>
+                        <xsd:element name="moreWork" type="xsd:boolean"/>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="tasks" type="tns:Task"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+            <xsd:element name="Init">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="valid" type="xsd:boolean"/>
+                        <xsd:element name="machID" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="InitResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="valid" type="xsd:boolean"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+
+            <xsd:element name="DeInit">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="valid" type="xsd:boolean"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="DeInitResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="valid" type="xsd:boolean"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Status">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="message" type="xsd:string"/>
+                        <xsd:element name="drpAllocation" type="xsd:string"/>
+                        <xsd:element name="drpMinResc" type="xsd:int"/>
+                        <xsd:element name="drpMaxResc" type="xsd:int"/>
+                        <xsd:element name="drpMinTime" type="xsd:int"/>
+                        <xsd:element name="drpMaxTime" type="xsd:int"/>
+                        <xsd:element name="drpIdle" type="xsd:int"/>
+                        <xsd:element name="resourceAllocated" type="xsd:int"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="StatusResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="queueLength" type="xsd:int"/>
+                        <xsd:element name="activeTasks" type="xsd:int"/>
+                        <xsd:element name="numWorkers" type="xsd:int"/>
+                        <xsd:element name="busyWorkers" type="xsd:int"/>
+                        <xsd:element name="newWorkers" type="xsd:int"/>
+                        <xsd:element name="deregisteredWorkers" type="xsd:int"/>
+                        <xsd:element name="valid" type="xsd:boolean"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+            <xsd:element name="MonitorConfig">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="message" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MonitorConfigResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="maxBundling" type="xsd:int"/>
+                        <xsd:element name="piggyBacking" type="xsd:boolean"/>
+                        <xsd:element name="preFetching" type="xsd:boolean"/>
+                        <xsd:element name="drpAllocation" type="xsd:string"/>
+                        <xsd:element name="drpMinResc" type="xsd:int"/>
+                        <xsd:element name="drpMaxResc" type="xsd:int"/>
+                        <xsd:element name="drpMinTime" type="xsd:int"/>
+                        <xsd:element name="drpMaxTime" type="xsd:int"/>
+                        <xsd:element name="drpIdle" type="xsd:int"/>
+                        <xsd:element name="scheduler" type="xsd:string"/>
+                        <xsd:element name="dataCaching" type="xsd:boolean"/>
+                        <xsd:element name="valid" type="xsd:boolean"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+
+
+
+            <xsd:element name="MonitorWorkerState">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="message" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MonitorWorkerStateResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="freeWorkers" type="xsd:string"/>
+                        <xsd:element name="freeWorkerNum" type="xsd:int"/>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="pendWorkers" type="xsd:string"/>
+                        <xsd:element name="pendWorkerNum" type="xsd:int"/>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="busyWorkers" type="xsd:string"/>
+                        <xsd:element name="busyWorkerNum" type="xsd:int"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+
+
+            <xsd:element name="MonitorTaskState">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="message" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MonitorTaskStateResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="queuedTasks" type="xsd:string"/>
+                        <xsd:element name="queuedTaskNum" type="xsd:int"/>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="activeTasks" type="xsd:string"/>
+                        <xsd:element name="activeTaskNum" type="xsd:int"/>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="doneTasks" type="xsd:string"/>
+                        <xsd:element name="doneTaskNum" type="xsd:int"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+
+
+            <xsd:element name="StatusUser">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="message" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="StatusUserResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="queueLength" type="xsd:int"/>
+                        <xsd:element name="activeTasks" type="xsd:int"/>
+                        <xsd:element name="queuedTask" type="xsd:int"/>
+                        <xsd:element name="activeTask" type="xsd:int"/>
+                        <xsd:element name="numWorkers" type="xsd:int"/>
+                        <xsd:element name="numWorkerResults" type="xsd:int"/>
+                        <xsd:element name="valid" type="xsd:boolean"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+            <xsd:element name="WorkerRegistration">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="machID" type="xsd:string"/>
+                        <xsd:element name="wallTime" type="xsd:long"/>
+                        <xsd:element name="service" type="xsd:boolean"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="WorkerRegistrationResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="valid" type="xsd:boolean"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="WorkerDeRegistration">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="machID" type="xsd:string"/>
+                        <xsd:element name="service" type="xsd:boolean"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="WorkerDeRegistrationResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="valid" type="xsd:boolean"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+            <!-- Resource properties -->
+
+            <xsd:element name="NumJobs" type="xsd:int"/>
+            <xsd:element name="State" type="xsd:string"/>
+            <xsd:element name="NumWorkers" type="xsd:int"/>
+            <xsd:element name="NumUserResults" type="xsd:int"/>
+            <xsd:element name="NumWorkerResults" type="xsd:int"/>
+            <xsd:element name="GPResourceProperties">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="tns:NumJobs"/>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="tns:State"/>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="tns:NumWorkers"/>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="tns:NumUserResults"/>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="tns:NumWorkerResults"/>
+                    
+            <xsd:element maxOccurs="1" minOccurs="1" ref="rpns0:TerminationTime"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="rpns0:CurrentTime"/>
+          </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        
+        </xsd:schema>
+  </types>
+  <message name="MonitorConfigInputMessage">
+    <part name="parameters" element="tns:MonitorConfig"/>
+  </message>
+  <message name="StatusUserInputMessage">
+    <part name="parameters" element="tns:StatusUser"/>
+  </message>
+  <message name="WorkerResultInputMessage">
+    <part name="parameters" element="tns:WorkerResult"/>
+  </message>
+  <message name="StatusInputMessage">
+    <part name="parameters" element="tns:Status"/>
+  </message>
+  <message name="MonitorConfigOutputMessage">
+    <part name="parameters" element="tns:MonitorConfigResponse"/>
+  </message>
+  <message name="WorkerRegistrationOutputMessage">
+    <part name="parameters" element="tns:WorkerRegistrationResponse"/>
+  </message>
+  <message name="MonitorWorkerStateInputMessage">
+    <part name="parameters" element="tns:MonitorWorkerState"/>
+  </message>
+  <message name="WorkerWorkOutputMessage">
+    <part name="parameters" element="tns:WorkerWorkResponse"/>
+  </message>
+  <message name="DeInitInputMessage">
+    <part name="parameters" element="tns:DeInit"/>
+  </message>
+  <message name="MonitorTaskStateOutputMessage">
+    <part name="parameters" element="tns:MonitorTaskStateResponse"/>
+  </message>
+  <message name="UserJobOutputMessage">
+    <part name="parameters" element="tns:UserJobResponse"/>
+  </message>
+  <message name="UserResultOutputMessage">
+    <part name="parameters" element="tns:UserResultResponse"/>
+  </message>
+  <message name="InitInputMessage">
+    <part name="parameters" element="tns:Init"/>
+  </message>
+  <message name="MonitorWorkerStateOutputMessage">
+    <part name="parameters" element="tns:MonitorWorkerStateResponse"/>
+  </message>
+  <message name="WorkerWorkInputMessage">
+    <part name="parameters" element="tns:WorkerWork"/>
+  </message>
+  <message name="WorkerRegistrationInputMessage">
+    <part name="parameters" element="tns:WorkerRegistration"/>
+  </message>
+  <message name="UserResultInputMessage">
+    <part name="parameters" element="tns:UserResult"/>
+  </message>
+  <message name="MonitorTaskStateInputMessage">
+    <part name="parameters" element="tns:MonitorTaskState"/>
+  </message>
+  <message name="UserJobInputMessage">
+    <part name="parameters" element="tns:UserJob"/>
+  </message>
+  <message name="DeInitOutputMessage">
+    <part name="parameters" element="tns:DeInitResponse"/>
+  </message>
+  <message name="InitOutputMessage">
+    <part name="parameters" element="tns:InitResponse"/>
+  </message>
+  <message name="StatusOutputMessage">
+    <part name="parameters" element="tns:StatusResponse"/>
+  </message>
+  <message name="StatusUserOutputMessage">
+    <part name="parameters" element="tns:StatusUserResponse"/>
+  </message>
+  <message name="WorkerResultOutputMessage">
+    <part name="parameters" element="tns:WorkerResultResponse"/>
+  </message>
+  <message name="WorkerDeRegistrationOutputMessage">
+    <part name="parameters" element="tns:WorkerDeRegistrationResponse"/>
+  </message>
+  <message name="MonitorStateInputMessage">
+    <part name="parameters" element="tns:MonitorState"/>
+  </message>
+  <message name="MonitorStateOutputMessage">
+    <part name="parameters" element="tns:MonitorStateResponse"/>
+  </message>
+  <message name="WorkerDeRegistrationInputMessage">
+    <part name="parameters" element="tns:WorkerDeRegistration"/>
+  </message>
+  <portType name="GPPortType" wsrp:ResourceProperties="tns:GPResourceProperties">
+    <operation name="workerRegistration">
+      <input message="tns:WorkerRegistrationInputMessage"/>
+      <output message="tns:WorkerRegistrationOutputMessage"/>
+    </operation>
+    <operation name="workerDeRegistration">
+      <input message="tns:WorkerDeRegistrationInputMessage"/>
+      <output message="tns:WorkerDeRegistrationOutputMessage"/>
+    </operation>
+    <operation name="userJob">
+      <input message="tns:UserJobInputMessage"/>
+      <output message="tns:UserJobOutputMessage"/>
+    </operation>
+    <operation name="userResult">
+      <input message="tns:UserResultInputMessage"/>
+      <output message="tns:UserResultOutputMessage"/>
+    </operation>
+    <operation name="workerWork">
+      <input message="tns:WorkerWorkInputMessage"/>
+      <output message="tns:WorkerWorkOutputMessage"/>
+    </operation>
+    <operation name="workerResult">
+      <input message="tns:WorkerResultInputMessage"/>
+      <output message="tns:WorkerResultOutputMessage"/>
+    </operation>
+    <operation name="init">
+      <input message="tns:InitInputMessage"/>
+      <output message="tns:InitOutputMessage"/>
+    </operation>
+    <operation name="deInit">
+      <input message="tns:DeInitInputMessage"/>
+      <output message="tns:DeInitOutputMessage"/>
+    </operation>
+    <operation name="status">
+      <input message="tns:StatusInputMessage"/>
+      <output message="tns:StatusOutputMessage"/>
+    </operation>
+    <operation name="statusUser">
+      <input message="tns:StatusUserInputMessage"/>
+      <output message="tns:StatusUserOutputMessage"/>
+    </operation>
+    <operation name="monitorConfig">
+      <input message="tns:MonitorConfigInputMessage"/>
+      <output message="tns:MonitorConfigOutputMessage"/>
+    </operation>
+    <operation name="monitorState">
+      <input message="tns:MonitorStateInputMessage"/>
+      <output message="tns:MonitorStateOutputMessage"/>
+    </operation>
+    <operation name="monitorWorkerState">
+      <input message="tns:MonitorWorkerStateInputMessage"/>
+      <output message="tns:MonitorWorkerStateOutputMessage"/>
+    </operation>
+    <operation name="monitorTaskState">
+      <input message="tns:MonitorTaskStateInputMessage"/>
+      <output message="tns:MonitorTaskStateOutputMessage"/>
+    </operation>
+    <operation name="Destroy">
+      <input message="wsrlw:DestroyRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/Destroy"/>
+      <output message="wsrlw:DestroyResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/DestroyResponse"/>
+      <fault name="ResourceUnknownFault" message="wsrlw:ResourceUnknownFault"/>
+      <fault name="ResourceNotDestroyedFault" message="wsrlw:ResourceNotDestroyedFault"/>
+    </operation>
+    <operation name="SetTerminationTime">
+      <input message="wsrlw:SetTerminationTimeRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/SetTerminationTime"/>
+      <output message="wsrlw:SetTerminationTimeResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/SetTerminationTimeResponse"/>
+      <fault name="ResourceUnknownFault" message="wsrlw:ResourceUnknownFault"/>
+      <fault name="UnableToSetTerminationTimeFault" message="wsrlw:UnableToSetTerminationTimeFault"/>
+      <fault name="TerminationTimeChangeRejectedFault" message="wsrlw:TerminationTimeChangeRejectedFault"/>
+    </operation>
+    <operation name="GetResourceProperty">
+      <input name="GetResourcePropertyRequest" message="wsrpw:GetResourcePropertyRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetResourceProperty"/>
+      <output name="GetResourcePropertyResponse" message="wsrpw:GetResourcePropertyResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetResourcePropertyResponse"/>
+      <fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault"/>
+      <fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault"/>
+    </operation>
+  </portType>
+</definitions>

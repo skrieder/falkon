@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_index
+END
+upstream.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_index/upstream.xml
+END
+downstream.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_index/downstream.xml
+END
+jndi-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_index/jndi-config.xml
+END
+entry-security-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_index/entry-security-config.xml
+END
+container-registration.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_index/container-registration.xml
+END
+server-config.wsdd
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_index/server-config.wsdd
+END
+hierarchy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_index/hierarchy.xml
+END
+factory-security-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_index/factory-security-config.xml
+END
+index-security-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_mds_index/index-security-config.xml
+END

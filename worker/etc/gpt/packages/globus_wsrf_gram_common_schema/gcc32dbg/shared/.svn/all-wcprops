@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_wsrf_gram_common_schema/gcc32dbg/shared
+END
+pkg_data_gcc32dbg_pgm.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_wsrf_gram_common_schema/gcc32dbg/shared/pkg_data_gcc32dbg_pgm.gpt
+END
+gcc32dbg_pgm.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_wsrf_gram_common_schema/gcc32dbg/shared/gcc32dbg_pgm.filelist
+END

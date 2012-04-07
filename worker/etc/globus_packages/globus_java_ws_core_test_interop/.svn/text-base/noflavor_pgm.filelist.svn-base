@@ -1,0 +1,9 @@
+etc/gpt/./packages/globus_wsrf_test_interop/undeploy.xml
+etc/globus_wsrf_test_interop/jndi-config.xml
+etc/globus_wsrf_test_interop/server-config.wsdd
+lib/wsrf_test_interop.jar
+lib/wsrf_test_interop_stubs.jar
+bin/widget-create
+test/globus_wsrf_test_interop/TESTS.pl
+etc/gpt/packages/globus_java_ws_core_test_interop/noflavor_pgm.filelist
+etc/gpt/packages/globus_java_ws_core_test_interop/pkg_data_noflavor_pgm.gpt

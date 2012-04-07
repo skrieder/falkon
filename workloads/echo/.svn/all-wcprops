@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/repos/falkon/!svn/ver/151/workloads/echo
+END
+echo_100KB.txt
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/151/workloads/echo/echo_100KB.txt
+END
+echo_10KB.txt
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/falkon/!svn/ver/151/workloads/echo/echo_10KB.txt
+END
+echo_1KB.txt
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repos/falkon/!svn/ver/151/workloads/echo/echo_1KB.txt
+END
+echo_100B.txt
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/falkon/!svn/ver/151/workloads/echo/echo_100B.txt
+END
+echo_10B.txt
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repos/falkon/!svn/ver/151/workloads/echo/echo_10B.txt
+END
+task_description.sh
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/falkon/!svn/ver/151/workloads/echo/task_description.sh
+END

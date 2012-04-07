@@ -1,0 +1,3 @@
+//taskNum taskID workerID startTimeStamp execTimeStamp resultsQueueTimeStamp endTimeStamp waitQueueTime execTime resultsQueueTime totalTime exitCode
+//0-time is 1332879326090ms
+1 scott:50065:1_1420821928 scott:50803 4485 4685 5833 5836 200 1148 3 1351 0

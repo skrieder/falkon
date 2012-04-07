@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="GPService" targetNamespace="http://www.globus.org/namespaces/GenericPortal/GPService_instance/service" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:binding="http://www.globus.org/namespaces/GenericPortal/GPService_instance/bindings" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:import namespace="http://www.globus.org/namespaces/GenericPortal/GPService_instance/bindings" location="GP_bindings.wsdl"/>
+  <wsdl:service name="GPService">
+    <wsdl:port name="GPPortTypePort" binding="binding:GPPortTypeSOAPBinding">
+      <soap:address location="http://localhost:8080/wsrf/services/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

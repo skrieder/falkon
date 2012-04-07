@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_c_delegation_client_bindings
+END
+pkg_data_gcc32dbg_dev.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_c_delegation_client_bindings/pkg_data_gcc32dbg_dev.gpt
+END
+pkg_data_gcc32dbg_rtl.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_c_delegation_client_bindings/pkg_data_gcc32dbg_rtl.gpt
+END
+gcc32dbgdev.format
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_c_delegation_client_bindings/gcc32dbgdev.format
+END
+gcc32dbg_dev.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_c_delegation_client_bindings/gcc32dbg_dev.filelist
+END
+gcc32dbgrtl.format
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_c_delegation_client_bindings/gcc32dbgrtl.format
+END
+gcc32dbg_rtl.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_c_delegation_client_bindings/gcc32dbg_rtl.filelist
+END

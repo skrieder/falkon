@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/worker/etc/gram-service
+END
+managed-job-factory-security-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/falkon/!svn/ver/1/worker/etc/gram-service/managed-job-factory-security-config.xml
+END
+jndi-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/falkon/!svn/ver/1/worker/etc/gram-service/jndi-config.xml
+END
+registration.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/falkon/!svn/ver/1/worker/etc/gram-service/registration.xml
+END
+server-config.wsdd
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/falkon/!svn/ver/1/worker/etc/gram-service/server-config.wsdd
+END
+globus_gram_fs_map_config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/falkon/!svn/ver/1/worker/etc/gram-service/globus_gram_fs_map_config.xml
+END
+managed-job-security-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/falkon/!svn/ver/1/worker/etc/gram-service/managed-job-security-config.xml
+END

@@ -1,0 +1,1 @@
+stderr_log,local_cred - /scratch/local/iraicu/GT4.0.3/libexec/globus-job-manager globus-job-manager -conf /scratch/local/iraicu/GT4.0.3/etc/globus-job-manager.conf -type fork -rdn jobmanager-fork -machine-type unknown -publish-jobs 

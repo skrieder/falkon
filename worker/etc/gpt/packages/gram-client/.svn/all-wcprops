@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gram-client
+END
+undeploy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/gram-client/undeploy.xml
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_gram_job_manager_callout_error
+END
+pkg_data_gcc32dbg_dev.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_gram_job_manager_callout_error/pkg_data_gcc32dbg_dev.gpt
+END
+pkg_data_gcc32dbg_rtl.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_gram_job_manager_callout_error/pkg_data_gcc32dbg_rtl.gpt
+END
+gcc32dbgdev.format
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_gram_job_manager_callout_error/gcc32dbgdev.format
+END
+gcc32dbg_dev.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_gram_job_manager_callout_error/gcc32dbg_dev.filelist
+END
+gcc32dbgrtl.format
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_gram_job_manager_callout_error/gcc32dbgrtl.format
+END
+gcc32dbg_rtl.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_gram_job_manager_callout_error/gcc32dbg_rtl.filelist
+END

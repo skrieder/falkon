@@ -1,0 +1,2 @@
+taskNum taskID workerID startTimeStamp submitTimeStamp resultsQueueTimeStamp endTimeStamp submitTime queueExecTime resultsTime totalTime exitCode
+1333382212245 scott:50222:1_1684025713 QUEUE_50222 1333382211012 1333382211070 1333382212245 1333382212245 58 1175 0 1233 0

@@ -1,0 +1,39 @@
+<project default="all">
+
+<property name="here" location="." />
+
+<target name="all" depends="service,worker,client,monitor" />
+
+<target name="service">
+  <exec dir="${here}/service/" executable="${here}/service/make.service.sh" failonerror="true"/>
+</target>
+
+<target name="worker" depends="service">
+  <exec dir="${here}/worker/" executable="${here}/worker/make.worker.sh" failonerror="true"/>
+</target>
+
+<target name="client" depends="service">
+  <exec dir="${here}/client/" executable="${here}/client/make.user.sh" failonerror="true"/>
+</target>
+
+<target name="monitor" depends="service">
+  <exec dir="${here}/monitor/" executable="${here}/monitor/make.monitor.sh" failonerror="true"/>
+</target>
+
+<target name="clean">
+
+  <exec dir="${here}/service/" executable="${here}/service/clean.service.sh" failonerror="true"/>
+  <exec dir="${here}/worker/" executable="${here}/worker/clean.worker.sh" failonerror="true"/>
+  <exec dir="${here}/client/" executable="${here}/client/clean.user.sh" failonerror="true"/>
+  <exec dir="${here}/monitor/" executable="${here}/monitor/clean.monitor.sh" failonerror="true"/>
+  <exec dir="${here}/webserver/" executable="${here}/webserver/clean.www.sh" failonerror="true"/>
+  <exec dir="${here}/" executable="rm" failonerror="true">
+  <arg value="-rf" />
+  <arg value="${here}/swift-libs" />
+</exec>
+
+</target>
+
+</project>
+
+

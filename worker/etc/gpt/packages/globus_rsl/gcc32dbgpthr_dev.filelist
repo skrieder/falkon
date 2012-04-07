@@ -1,0 +1,5 @@
+/lib/libglobus_rsl_gcc32dbgpthr.a
+/lib/libglobus_rsl_gcc32dbgpthr.la
+/include/gcc32dbgpthr/globus_rsl.h
+/etc/globus_packages/globus_rsl/gcc32dbgpthr_dev.filelist
+/etc/globus_packages/globus_rsl/pkg_data_gcc32dbgpthr_dev.gpt

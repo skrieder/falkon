@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/repos/falkon/!svn/ver/125/workloads/data
+END
+generate-data-all-files.sh
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/falkon/!svn/ver/88/workloads/data/generate-data-all-files.sh
+END
+data_1GB
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/87/workloads/data/data_1GB
+END
+read-sleep-write.sh
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/falkon/!svn/ver/111/workloads/data/read-sleep-write.sh
+END
+generate-data-1M-files.sh
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/falkon/!svn/ver/90/workloads/data/generate-data-1M-files.sh
+END
+data_100KB
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/87/workloads/data/data_100KB
+END
+data_10KB
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/87/workloads/data/data_10KB
+END
+data_1KB
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/87/workloads/data/data_1KB
+END
+data_100MB
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/87/workloads/data/data_100MB
+END
+data_10MB
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/87/workloads/data/data_10MB
+END
+data_1MB
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/87/workloads/data/data_1MB
+END
+data_1B
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/87/workloads/data/data_1B
+END
+generate-data-100K-1M-files.sh
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/falkon/!svn/ver/111/workloads/data/generate-data-100K-1M-files.sh
+END
+generate-data-100K-1M-workload.sh
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/falkon/!svn/ver/111/workloads/data/generate-data-100K-1M-workload.sh
+END

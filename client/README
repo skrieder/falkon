@@ -1,0 +1,63 @@
+wget http://people.cs.uchicago.edu/~iraicu/research/Falkon/code/Falkon_v0.8.1.tgz
+tar xfz Falkon_v0.8.1.tgz
+cd Falkon_v0.8.1/client
+echo $JAVA_HOME
+java -version
+# make sure to have at least Java 1.4 or later
+
+To clean up old compiled code:
+./clean.user.sh
+
+To compile:
+./make.user.sh
+
+To run:
+# usage: ./run.user.file.sh <GT4_IP> <GT4_PORT> <EXEC_FILE> <NUM_EXECS> <NUM_THREADS> <SECURITY_OPTIONS>
+iraicu@gto:~/java/Falkon_v0.8.1_dist/client> ./run.user.file.sh viper.uchicago.edu 59000 workloads/sleep/sleep_0 10 1 etc/client-security-config.xml
+Starting threaded UserRun...
+Starting non-interactive mode....
+Reading file: workloads/sleep/sleep_0... 
+.
+103 : SEND : 10 tasks submited succesful [10] in 89 ms!
+375 : NOTIFICATION 1 of 10 : gto.uchicago.edu:50102:1_161504957 0 ... notifications left to receive 9
+439 : NOTIFICATION 2 of 10 : gto.uchicago.edu:50102:3_510913519 0 ... notifications left to receive 8
+472 : NOTIFICATION 3 of 10 : gto.uchicago.edu:50102:2_111836974 0 ... notifications left to receive 7
+567 : NOTIFICATION 4 of 10 : gto.uchicago.edu:50102:6_297928332 0 ... notifications left to receive 6
+606 : NOTIFICATION 5 of 10 : gto.uchicago.edu:50102:7_2019834164 0 ... notifications left to receive 5
+669 : NOTIFICATION 6 of 10 : gto.uchicago.edu:50102:4_884369251 0 ... notifications left to receive 4
+700 : NOTIFICATION 7 of 10 : gto.uchicago.edu:50102:5_790107219 0 ... notifications left to receive 3
+732 : NOTIFICATION 8 of 10 : gto.uchicago.edu:50102:10_311346262 0 ... notifications left to receive 2
+762 : NOTIFICATION 9 of 10 : gto.uchicago.edu:50102:9_1603846488 0 ... notifications left to receive 1
+793 : NOTIFICATION 10 of 10 : gto.uchicago.edu:50102:8_1371520003 0 ... notifications left to receive 0
+************* UserRunThread finished succesfully: sent 10 recv 10
+UserRunThread # 0 finished!
+
+10 tasks completed in 794 ms
+Successful tasks: 10
+Failed tasks: 0
+Notification Errors: 0
+X
+
+To view the deployed Falkon service status, visit:
+http://viper.uchicago.edu:59999/index.htm
+
+The graphs regenerate every 60 seconds, and only show the last 1000 samples.  Try submitting 1000 sleep 0 tasks, and wait until the graphs regenerate, and see if you can see them!
+
+You will find the WSDL definition of the Falkon service in: 
+Falkon_v0.8.1/client/schema/GenericPortal/FactoryService/Factory.wsdl
+Falkon_v0.8.1/client/schema/GenericPortal/GPService_instance/GP.wsdl
+
+The client source code is split over several files:
+1) Falkon_v0.8.1/client/org/globus/GenericPortal/clients/FactoryService_GP/ClientCreate.java  
+2) Falkon_v0.8.1/client/org/globus/GenericPortal/clients/FactoryService_GP/ClientDestroy.java
+3) Falkon_v0.8.1/client/org/globus/GenericPortal/clients/GPService_instance/Console.java         
+4) Falkon_v0.8.1/client/org/globus/GenericPortal/clients/GPService_instance/ExecutablePerformance.java   
+5) Falkon_v0.8.1/client/org/globus/GenericPortal/clients/GPService_instance/UserRun.java       
+
+The bulk of the code is in (5).
+
+The code and scripts still need to be cleaned up...
+
+Any questions should be directed to Ioan Raicu at iraicu@cs.uchicago.edu.
+
+

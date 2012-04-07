@@ -1,0 +1,7 @@
+lib/commons-dbcp.jar
+lib/commons-pool.jar
+lib/pg73jdbc2.jar
+share/licenses/commons.LICENSE
+share/licenses/pg73jdbc2.LICENSE
+etc/gpt/packages/globus_database_common/noflavor_pgm.filelist
+etc/gpt/packages/globus_database_common/pkg_data_noflavor_pgm.gpt

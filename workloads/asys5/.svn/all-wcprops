@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/repos/falkon/!svn/ver/86/workloads/asys5
+END
+run.generateAsys5Workload.sh
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/falkon/!svn/ver/86/workloads/asys5/run.generateAsys5Workload.sh
+END

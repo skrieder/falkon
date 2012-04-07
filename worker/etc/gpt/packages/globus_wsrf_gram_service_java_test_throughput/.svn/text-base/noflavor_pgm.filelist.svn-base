@@ -1,0 +1,5 @@
+lib/globus_wsrf_gram_service_java_test_throughput.jar
+test/globus_wsrf_gram_service_java_test_throughput/run-throughput-tests.pl
+test/globus_wsrf_gram_service_java_test_throughput/gram-throughput-tester
+etc/gpt/packages/globus_wsrf_gram_service_java_test_throughput/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_gram_service_java_test_throughput/pkg_data_noflavor_pgm.gpt

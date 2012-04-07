@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_duroc_control
+END
+pkg_data_gcc32dbg_dev.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_duroc_control/pkg_data_gcc32dbg_dev.gpt
+END
+pkg_data_gcc32dbgpthr_rtl.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_duroc_control/pkg_data_gcc32dbgpthr_rtl.gpt
+END
+gcc32dbgpthrdev.format
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_duroc_control/gcc32dbgpthrdev.format
+END
+pkg_data_gcc32dbg_rtl.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_duroc_control/pkg_data_gcc32dbg_rtl.gpt
+END
+gcc32dbgdev.format
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_duroc_control/gcc32dbgdev.format
+END
+gcc32dbgpthr_dev.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_duroc_control/gcc32dbgpthr_dev.filelist
+END
+gcc32dbgpthrrtl.format
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_duroc_control/gcc32dbgpthrrtl.format
+END
+gcc32dbg_dev.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_duroc_control/gcc32dbg_dev.filelist
+END
+gcc32dbgpthr_rtl.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_duroc_control/gcc32dbgpthr_rtl.filelist
+END
+gcc32dbgrtl.format
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_duroc_control/gcc32dbgrtl.format
+END
+gcc32dbg_rtl.filelist
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_duroc_control/gcc32dbg_rtl.filelist
+END
+pkg_data_gcc32dbgpthr_dev.gpt
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/falkon/!svn/ver/1/worker/etc/globus_packages/globus_duroc_control/pkg_data_gcc32dbgpthr_dev.gpt
+END

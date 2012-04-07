@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gpt_package_metadata SYSTEM "globus_package.dtd">
+<gpt_package_metadata Format_Version="0.02" Name="globus_c_gram_client_bindings" >
+<Aging_Version Age="0" Major="1" Minor="4" />
+<Description >globus_c_gram_client C WS Bindings</Description>
+<Functional_Group >WS GRAM</Functional_Group>
+<Version_Stability Release="Experimental" />
+<PackagingTool ToolName="GPT" ToolVersion="3.2" />
+<dev_pkg >
+<Flavor ColocateLibraries="yes" >gcc32dbg</Flavor>
+<Binary_Dependencies Type="Build_Link" >
+<Dependency Name="globus_c_rendezvous_client_bindings" Package="dev" >
+<Version >
+<Simple_Version Major="1" />
+</Version>
+</Dependency>
+<Dependency Name="globus_c_rft_client_bindings" Package="dev" >
+<Version >
+<Simple_Version Major="1" />
+</Version>
+</Dependency>
+<Dependency Name="globus_c_ws_messaging" Package="dev" >
+<Version >
+<Simple_Version Major="2" />
+</Version>
+</Dependency>
+<Dependency Name="globus_c_wsrf_core_bindings" Package="dev" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+<Dependency Name="globus_c_wsrf_core_tools" Package="dev" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+<Dependency Name="globus_c_wsrf_providers" Package="dev" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+<Dependency Name="globus_c_wsrf_resource" Package="dev" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+<Dependency Name="globus_core" Package="dev" >
+<Version >
+<Simple_Version Major="2" />
+</Version>
+</Dependency>
+</Binary_Dependencies>
+<Binary_Dependencies Type="Compile" >
+<Dependency Name="globus_c_rendezvous_client_bindings" Package="dev" >
+<Version >
+<Simple_Version Major="1" />
+</Version>
+</Dependency>
+<Dependency Name="globus_c_rft_client_bindings" Package="dev" >
+<Version >
+<Simple_Version Major="1" />
+</Version>
+</Dependency>
+<Dependency Name="globus_c_ws_messaging" Package="dev" >
+<Version >
+<Simple_Version Major="2" />
+</Version>
+</Dependency>
+<Dependency Name="globus_c_wsrf_cgen" Package="pgm" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+<Dependency Name="globus_c_wsrf_core_bindings" Package="dev" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+<Dependency Name="globus_c_wsrf_core_tools" Package="dev" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+<Dependency Name="globus_c_wsrf_providers" Package="dev" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+<Dependency Name="globus_c_wsrf_resource" Package="dev" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+<Dependency Name="globus_core" Package="dev" >
+<Version >
+<Simple_Version Major="2" />
+</Version>
+</Dependency>
+<Dependency Name="globus_handler_ws_addressing" Package="dev" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+<Dependency Name="globus_wsrf_gram_common_schema" Package="pgm" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+</Binary_Dependencies>
+<Binary_Dependencies Type="Runtime" >
+<Dependency Name="globus_c_wsrf_providers" Package="rtl" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+<Dependency Name="globus_handler_ws_addressing" Package="rtl" >
+<Version >
+<Simple_Version Major="0" />
+</Version>
+</Dependency>
+</Binary_Dependencies>
+<Build_Environment >
+<cflags > -I\$(GLOBUS_LOCATION)/include/\$(GLOBUS_FLAVOR_NAME)/wsrf/services -I\$(GLOBUS_LOCATION)/include/\$(GLOBUS_FLAVOR_NAME)/
+       </cflags>
+<external_includes ></external_includes>
+<pkg_libs >-lglobus_c_gram_client_client_bindings_gcc32dbg -lglobus_c_gram_client_types_gcc32dbg</pkg_libs>
+<external_libs ></external_libs>
+</Build_Environment>
+</dev_pkg>
+</gpt_package_metadata>

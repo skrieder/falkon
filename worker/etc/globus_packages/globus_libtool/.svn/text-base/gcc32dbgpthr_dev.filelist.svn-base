@@ -1,0 +1,4 @@
+lib/libltdl_gcc32dbgpthr.a
+include/gcc32dbgpthr/ltdl.h
+etc/gpt/packages/globus_libtool/gcc32dbgpthr_dev.filelist
+etc/gpt/packages/globus_libtool/pkg_data_gcc32dbgpthr_dev.gpt

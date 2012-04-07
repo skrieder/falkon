@@ -1,0 +1,9 @@
+/bin/globusrun
+/bin/globus-job-run
+/bin/globus-job-status
+/bin/globus-job-clean
+/bin/globus-job-get-output
+/bin/globus-job-submit
+/bin/globus-job-cancel
+/etc/globus_packages/globus_gram_client_tools/gcc32dbg_pgm.filelist
+/etc/globus_packages/globus_gram_client_tools/pkg_data_gcc32dbg_pgm.gpt

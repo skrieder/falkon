@@ -1,0 +1,4 @@
+/bin/globus-gass-server
+/bin/globus-gass-server-shutdown
+/etc/globus_packages/globus_gass_server_ez/gcc32dbg_pgm.filelist
+/etc/globus_packages/globus_gass_server_ez/pkg_data_gcc32dbg_pgm.gpt

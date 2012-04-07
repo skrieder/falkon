@@ -1,0 +1,7 @@
+lib/globus_delegation_test.jar
+etc/globus_delegation_test/test-security-config.xml
+etc/globus_delegation_test/jndi-config.xml
+etc/globus_delegation_test/server-config.wsdd
+etc/gpt/./packages/globus_delegation_test/undeploy.xml
+etc/gpt/packages/globus_wsrf_delegation_service_java_test/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_delegation_service_java_test/pkg_data_noflavor_pgm.gpt

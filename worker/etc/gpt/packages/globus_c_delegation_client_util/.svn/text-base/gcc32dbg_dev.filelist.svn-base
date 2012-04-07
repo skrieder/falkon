@@ -1,0 +1,5 @@
+/lib/libglobus_delegation_client_util_gcc32dbg.a
+/lib/libglobus_delegation_client_util_gcc32dbg.la
+/include/gcc32dbg/globus_delegation_client_util.h
+/etc/globus_packages/globus_c_delegation_client_util/gcc32dbg_dev.filelist
+/etc/globus_packages/globus_c_delegation_client_util/pkg_data_gcc32dbg_dev.gpt

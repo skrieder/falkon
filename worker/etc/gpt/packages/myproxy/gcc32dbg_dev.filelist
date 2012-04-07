@@ -1,0 +1,16 @@
+/lib/libmyproxy_gcc32dbg.a
+/lib/libmyproxy_gcc32dbg.la
+/include/gcc32dbg/myproxy.h
+/include/gcc32dbg/myproxy_constants.h
+/include/gcc32dbg/myproxy_authorization.h
+/include/gcc32dbg/myproxy_protocol.h
+/include/gcc32dbg/myproxy_creds.h
+/include/gcc32dbg/myproxy_delegation.h
+/include/gcc32dbg/myproxy_log.h
+/include/gcc32dbg/myproxy_read_pass.h
+/include/gcc32dbg/myproxy_sasl_client.h
+/include/gcc32dbg/myproxy_sasl_server.h
+/include/gcc32dbg/myproxy_server.h
+/include/gcc32dbg/verror.h
+/etc/globus_packages/myproxy/gcc32dbg_dev.filelist
+/etc/globus_packages/myproxy/pkg_data_gcc32dbg_dev.gpt

@@ -1,0 +1,2 @@
+cp in out %%% in %%% /home/iraicu/in %%% out %%% /home/iraicu/out %%%
+cp in out %%% out %%% /home/iraicu/out %%% out_final %%% /home/user/out_final %%%

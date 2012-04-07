@@ -1,0 +1,6 @@
+/etc/globus_packages/globus_wsrf_rft_service_java_setup/noflavor_pgm.filelist
+/etc/globus_packages/globus_wsrf_rft_service_java_setup/pkg_data_noflavor_pgm.gpt
+/setup/globus/setup-rft
+/setup/globus/setup-rft.pl
+/setup/globus/build-rft-setup.xml
+/setup/globus/rft-deploy-jndi-config.xml.in

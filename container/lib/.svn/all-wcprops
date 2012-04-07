@@ -1,0 +1,437 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/repos/falkon/!svn/ver/56/container/lib
+END
+axis.jar
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/container/lib/axis.jar
+END
+cryptix32.jar
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/container/lib/cryptix32.jar
+END
+wsdl4j.jar
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/container/lib/wsdl4j.jar
+END
+cog-url.jar
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/1/container/lib/cog-url.jar
+END
+wsrf_core_stubs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/falkon/!svn/ver/1/container/lib/wsrf_core_stubs.jar
+END
+wsrf_mds_usefulrp_schema_stubs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/falkon/!svn/ver/1/container/lib/wsrf_mds_usefulrp_schema_stubs.jar
+END
+wsrf_core_samples_counter.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/falkon/!svn/ver/1/container/lib/wsrf_core_samples_counter.jar
+END
+naming-factory.jar
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/falkon/!svn/ver/1/container/lib/naming-factory.jar
+END
+globus_wsrf_mds_aggregator_stubs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/falkon/!svn/ver/1/container/lib/globus_wsrf_mds_aggregator_stubs.jar
+END
+wsrf_core_samples_mgmt_stubs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/falkon/!svn/ver/1/container/lib/wsrf_core_samples_mgmt_stubs.jar
+END
+servlet.jar
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/1/container/lib/servlet.jar
+END
+jaxrpc.jar
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/container/lib/jaxrpc.jar
+END
+wsrf_core.jar
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/container/lib/wsrf_core.jar
+END
+wsrf_mds_index_stubs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/falkon/!svn/ver/1/container/lib/wsrf_mds_index_stubs.jar
+END
+wsrf_test_interop_stubs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/falkon/!svn/ver/1/container/lib/wsrf_test_interop_stubs.jar
+END
+wsrf_core_samples_mgmt.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/falkon/!svn/ver/1/container/lib/wsrf_core_samples_mgmt.jar
+END
+globus_delegation_service.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/falkon/!svn/ver/1/container/lib/globus_delegation_service.jar
+END
+globus_delegation_stubs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/falkon/!svn/ver/1/container/lib/globus_delegation_stubs.jar
+END
+cog-axis.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/container/lib/cog-axis.jar
+END
+wss4j.jar
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/container/lib/wss4j.jar
+END
+globus_wsrf_tools_test.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/falkon/!svn/ver/1/container/lib/globus_wsrf_tools_test.jar
+END
+xercesImpl.jar
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/container/lib/xercesImpl.jar
+END
+wsrf_provider_jce.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/falkon/!svn/ver/1/container/lib/wsrf_provider_jce.jar
+END
+commons-cli-2.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/falkon/!svn/ver/1/container/lib/commons-cli-2.0.jar
+END
+bootstrap.jar
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/container/lib/bootstrap.jar
+END
+commons-digester.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/falkon/!svn/ver/1/container/lib/commons-digester.jar
+END
+wsrf_test.jar
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/container/lib/wsrf_test.jar
+END
+commons-discovery.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/falkon/!svn/ver/1/container/lib/commons-discovery.jar
+END
+naming-resources.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/falkon/!svn/ver/1/container/lib/naming-resources.jar
+END
+gram-utils.jar
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/container/lib/gram-utils.jar
+END
+commons-collections-3.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/falkon/!svn/ver/1/container/lib/commons-collections-3.0.jar
+END
+globus_wsrf_rft_stubs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/falkon/!svn/ver/1/container/lib/globus_wsrf_rft_stubs.jar
+END
+globus_usage_core.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/falkon/!svn/ver/1/container/lib/globus_usage_core.jar
+END
+naming-java.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repos/falkon/!svn/ver/1/container/lib/naming-java.jar
+END
+wsrf_core_samples_authzService_stubs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/falkon/!svn/ver/1/container/lib/wsrf_core_samples_authzService_stubs.jar
+END
+xml-apis.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/container/lib/xml-apis.jar
+END
+xmlsec.jar
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/container/lib/xmlsec.jar
+END
+wsrf_core_samples_counter_stubs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/falkon/!svn/ver/1/container/lib/wsrf_core_samples_counter_stubs.jar
+END
+cog-tomcat.jar
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/container/lib/cog-tomcat.jar
+END
+commons-logging.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/falkon/!svn/ver/1/container/lib/commons-logging.jar
+END
+globus_usage_packets_common.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/falkon/!svn/ver/1/container/lib/globus_usage_packets_common.jar
+END
+resolver.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/container/lib/resolver.jar
+END
+commonj.jar
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/1/container/lib/commonj.jar
+END
+wsrf_core_samples_authzService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/falkon/!svn/ver/1/container/lib/wsrf_core_samples_authzService.jar
+END
+cog-jglobus.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repos/falkon/!svn/ver/1/container/lib/cog-jglobus.jar
+END
+jce-jdk13-125.jar
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/1/container/lib/jce-jdk13-125.jar
+END
+concurrent.jar
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/container/lib/concurrent.jar
+END
+log4j-1.2.8.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repos/falkon/!svn/ver/1/container/lib/log4j-1.2.8.jar
+END
+nom_tam.jar
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/1/container/lib/nom_tam.jar
+END
+puretls.jar
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/1/container/lib/puretls.jar
+END
+wsrf_test_unit_stubs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/falkon/!svn/ver/1/container/lib/wsrf_test_unit_stubs.jar
+END
+wsrf_core_registry_stubs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/falkon/!svn/ver/1/container/lib/wsrf_core_registry_stubs.jar
+END
+cryptix-asn1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/falkon/!svn/ver/1/container/lib/cryptix-asn1.jar
+END
+xalan.jar
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/container/lib/xalan.jar
+END
+axis-url.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/container/lib/axis-url.jar
+END
+jgss.jar
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/container/lib/jgss.jar
+END
+opensaml.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/container/lib/opensaml.jar
+END
+saaj.jar
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/falkon/!svn/ver/1/container/lib/saaj.jar
+END
+wsrf_test_unit.jar
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/falkon/!svn/ver/1/container/lib/wsrf_test_unit.jar
+END
+addressing-1.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/falkon/!svn/ver/1/container/lib/addressing-1.0.jar
+END
+wsrf_test_interop.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/falkon/!svn/ver/1/container/lib/wsrf_test_interop.jar
+END
+wsrf_core_registry.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/falkon/!svn/ver/1/container/lib/wsrf_core_registry.jar
+END
+gram-stubs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/container/lib/gram-stubs.jar
+END
+wsrf_common.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repos/falkon/!svn/ver/1/container/lib/wsrf_common.jar
+END
+junit.jar
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/falkon/!svn/ver/1/container/lib/junit.jar
+END
+swing-layout-1.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/falkon/!svn/ver/1/container/lib/swing-layout-1.0.jar
+END
+naming-common.jar
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/1/container/lib/naming-common.jar
+END
+commons-beanutils.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/falkon/!svn/ver/1/container/lib/commons-beanutils.jar
+END
+globus_wsrf_rendezvous_stubs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/falkon/!svn/ver/1/container/lib/globus_wsrf_rendezvous_stubs.jar
+END
+wsrf_tools.jar
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/container/lib/wsrf_tools.jar
+END
+cryptix.jar
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/1/container/lib/cryptix.jar
+END
+gram-client.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repos/falkon/!svn/ver/1/container/lib/gram-client.jar
+END

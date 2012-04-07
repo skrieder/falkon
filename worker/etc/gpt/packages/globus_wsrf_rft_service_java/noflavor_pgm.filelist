@@ -1,0 +1,12 @@
+etc/globus_wsrf_rft/security-config.xml
+etc/globus_wsrf_rft/factory-security-config.xml
+etc/globus_wsrf_rft/server-config.wsdd
+etc/globus_wsrf_rft/registration.xml
+etc/gpt/./packages/globus_wsrf_rft/undeploy.xml
+lib/globus_wsrf_rft.jar
+share/globus_wsrf_rft/rft_schema.sql
+share/globus_wsrf_rft/rft_schema_mysql.sql
+share/globus_wsrf_rft/update.sql
+share/globus_wsrf_rft/rft_schema_mysql_pre4.0.sql
+etc/gpt/packages/globus_wsrf_rft_service_java/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_rft_service_java/pkg_data_noflavor_pgm.gpt

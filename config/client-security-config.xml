@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- user side -->
+<securityConfig xmlns="http://www.globus.org">
+    <authz value="self"/>  
+  <!--  <authz value="none"/>-->  
+    <!--<GSITransport>
+        <integrity/> 
+        <privacy/>     
+    </GSITransport>  -->
+
+ <!--   
+ <GSISecureMessage>
+        <peer-credentials value="/home/iraicu/.globus/usercert.pem"/>
+         <integrity/>                                                                              
+        <privacy/>       
+    </GSISecureMessage>                                                                -->
+    
+<GSISecureConversation>
+<!--      <integrity/>  -->
+        <privacy/>    
+ <!--    <anonymous/> -->
+    </GSISecureConversation>
+    
+
+ <!--
+ <credential>  
+  <key-file value="/home/iraicu/.globus/userkey.pem"/>  
+  <cert-file value="/home/iraicu/.globus/usercert.pem"/> 
+   </credential>           -->
+
+ 
+
+
+</securityConfig>

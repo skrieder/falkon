@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/lifetime
+END
+WS-ResourceLifetime_bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/lifetime/WS-ResourceLifetime_bindings.wsdl
+END
+WS-ResourceLifetime.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/lifetime/WS-ResourceLifetime.wsdl
+END
+WS-ResourceLifetime_service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/lifetime/WS-ResourceLifetime_service.wsdl
+END
+WS-ResourceLifetime.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/falkon/!svn/ver/1/container/share/schema/wsrf/lifetime/WS-ResourceLifetime.xsd
+END

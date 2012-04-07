@@ -1,0 +1,6 @@
+lib/globus_delegation_client.jar
+bin/globus-credential-refresh
+bin/globus-credential-delegate
+etc/gpt/./packages/globus_delegation_client/undeploy.xml
+etc/gpt/packages/globus_wsrf_delegation_client_java/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_delegation_client_java/pkg_data_noflavor_pgm.gpt

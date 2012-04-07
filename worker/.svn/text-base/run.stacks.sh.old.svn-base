@@ -1,0 +1,81 @@
+#!/bin/bash
+
+#vmstat -n 1 > stack-10000-lan-10x10.txt &
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp1.txt 1000 10 10 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp2.txt 1000 10 10 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp3.txt 1000 10 10 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp4.txt 1000 10 10 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp5.txt 1000 10 10 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp6.txt 1000 10 10 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp7.txt 1000 10 10 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp8.txt 1000 10 10 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp9.txt 1000 10 10 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp10.txt 1000 10 10 /disks/scratchgpfs1/iraicu/result.fit 10
+#killall -9 vmstat
+
+#vmstat -n 1 > stack-10000-lan-100x100.txt &
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp1.txt 1000 100 100 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp2.txt 1000 100 100 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp3.txt 1000 100 100 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp4.txt 1000 100 100 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp5.txt 1000 100 100 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp6.txt 1000 100 100 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp7.txt 1000 100 100 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp8.txt 1000 100 100 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp9.txt 1000 100 100 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp10.txt 1000 100 100 /disks/scratchgpfs1/iraicu/result.fit 10
+#killall -9 vmstat
+
+#vmstat -n 1 > stack-10000-lan-500x500.txt &
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp1.txt 500 500 500 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp2.txt 500 500 500 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp3.txt 500 500 500 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp4.txt 500 500 500 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp5.txt 500 500 500 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp6.txt 500 500 500 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp7.txt 500 500 500 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp8.txt 500 500 500 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp9.txt 500 500 500 /disks/scratchgpfs1/iraicu/result.fit 10
+#./run.stack.sh /disks/scratchgpfs1/iraicu/sdss.temp10.txt 500 500 500 /disks/scratchgpfs1/iraicu/result.fit 10
+#killall -9 vmstat
+
+
+#vmstat -n 1 > stack-10000-local-10x10.txt &
+./run.stack.sh /scratch/local/iraicu/sdss.temp1.txt 1000 10 10 /scratch/local/iraicu/result.fit 10
+./run.stack.sh /scratch/local/iraicu/sdss.temp2.txt 1000 10 10 /scratch/local/iraicu/result.fit 10
+./run.stack.sh /scratch/local/iraicu/sdss.temp3.txt 1000 10 10 /scratch/local/iraicu/result.fit 10
+./run.stack.sh /scratch/local/iraicu/sdss.temp4.txt 1000 10 10 /scratch/local/iraicu/result.fit 10
+#./run.stack.sh /scratch/local/iraicu/sdss.temp5.txt 1000 10 10 /scratch/local/iraicu/result.fit 10
+#./run.stack.sh /scratch/local/iraicu/sdss.temp6.txt 1000 10 10 /scratch/local/iraicu/result.fit 10
+#./run.stack.sh /scratch/local/iraicu/sdss.temp7.txt 1000 10 10 /scratch/local/iraicu/result.fit 10
+#./run.stack.sh /scratch/local/iraicu/sdss.temp8.txt 1000 10 10 /scratch/local/iraicu/result.fit 10
+#./run.stack.sh /scratch/local/iraicu/sdss.temp9.txt 1000 10 10 /scratch/local/iraicu/result.fit 10
+#./run.stack.sh /scratch/local/iraicu/sdss.temp10.txt 1000 10 10 /scratch/local/iraicu/result.fit 10
+#killall -9 vmstat
+
+#vmstat -n 1 > stack-10000-local-100x100.txt &
+#./run.stack.sh /scratch/local/iraicu/sdss.temp1.txt 1000 100 100 /scratch/local/iraicu/result.fit 10
+#./run.stack.sh /scratch/local/iraicu/sdss.temp2.txt 1000 100 100 /scratch/local/iraicu/result.fit 10
+#./run.stack.sh /scratch/local/iraicu/sdss.temp3.txt 1000 100 100 /scratch/local/iraicu/result.fit 10
+#./run.stack.sh /scratch/local/iraicu/sdss.temp4.txt 1000 100 100 /scratch/local/iraicu/result.fit 10
+./run.stack.sh /scratch/local/iraicu/sdss.temp5.txt 1000 100 100 /scratch/local/iraicu/result.fit 10
+./run.stack.sh /scratch/local/iraicu/sdss.temp6.txt 1000 100 100 /scratch/local/iraicu/result.fit 10
+./run.stack.sh /scratch/local/iraicu/sdss.temp7.txt 1000 100 100 /scratch/local/iraicu/result.fit 10
+#./run.stack.sh /scratch/local/iraicu/sdss.temp8.txt 1000 100 100 /scratch/local/iraicu/result.fit 10
+#./run.stack.sh /scratch/local/iraicu/sdss.temp9.txt 1000 100 100 /scratch/local/iraicu/result.fit 10
+#./run.stack.sh /scratch/local/iraicu/sdss.temp10.txt 1000 100 100 /scratch/local/iraicu/result.fit 10
+#killall -9 vmstat
+
+#vmstat -n 1 > stack-10000-local-500x500.txt &
+#./run.stack.sh /scratch/local/iraicu/sdss.temp1.txt 500 500 500 /scratch/local/iraicu/result.fit 10
+#./run.stack.sh /scratch/local/iraicu/sdss.temp2.txt 500 500 500 /scratch/local/iraicu/result.fit 10
+#./run.stack.sh /scratch/local/iraicu/sdss.temp3.txt 500 500 500 /scratch/local/iraicu/result.fit 10
+#./run.stack.sh /scratch/local/iraicu/sdss.temp4.txt 500 500 500 /scratch/local/iraicu/result.fit 10
+#./run.stack.sh /scratch/local/iraicu/sdss.temp5.txt 500 500 500 /scratch/local/iraicu/result.fit 10
+#./run.stack.sh /scratch/local/iraicu/sdss.temp6.txt 500 500 500 /scratch/local/iraicu/result.fit 10
+#./run.stack.sh /scratch/local/iraicu/sdss.temp7.txt 500 500 500 /scratch/local/iraicu/result.fit 10
+./run.stack.sh /scratch/local/iraicu/sdss.temp8.txt 500 500 500 /scratch/local/iraicu/result.fit 10
+./run.stack.sh /scratch/local/iraicu/sdss.temp9.txt 500 500 500 /scratch/local/iraicu/result.fit 10
+./run.stack.sh /scratch/local/iraicu/sdss.temp10.txt 500 500 500 /scratch/local/iraicu/result.fit 10
+#killall -9 vmstat
+

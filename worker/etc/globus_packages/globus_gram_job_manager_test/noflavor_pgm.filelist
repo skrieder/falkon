@@ -1,0 +1,13 @@
+/test/globus_gram_job_manager_test/globus-gram-job-manager-submit-test.pl
+/test/globus_gram_job_manager_test/globus-gram-job-manager-stdio-test.pl
+/test/globus_gram_job_manager_test/globus-gram-job-manager-failure-test.pl
+/test/globus_gram_job_manager_test/globus-gram-job-manager-proxy-expire-test.pl
+/test/globus_gram_job_manager_test/globus-gram-job-manager-rsl-size-test.pl
+/test/globus_gram_job_manager_test/globus-gram-job-manager-user-test.pl
+/test/globus_gram_job_manager_test/dc31a685.0
+/test/globus_gram_job_manager_test/dc31a685.signing_policy
+/test/globus_gram_job_manager_test/testcred.pem
+/test/globus_gram_job_manager_test/TESTS.pl
+/test/globus_gram_job_manager_test/globus-gram-job-manager-run-tests.pl
+/etc/globus_packages/globus_gram_job_manager_test/noflavor_pgm.filelist
+/etc/globus_packages/globus_gram_job_manager_test/pkg_data_noflavor_pgm.gpt

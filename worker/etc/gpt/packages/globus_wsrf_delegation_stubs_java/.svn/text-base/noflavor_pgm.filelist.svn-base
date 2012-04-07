@@ -1,0 +1,4 @@
+lib/globus_delegation_stubs.jar
+share/globus_delegation_stubs/NStoPkg.properties
+etc/gpt/packages/globus_wsrf_delegation_stubs_java/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_delegation_stubs_java/pkg_data_noflavor_pgm.gpt

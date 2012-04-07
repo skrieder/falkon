@@ -1,0 +1,12 @@
+lib/globus_cas_service.jar
+share/globus_cas_service/bootstrapTemplate
+share/globus_cas_service/bootstrapSample
+etc/gpt/./packages/globus_cas_service/undeploy.xml
+etc/globus_cas_service/casDbSchema/cas_pgsql_database_schema.sql
+etc/globus_cas_service/casDbSchema/cas_mysql_database_schema.sql
+etc/globus_cas_service/security-config.xml
+etc/globus_cas_service/server-config.wsdd
+etc/globus_cas_service/jndi-config.xml
+etc/globus_cas_service/registration.xml
+etc/gpt/packages/globus_wsrf_cas_service_java/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_cas_service_java/pkg_data_noflavor_pgm.gpt

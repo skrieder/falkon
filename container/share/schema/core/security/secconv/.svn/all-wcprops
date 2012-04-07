@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/falkon/!svn/ver/1/container/share/schema/core/security/secconv
+END
+secure_conversation_bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/falkon/!svn/ver/1/container/share/schema/core/security/secconv/secure_conversation_bindings.wsdl
+END
+secure_conversation_service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/falkon/!svn/ver/1/container/share/schema/core/security/secconv/secure_conversation_service.wsdl
+END
+secure_conversation_port_type.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/falkon/!svn/ver/1/container/share/schema/core/security/secconv/secure_conversation_port_type.wsdl
+END

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/108/client/edu/wlu/cs/levy/CG/bak
+END
+HPoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/falkon/!svn/ver/108/client/edu/wlu/cs/levy/CG/bak/HPoint.java
+END
+KeyMissingException.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/falkon/!svn/ver/108/client/edu/wlu/cs/levy/CG/bak/KeyMissingException.java
+END
+KeyDuplicateException.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/falkon/!svn/ver/108/client/edu/wlu/cs/levy/CG/bak/KeyDuplicateException.java
+END
+KeySizeException.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/falkon/!svn/ver/108/client/edu/wlu/cs/levy/CG/bak/KeySizeException.java
+END
+KDNode.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/falkon/!svn/ver/108/client/edu/wlu/cs/levy/CG/bak/KDNode.java
+END
+HRect.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/falkon/!svn/ver/108/client/edu/wlu/cs/levy/CG/bak/HRect.java
+END
+PriorityQueue.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/falkon/!svn/ver/108/client/edu/wlu/cs/levy/CG/bak/PriorityQueue.java
+END
+NearestNeighborList.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/falkon/!svn/ver/108/client/edu/wlu/cs/levy/CG/bak/NearestNeighborList.java
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/falkon/!svn/ver/108/client/edu/wlu/cs/levy/CG/bak/Makefile
+END
+KDTree.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/falkon/!svn/ver/108/client/edu/wlu/cs/levy/CG/bak/KDTree.java
+END

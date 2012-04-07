@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/falkon/!svn/ver/1/container/share/schema/ws/trust
+END
+ws-trust.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/falkon/!svn/ver/1/container/share/schema/ws/trust/ws-trust.wsdl
+END
+ws-trust.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/falkon/!svn/ver/1/container/share/schema/ws/trust/ws-trust.xsd
+END

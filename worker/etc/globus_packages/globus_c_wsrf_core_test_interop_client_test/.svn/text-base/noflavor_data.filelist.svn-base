@@ -1,0 +1,12 @@
+/test/globus_c_wsrf_core_test_interop_client_test/global_security_descriptor.xml
+/test/globus_c_wsrf_core_test_interop_client_test/get-resource-property-test
+/test/globus_c_wsrf_core_test_interop_client_test/get-multiple-resource-properties-test
+/test/globus_c_wsrf_core_test_interop_client_test/immediate-destruction-test
+/test/globus_c_wsrf_core_test_interop_client_test/instance-creation-test
+/test/globus_c_wsrf_core_test_interop_client_test/query-resource-properties-test
+/test/globus_c_wsrf_core_test_interop_client_test/set-resource-properties-test
+/test/globus_c_wsrf_core_test_interop_client_test/set-termination-time-test
+/test/globus_c_wsrf_core_test_interop_client_test/interop-tests.pl
+/test/globus_c_wsrf_core_test_interop_client_test/TESTS.pl
+/etc/globus_packages/globus_c_wsrf_core_test_interop_client_test/noflavor_data.filelist
+/etc/globus_packages/globus_c_wsrf_core_test_interop_client_test/pkg_data_noflavor_data.gpt

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_test_unit
+END
+identity-security-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_test_unit/identity-security-config.xml
+END
+jndi-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_test_unit/jndi-config.xml
+END
+local-config-authz-test.conf
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_test_unit/local-config-authz-test.conf
+END
+security-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_test_unit/security-config.xml
+END
+server-config.wsdd
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/falkon/!svn/ver/1/worker/etc/globus_wsrf_test_unit/server-config.wsdd
+END

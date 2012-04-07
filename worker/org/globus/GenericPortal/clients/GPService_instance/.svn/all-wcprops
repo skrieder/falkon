@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/falkon/!svn/ver/356/worker/org/globus/GenericPortal/clients/GPService_instance
+END
+WorkerRunGram.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/falkon/!svn/ver/356/worker/org/globus/GenericPortal/clients/GPService_instance/WorkerRunGram.java
+END
+ImageStacking.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/falkon/!svn/ver/100/worker/org/globus/GenericPortal/clients/GPService_instance/ImageStacking.java
+END
+ImageStackingMain.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/falkon/!svn/ver/100/worker/org/globus/GenericPortal/clients/GPService_instance/ImageStackingMain.java
+END
+WorkerMain.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/falkon/!svn/ver/1/worker/org/globus/GenericPortal/clients/GPService_instance/WorkerMain.java
+END
+WorkerRun.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/falkon/!svn/ver/351/worker/org/globus/GenericPortal/clients/GPService_instance/WorkerRun.java
+END

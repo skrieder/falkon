@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gpt_package_metadata SYSTEM "globus_package.dtd">
+<gpt_package_metadata Format_Version="0.02" Name="gsi_openssh_setup" >
+<Aging_Version Age="0" Major="3" Minor="7" />
+<Description >GSI-Enabled OpenSSH setup package</Description>
+<Functional_Group >gsi_openssh</Functional_Group>
+<Version_Stability Release="stable" />
+<PackagingTool ToolName="GPT" ToolVersion="3.2" />
+<pgm_pkg >
+<Flavor ColocateLibraries="yes" >noflavor</Flavor>
+<Version_Label >GSI-OpenSSH 3.7 / OpenSSH 4.2p1</Version_Label>
+<Post_Install_Message >
+        Please run GLOBUS_LOCATION/setup/gsi_openssh_setup/setup-openssh.
+      </Post_Install_Message>
+<Post_Install_Program >
+        gsi_openssh_setup/setup-openssh
+      </Post_Install_Program>
+<Setup Name="gsi_openssh_setup" >
+<Aging_Version Age="0" Major="3" Minor="7" />
+</Setup>
+</pgm_pkg>
+</gpt_package_metadata>

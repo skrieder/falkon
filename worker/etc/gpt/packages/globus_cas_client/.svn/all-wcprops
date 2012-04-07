@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_cas_client
+END
+undeploy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/falkon/!svn/ver/1/worker/etc/gpt/packages/globus_cas_client/undeploy.xml
+END

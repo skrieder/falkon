@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/repos/falkon/!svn/ver/1/webserver/html
+END
+header.htm
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/1/webserver/html/header.htm
+END
+service_logs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/falkon/!svn/ver/1/webserver/html/service_logs
+END
+graph_links.htm
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/falkon/!svn/ver/1/webserver/html/graph_links.htm
+END
+log_links.htm
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/falkon/!svn/ver/1/webserver/html/log_links.htm
+END
+graphs.htm
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/falkon/!svn/ver/1/webserver/html/graphs.htm
+END
+worker_logs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/falkon/!svn/ver/1/webserver/html/worker_logs
+END
+index.htm
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/falkon/!svn/ver/1/webserver/html/index.htm
+END

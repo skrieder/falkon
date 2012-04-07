@@ -1,0 +1,4 @@
+/bin/globus-wsrf-cgen
+/libexec/globus-cgen-merge-pkgdata
+/etc/globus_packages/globus_c_wsrf_cgen/gcc32dbg_pgm.filelist
+/etc/globus_packages/globus_c_wsrf_cgen/pkg_data_gcc32dbg_pgm.gpt
